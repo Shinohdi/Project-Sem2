@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LancéeBoule : MonoBehaviour
+public class LanceeBoule : MonoBehaviour
 {
 
     [SerializeField] private float coolDown;
