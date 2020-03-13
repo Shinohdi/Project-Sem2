@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{54088455-cfc0-4698-95a0-f82a988abe6f}">
+		<property name="assetPath">
+			<value>RumeurVille/Exterior Crowd City Park with Kids Playing Paris.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>247.03999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f403242-59e4-4c92-b244-bb3edfad3f4c}</destination>
+		</relationship>
+	</object>
+</objects>

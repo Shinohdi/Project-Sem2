@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f7fc9b20-a3ea-462b-9a7a-c8e8fb52c552}">
+		<property name="assetPath">
+			<value>Pas/FootStep_05.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.33916099773242631</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f403242-59e4-4c92-b244-bb3edfad3f4c}</destination>
+		</relationship>
+	</object>
+</objects>

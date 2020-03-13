@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{80668b08-d1a9-4568-a66a-9bad64f58049}">
+		<property name="assetPath">
+			<value>ThrowingSmthin/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f403242-59e4-4c92-b244-bb3edfad3f4c}</destination>
+		</relationship>
+	</object>
+</objects>
