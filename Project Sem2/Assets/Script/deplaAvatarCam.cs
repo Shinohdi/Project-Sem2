@@ -34,7 +34,7 @@ public class deplaAvatarCam : MonoBehaviour
             Debug.Log("enMarche");
         }
         //isIdle
-        else
+        else if(Input.GetKeyUp(KeyCode.Z))
         {
             anim.SetBool("isWalkingForward", false);
             anim.SetBool("isIdle", true);
@@ -48,7 +48,7 @@ public class deplaAvatarCam : MonoBehaviour
             anim.SetBool("isIdle", false);
         }
         //isIdle
-        else
+        else if(Input.GetKeyUp(KeyCode.S))
         {
             anim.SetBool("isWalkingBackward", false);
             anim.SetBool("isIdle", true);
