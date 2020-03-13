@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{5da703ff-6579-4a94-a2fb-aaf76ffc0f7f}">
+		<property name="name">
+			<value>PasAvecPeinture</value>
+		</property>
+		<relationship name="folder">
+			<destination>{689471fb-4489-4687-be89-0553aa2fa000}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f45e204f-f5dc-4eb3-ad61-45bd294d3fc7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f45e204f-f5dc-4eb3-ad61-45bd294d3fc7}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<relationship name="automators">
+			<destination>{8fe35d29-c281-4881-8b63-381cfd5df11a}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{8fe35d29-c281-4881-8b63-381cfd5df11a}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>
