@@ -11,6 +11,8 @@ public class deplacementAvatar : MonoBehaviour
 
     [SerializeField] private float vitesseMax;
 
+    private Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,14 @@ public class deplacementAvatar : MonoBehaviour
         if (Input.GetKey(KeyCode.Z))
         {
             transform.Translate(0, 0, vitesse * Time.deltaTime);
+            anim.SetBool("isWalkingForward", true);
+            anim.SetBool("isIdle", false);
+            Debug.Log("jeMarche");
+        }
+        else
+        {
+            anim.SetBool("isWalkingForward", false);
+            anim.SetBool("isIdle", true);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
