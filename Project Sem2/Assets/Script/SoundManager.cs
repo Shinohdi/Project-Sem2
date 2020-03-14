@@ -6,12 +6,12 @@ public class SoundManager : MonoBehaviour
 {
 
     [FMODUnity.EventRef]
-    public string Event;
+    //public string Event;
     FMOD.Studio.EventInstance Audio;
 
     void Awake()
     {
-        Audio = FMODUnity.RuntimeManager.CreateInstance(Event);
+        //Audio = FMODUnity.RuntimeManager.CreateInstance(Event);
     }
 
     void OnTriggerStay(Collider other)
@@ -19,7 +19,8 @@ public class SoundManager : MonoBehaviour
         if(other.gameObject.tag == "TexturePeinture")
         {
             Debug.Log("Paint");
-            Audio.setParameterByName("PasAvecPeinture", 1);
+            //walking.events[0].stringParameter = "event:/Avatar/Deplacements/SurfaceSimple/PasSurPeinture";
+            //Audio.setParameterByName("PasAvecPeinture", 1);
 
         }
     }
@@ -29,7 +30,8 @@ public class SoundManager : MonoBehaviour
         if (other.gameObject.tag == "TexturePeinture")
         {
             Debug.Log("No Paint");
-            Audio.setParameterByName("PasAvecPeinture", 0);
+            //walking.GetComponent<AnimationEvent>().stringParameter = "event:/Avatar/Deplacements/SurfaceSimple/Pas";
+            //Audio.setParameterByName("PasAvecPeinture", 0);
         }
     }
 

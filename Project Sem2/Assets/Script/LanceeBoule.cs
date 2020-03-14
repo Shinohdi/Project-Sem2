@@ -59,10 +59,6 @@ public class LanceeBoule : MonoBehaviour
                           
             }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-
-            }
         }
         else
         {

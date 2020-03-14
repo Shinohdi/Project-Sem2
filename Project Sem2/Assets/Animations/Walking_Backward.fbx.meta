@@ -59,23 +59,9 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.1076555
-        functionName: NewEvent
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.23205742
-        functionName: NewEvent
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: 0.31578946
         functionName: PasSurSurfaceSimple
-        data: 
+        data: event:/Avatar/Deplacements/SurfaceSimple/Pas
         objectReferenceParameter: {fileID: 11500000, guid: ddd2860dd86de1c40adbe549fba33480,
           type: 3}
         floatParameter: 0
