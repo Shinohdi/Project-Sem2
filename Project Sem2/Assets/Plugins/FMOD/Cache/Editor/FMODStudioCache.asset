@@ -1,26 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
-=======
---- !u!114 &-8852902874703962861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_Project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637197705144957174
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-7657284037864004745
+--- !u!114 &-8344136498113675378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,7 +15,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
-  - {fileID: -8852902874703962861}
+  - {fileID: -7386346892339628026}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -43,7 +23,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 532
---- !u!114 &-6040944158855173537
+--- !u!114 &-7386346892339628026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,84 +32,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Avatar/Deplacements/SurfaceSimple/Pas
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
-  guid: 91f2b9afa4e7a14ea5219c787cb18c08
-  Banks:
-  - {fileID: -8852902874703962861}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 432
---- !u!114 &-338297444451840479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environnement/Pigeon
-  m_EditorClassIdentifier: 
-  Path: event:/Environnement/Pigeon
-  guid: 9da91076d98c134ca442eda2f65ea096
-  Banks:
-  - {fileID: -8852902874703962861}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5950
->>>>>>> 44df31c4631350b0b4efee3f0994ffce008bf9c1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  EditorBanks: []
-  EditorEvents: []
-  EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  stringsBankWriteTime: 0
-  cacheVersion: 3
-=======
-  EditorBanks:
-  - {fileID: 7021631098273518132}
-  - {fileID: -8852902874703962861}
-  EditorEvents:
-  - {fileID: 4026162929697487457}
-  - {fileID: 6635491221018541355}
-  - {fileID: 1886095666541864269}
-  - {fileID: -6040944158855173537}
-  - {fileID: -338297444451840479}
-  - {fileID: -7657284037864004745}
-  - {fileID: 4020696325220861704}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -8852902874703962861}
-  StringsBanks:
-  - {fileID: 7021631098273518132}
-  stringsBankWriteTime: 637197705145007017
-  cacheVersion: 3
---- !u!114 &1886095666541864269
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197376577215707
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4156203632019025790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +56,7 @@ MonoBehaviour:
   Path: event:/Test2D
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
-  - {fileID: -8852902874703962861}
+  - {fileID: -7386346892339628026}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -152,7 +64,37 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1923
---- !u!114 &4020696325220861704
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 8055373769368024141}
+  - {fileID: -7386346892339628026}
+  EditorEvents:
+  - {fileID: 4438970283222563657}
+  - {fileID: 1530417946771803359}
+  - {fileID: -4156203632019025790}
+  - {fileID: 1516774739520649065}
+  - {fileID: 4394898482473305243}
+  - {fileID: -8344136498113675378}
+  - {fileID: 6798090918829207082}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -7386346892339628026}
+  StringsBanks:
+  - {fileID: 8055373769368024141}
+  stringsBankWriteTime: 637197376577235568
+  cacheVersion: 3
+--- !u!114 &1516774739520649065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,43 +104,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environnement/Rumeur Ville
+  m_Name: event:/Avatar/Deplacements/SurfaceSimple/Pas
   m_EditorClassIdentifier: 
-  Path: event:/Environnement/Rumeur Ville
-  guid: effbabf4976ca84ab9a6a1b2f9000f94
+  Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
+  guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
-  - {fileID: -8852902874703962861}
-  IsStream: 1
+  - {fileID: -7386346892339628026}
+  IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 247040
---- !u!114 &4026162929697487457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environnement/Circulation
-  m_EditorClassIdentifier: 
-  Path: event:/Environnement/Circulation
-  guid: 1c7429d6a7e3d94aabec03e9d4814919
-  Banks:
-  - {fileID: -8852902874703962861}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 363049
---- !u!114 &6635491221018541355
+  Length: 432
+--- !u!114 &1530417946771803359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,7 +132,7 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
-  - {fileID: -8852902874703962861}
+  - {fileID: -7386346892339628026}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -221,7 +140,76 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1847
---- !u!114 &7021631098273518132
+--- !u!114 &4394898482473305243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Pigeon
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Pigeon
+  guid: 9da91076d98c134ca442eda2f65ea096
+  Banks:
+  - {fileID: -7386346892339628026}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5950
+--- !u!114 &4438970283222563657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Circulation
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Circulation
+  guid: 1c7429d6a7e3d94aabec03e9d4814919
+  Banks:
+  - {fileID: -7386346892339628026}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 363049
+--- !u!114 &6798090918829207082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Rumeur Ville
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Rumeur Ville
+  guid: effbabf4976ca84ab9a6a1b2f9000f94
+  Banks:
+  - {fileID: -7386346892339628026}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 247040
+--- !u!114 &8055373769368024141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,10 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637197705145007017
+  lastModified: 637197376577235568
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
->>>>>>> 44df31c4631350b0b4efee3f0994ffce008bf9c1
