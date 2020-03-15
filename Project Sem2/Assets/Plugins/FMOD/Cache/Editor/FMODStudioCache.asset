@@ -79,6 +79,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 532
+--- !u!114 &-4064584101108771458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197974215778849
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4005116354188058305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +112,15 @@ MonoBehaviour:
   Path: event:/Environnement/Circulation
   guid: 1c7429d6a7e3d94aabec03e9d4814919
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -117,7 +143,15 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -140,7 +174,15 @@ MonoBehaviour:
   Path: event:/Environnement/Pigeon
   guid: 9da91076d98c134ca442eda2f65ea096
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -180,7 +222,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8837907994245095233}
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   EditorEvents:
   - {fileID: -4005116354188058305}
   - {fileID: 1442168163122480132}
@@ -191,10 +241,24 @@ MonoBehaviour:
   - {fileID: 8028582659573607519}
   EditorParameters: []
   MasterBanks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
   StringsBanks:
   - {fileID: 8837907994245095233}
   stringsBankWriteTime: 637197376577235568
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+  StringsBanks:
+  - {fileID: 8837907994245095233}
+  stringsBankWriteTime: 637197974215808723
+=======
+  - {fileID: 7502156314865416740}
+  StringsBanks:
+  - {fileID: 8837907994245095233}
+  stringsBankWriteTime: 637197705145007017
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   cacheVersion: 3
 --- !u!114 &137275852906572049
 MonoBehaviour:
@@ -306,7 +370,15 @@ MonoBehaviour:
   Path: event:/Environnement/Rumeur Ville
   guid: effbabf4976ca84ab9a6a1b2f9000f94
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -385,7 +457,15 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -408,7 +488,15 @@ MonoBehaviour:
   Path: event:/Test2D
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -770,7 +858,15 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
+<<<<<<< HEAD
   - {fileID: -6957473309555653499}
+=======
+<<<<<<< HEAD
+  - {fileID: -4064584101108771458}
+=======
+  - {fileID: 7502156314865416740}
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -792,7 +888,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637197376577235568
+=======
+<<<<<<< HEAD
+  lastModified: 637197974215808723
+=======
+  lastModified: 637197705145007017
+>>>>>>> fd30ef6b249e8b63eea85e4d42323846089b6990
+>>>>>>> 0149fbcfe3889eeaff3bbd19dcd0d4ce6557c962
   LoadResult: 0
   FileSizes:
   - Name: Desktop
