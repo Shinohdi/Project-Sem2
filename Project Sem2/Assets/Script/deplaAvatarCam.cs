@@ -32,12 +32,26 @@ public class deplaAvatarCam : MonoBehaviour
             anim.SetBool("isWalkingForward", true);
             anim.SetBool("isIdle", false);
             Debug.Log("enMarche");
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                vitesse = vitesseMax;
+                anim.SetBool("isRunning", true);
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                vitesse = vitesseMin;
+                anim.SetBool("isRunning", false);
+            }
+
         }
         //isIdle
         else if(Input.GetKeyUp(KeyCode.Z))
         {
             anim.SetBool("isWalkingForward", false);
             anim.SetBool("isIdle", true);
+            vitesse = vitesseMin;
+            anim.SetBool("isRunning", false);
         }
 
         //isWalkingBackward
@@ -52,20 +66,6 @@ public class deplaAvatarCam : MonoBehaviour
         {
             anim.SetBool("isWalkingBackward", false);
             anim.SetBool("isIdle", true);
-        }
-
-        //isRunning
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            vitesse = vitesseMax;
-            anim.SetBool("isRunning", true);
-        }
-
-        //endRunning
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            vitesse = vitesseMin;
-            anim.SetBool("isRunning", false);
         }
     }
 }
