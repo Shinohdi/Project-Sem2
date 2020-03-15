@@ -26,16 +26,8 @@ public class colorBoule : MonoBehaviour
 
     private Rigidbody RB;
 
-    private enum stateBoule
-    {
-        SansPeinture,
-        PeintureRouge,
-        PeintureBleu
-    }
-
-    private stateBoule state = stateBoule.SansPeinture;
-
-
+    [SerializeField] private ScriptBoule SB;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +47,7 @@ public class colorBoule : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 //Debug.Log(camPlayer.transform.localEulerAngles.x);
-                if (state == stateBoule.PeintureBleu)
+                if (SB.state == ScriptBoule.stateBoule.PeintureBleu)
                 {
                     RB.isKinematic = false;
                     Boule.transform.parent = bouleParent.transform;
@@ -63,7 +55,7 @@ public class colorBoule : MonoBehaviour
                     RB.AddForce(camPlayer.transform.forward * forceLancée, ForceMode.Impulse);
                     EnJoue = false;
                 }
-                else if(state == stateBoule.PeintureRouge)
+                else if(SB.state == ScriptBoule.stateBoule.PeintureRouge)
                 {
                     RB.isKinematic = false;
                     Boule.transform.parent = bouleParent.transform;
@@ -79,20 +71,20 @@ public class colorBoule : MonoBehaviour
             {
                 if (disPotBleu < 1.4f)
                 {
-                    if (state != stateBoule.PeintureBleu)
+                    if (SB.state != ScriptBoule.stateBoule.PeintureBleu)
                     {
 
                         MSBoule.material.color = PotBleu.GetComponent<MeshRenderer>().material.color;
-                        state = stateBoule.PeintureBleu;
+                        SB.state = ScriptBoule.stateBoule.PeintureBleu;
                     }
                 }
 
                 if (disPotRouge < 1.4f)
                 {
-                    if (state != stateBoule.PeintureRouge)
+                    if (SB.state != ScriptBoule.stateBoule.PeintureRouge)
                     {
                         MSBoule.material.color = PotRouge.GetComponent<MeshRenderer>().material.color;
-                        state = stateBoule.PeintureRouge;
+                        SB.state = ScriptBoule.stateBoule.PeintureRouge;
 
                     }
                 }
@@ -111,6 +103,13 @@ public class colorBoule : MonoBehaviour
                     RB.isKinematic = true;
                     EnJoue = true;
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.Quote))
+            {
+                Boule.transform.position = main.position;
+                Boule.transform.parent = transform;
+                RB.isKinematic = true;
+                EnJoue = true;
             }
         }
 
