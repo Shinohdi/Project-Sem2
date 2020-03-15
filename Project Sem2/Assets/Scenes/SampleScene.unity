@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 812082611}
   - component: {fileID: 812082610}
   m_Layer: 0
-  m_Name: TestSonPigeon
+  m_Name: TestSon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,7 +1711,7 @@ GameObject:
   - component: {fileID: 1301503566}
   - component: {fileID: 1301503565}
   m_Layer: 0
-  m_Name: TestSonCirculation
+  m_Name: TestSon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 1582051734}
   - component: {fileID: 1582051733}
   m_Layer: 0
-  m_Name: TestSonRumeurVille
+  m_Name: TestSon2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
