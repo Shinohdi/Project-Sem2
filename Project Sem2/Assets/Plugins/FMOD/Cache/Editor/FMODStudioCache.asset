@@ -76,7 +76,7 @@ MonoBehaviour:
   Path: event:/Environnement/Circulation
   guid: 1c7429d6a7e3d94aabec03e9d4814919
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -107,6 +107,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 432
+--- !u!114 &-3169831258519923320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197722760528656
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2402291776344942557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +140,7 @@ MonoBehaviour:
   Path: event:/Environnement/Pigeon
   guid: 9da91076d98c134ca442eda2f65ea096
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -162,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8837907994245095233}
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   EditorEvents:
   - {fileID: -4005116354188058305}
   - {fileID: 1442168163122480132}
@@ -173,10 +191,10 @@ MonoBehaviour:
   - {fileID: 8028582659573607519}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   StringsBanks:
   - {fileID: 8837907994245095233}
-  stringsBankWriteTime: 637197705145007017
+  stringsBankWriteTime: 637197722760543983
   cacheVersion: 3
 --- !u!114 &137275852906572049
 MonoBehaviour:
@@ -288,7 +306,7 @@ MonoBehaviour:
   Path: event:/Environnement/Rumeur Ville
   guid: effbabf4976ca84ab9a6a1b2f9000f94
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -367,7 +385,7 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -390,7 +408,7 @@ MonoBehaviour:
   Path: event:/Test2D
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -752,7 +770,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
-  - {fileID: 7502156314865416740}
+  - {fileID: -3169831258519923320}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -774,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637197705145007017
+  lastModified: 637197722760543983
   LoadResult: 0
   FileSizes:
   - Name: Desktop
