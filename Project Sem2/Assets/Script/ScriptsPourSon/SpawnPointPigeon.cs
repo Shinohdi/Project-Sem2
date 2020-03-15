@@ -21,16 +21,15 @@ public class SpawnPointPigeon : MonoBehaviour
     {
         if(other.gameObject == player)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Event, transform.position);
-            // prefabPigeon.transform.position = new Vector3(prefabPigeon.transform.position.x, prefabPigeon.transform.position.y - 50, prefabPigeon.transform.position.z);
-
-
             StartCoroutine(Respawn());
         }
     }
 
     IEnumerator Respawn()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(Event, transform.position);
+        // prefabPigeon.transform.position = new Vector3(prefabPigeon.transform.position.x, prefabPigeon.transform.position.y - 50, prefabPigeon.transform.position.z);
+
         Destroy(prefabPigeon);
 
         yield return new WaitForSeconds(waitTime);
