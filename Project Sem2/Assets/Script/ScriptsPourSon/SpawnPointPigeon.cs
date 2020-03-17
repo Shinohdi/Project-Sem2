@@ -7,6 +7,8 @@ public class SpawnPointPigeon : MonoBehaviour
     public GameObject prefabPigeon;
     public GameObject player;
 
+    private GameObject blocPigeon;
+
     public int waitTime;
 
     [FMODUnity.EventRef]
@@ -14,24 +16,23 @@ public class SpawnPointPigeon : MonoBehaviour
 
     void Start()
     {
-        Instantiate(prefabPigeon, gameObject.transform);
+        blocPigeon = Instantiate(prefabPigeon, gameObject.transform);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == player)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Event, transform.position);
-            // prefabPigeon.transform.position = new Vector3(prefabPigeon.transform.position.x, prefabPigeon.transform.position.y - 50, prefabPigeon.transform.position.z);
-
-
             StartCoroutine(Respawn());
         }
     }
 
     IEnumerator Respawn()
     {
-        Destroy(prefabPigeon);
+        FMODUnity.RuntimeManager.PlayOneShot(Event, transform.position);
+        // prefabPigeon.transform.position = new Vector3(prefabPigeon.transform.position.x, prefabPigeon.transform.position.y - 50, prefabPigeon.transform.position.z);
+
+        Destroy(blocPigeon);
 
         yield return new WaitForSeconds(waitTime);
 
