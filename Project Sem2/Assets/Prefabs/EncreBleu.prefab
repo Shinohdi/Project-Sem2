@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6457246871406362737}
   - component: {fileID: 3006644965057109827}
   - component: {fileID: 4750361676080515121}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.004
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: 8336786920724645814}
   - component: {fileID: 999748533938292103}
   - component: {fileID: 999748533938292100}
-  m_Layer: 0
+  - component: {fileID: 7150952892574924969}
+  m_Layer: 10
   m_Name: Cube
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -189,6 +190,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.015, y: 0.017, z: 0.06}
   m_Center: {x: 0.0001702383, y: 0.0015159968, z: 0.0012844112}
+--- !u!114 &7150952892574924969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415501740224998155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d57e80ae7acd28478736215bf9ee892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5545490393520298263
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 8595256441234191740}
   - component: {fileID: 2470860137276113096}
   - component: {fileID: 221165615270237500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.001
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -279,7 +292,7 @@ GameObject:
   - component: {fileID: 3419366494958502406}
   - component: {fileID: 4814169398115882893}
   - component: {fileID: 6009855292125332814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.002
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -358,7 +371,7 @@ GameObject:
   - component: {fileID: 2860715668158060523}
   - component: {fileID: 9141842487064919883}
   - component: {fileID: 409244295624081857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.003
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -435,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5234701400125575720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EncreBleu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
