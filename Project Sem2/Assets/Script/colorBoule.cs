@@ -75,7 +75,7 @@ public class colorBoule : MonoBehaviour
                     {
 
                         MSBoule.material.color = PotBleu.GetComponent<MeshRenderer>().material.color;
-                        SB.state = ScriptBoule.stateBoule.PeintureBleu;
+                        SB.SwitchState(ScriptBoule.stateBoule.PeintureBleu);
                     }
                 }
 
@@ -84,7 +84,8 @@ public class colorBoule : MonoBehaviour
                     if (SB.state != ScriptBoule.stateBoule.PeintureRouge)
                     {
                         MSBoule.material.color = PotRouge.GetComponent<MeshRenderer>().material.color;
-                        SB.state = ScriptBoule.stateBoule.PeintureRouge;
+                        SB.SwitchState(ScriptBoule.stateBoule.PeintureRouge);
+
 
                     }
                 }
