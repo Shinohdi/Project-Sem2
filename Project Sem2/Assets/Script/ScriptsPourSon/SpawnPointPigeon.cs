@@ -38,6 +38,6 @@ public class SpawnPointPigeon : MonoBehaviour
 
         // prefabPigeon.transform.position = gameObject.transform.position;
 
-        Instantiate(prefabPigeon, gameObject.transform);
+        blocPigeon = Instantiate(prefabPigeon, gameObject.transform);
     }
 }
