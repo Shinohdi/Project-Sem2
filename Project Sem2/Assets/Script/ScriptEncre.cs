@@ -23,6 +23,7 @@ public class ScriptEncre : MonoBehaviour
             if(gameObject.layer == 9)
             {
                 Debug.Log("Rouge");
+                
             }
 
             if (gameObject.layer == 10)

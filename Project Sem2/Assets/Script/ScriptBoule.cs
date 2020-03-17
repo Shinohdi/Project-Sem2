@@ -10,8 +10,6 @@ public class ScriptBoule : MonoBehaviour
     [SerializeField] private PhysicMaterial Rebond;
 
     private Collider CL;
-    private MeshRenderer MS;
-
 
     public enum stateBoule
     {
