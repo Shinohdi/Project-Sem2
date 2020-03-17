@@ -35,7 +35,7 @@ public class ScriptBoule : MonoBehaviour
             case stateBoule.PeintureRouge:
                 if (collision.gameObject.CompareTag("Sol"))
                 {
-                    Instantiate(peintureRouge, new Vector3(transform.position.x, 0.09f, transform.position.z), Quaternion.identity);
+                    Instantiate(peintureRouge, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
                 }
                 break;
 
