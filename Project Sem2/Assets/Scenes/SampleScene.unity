@@ -167,7 +167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 12
+=======
+      value: 11
+>>>>>>> 6baa7b1048c5fa837b6518578800a57beb76ea9f
 =======
       value: 11
 >>>>>>> 6baa7b1048c5fa837b6518578800a57beb76ea9f
@@ -2729,6 +2733,7 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &999748535052678965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2819,5 +2824,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 999748535052678965}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 6baa7b1048c5fa837b6518578800a57beb76ea9f
 =======
 >>>>>>> 6baa7b1048c5fa837b6518578800a57beb76ea9f
