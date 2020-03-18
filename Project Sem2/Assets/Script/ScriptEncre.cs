@@ -23,6 +23,12 @@ public class ScriptEncre : MonoBehaviour
             if(gameObject.layer == 9)
             {
                 Debug.Log("Rouge");
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    Debug.Log("ca marche");
+                    //other.gameObject.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * 50, ForceMode.Impulse);
+
+                }
                 
             }
 
