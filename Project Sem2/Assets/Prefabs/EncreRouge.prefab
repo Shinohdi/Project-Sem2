@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6450937558972070508}
   - component: {fileID: 3000336279865828702}
   - component: {fileID: 4753064109384413740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: 8334155002482720171}
   - component: {fileID: 992264884201683127}
   - component: {fileID: 992264884201683126}
-  m_Layer: 0
+  - component: {fileID: 3273053718635493413}
+  m_Layer: 9
   m_Name: Cube
   m_TagString: TexturePeinture
   m_Icon: {fileID: 0}
@@ -189,6 +190,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.016, y: 0.015, z: 0.06}
   m_Center: {x: -0.001, y: 0.002039365, z: 0.0012844112}
+--- !u!114 &3273053718635493413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421793323000156438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d57e80ae7acd28478736215bf9ee892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5543755739005379338
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 8598100015762263905}
   - component: {fileID: 2472661383408827093}
   - component: {fileID: 219364311197953825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +292,7 @@ GameObject:
   - component: {fileID: 3417930767826909211}
   - component: {fileID: 4815957509861567888}
   - component: {fileID: 6016142603325374291}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +371,7 @@ GameObject:
   - component: {fileID: 2858000049526812150}
   - component: {fileID: 9134622856552858966}
   - component: {fileID: 411806538994023388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5242066172825118773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EncreRouge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
