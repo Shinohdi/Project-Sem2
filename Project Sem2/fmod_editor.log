@@ -7,7 +7,11 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+<<<<<<< HEAD
+[LOG] AsyncManager::init                       : manager 00000207BACB2238 isAsync 0 updatePeriod 0.02
+=======
 [LOG] AsyncManager::init                       : manager 00000217325FCD08 isAsync 0 updatePeriod 0.02
+>>>>>>> ef4befa67e4cf224c50f70c1b3ec3d803f2963e4
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -152,6 +156,9 @@
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+<<<<<<< HEAD
+=======
 [LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
 [LOG] Thread::callback                         : FMOD file thread finished.
+>>>>>>> ef4befa67e4cf224c50f70c1b3ec3d803f2963e4
 [LOG] SystemI::close                           : Closed.
