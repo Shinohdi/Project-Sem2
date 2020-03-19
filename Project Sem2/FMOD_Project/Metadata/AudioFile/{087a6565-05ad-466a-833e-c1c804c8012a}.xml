@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{087a6565-05ad-466a-833e-c1c804c8012a}">
+		<property name="assetPath">
+			<value>Police/ParlerRadio/ParlerRadio_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1918367346938776</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f403242-59e4-4c92-b244-bb3edfad3f4c}</destination>
+		</relationship>
+	</object>
+</objects>
