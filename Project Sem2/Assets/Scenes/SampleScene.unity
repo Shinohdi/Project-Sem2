@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -386,6 +386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9866b2011b70245beb43ca6e186fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureHeight: 256
+  textureWidth: 256
 --- !u!1 &426650262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 55c5e022e92755946bfc408895b03e89,
@@ -606,6 +608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9866b2011b70245beb43ca6e186fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureHeight: 256
+  textureWidth: 256
 --- !u!1 &607440091
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9866b2011b70245beb43ca6e186fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureHeight: 256
+  textureWidth: 256
 --- !u!23 &607440094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1482,6 +1488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9866b2011b70245beb43ca6e186fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureHeight: 256
+  textureWidth: 256
 --- !u!23 &1102069203
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2168,6 +2176,7 @@ GameObject:
   - component: {fileID: 1929594008}
   - component: {fileID: 1929594007}
   - component: {fileID: 1929594010}
+  - component: {fileID: 1929594011}
   m_Layer: 8
   m_Name: Camera FPS
   m_TagString: MainCamera
@@ -2201,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf37723a90c7914a91c79b18fdb0d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
 --- !u!81 &1929594008
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2260,14 +2269,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929594005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e451b7cb1389874b823dd2063079bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vision: {fileID: 1929594009}
-  player: {fileID: 8304057255042198689}
+  player: {fileID: 1929594006}
   splashTexture: {fileID: 2800000, guid: 64b6dce7a5e45fc4693dda1297d4c747, type: 3}
+--- !u!114 &1929594011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929594005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28bc52a886c1744b88888f918dc4c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vision: {fileID: 1929594009}
+  player: {fileID: 1929594006}
+  splash: {fileID: 2800000, guid: e85e7f32e6538ba4092f6be12c1b7a7d, type: 3}
 --- !u!1 &2036837247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,6 +2491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9866b2011b70245beb43ca6e186fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureHeight: 256
+  textureWidth: 256
 --- !u!23 &2088353850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2997,7 +3023,7 @@ CharacterController:
   m_GameObject: {fileID: 2689525309002959268}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -3047,7 +3073,7 @@ BoxCollider:
   m_GameObject: {fileID: 2689525309002959268}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.76, y: 0.59, z: 0.7}
   m_Center: {x: 0, y: 0.23, z: 0}

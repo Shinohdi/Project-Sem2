@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MyShaderBehavior : MonoBehaviour
 {
-    private const int textureHeight = 256;
-    private const int textureWidth = 256;
+    private const int textureHeight = 1000;
+    private const int textureWidth = 1000;
     private readonly Color c_color = new Color(0, 0, 0, 0);
 
     private Material m_material;
