@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8293606361507966345
+=======
+--- !u!114 &-8444756188657224080
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,6 +14,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Environnement/Circulation
   m_EditorClassIdentifier: 
   Path: event:/Environnement/Circulation
@@ -17,13 +22,26 @@ MonoBehaviour:
   Banks:
   - {fileID: -218765200050036364}
   IsStream: 1
+=======
+  m_Name: event:/Environnement/Pigeon
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Pigeon
+  guid: 9da91076d98c134ca442eda2f65ea096
+  Banks:
+  - {fileID: 4323269998944636340}
+  IsStream: 0
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+<<<<<<< HEAD
   Length: 363049
 --- !u!114 &-4174130236269304138
+=======
+  Length: 5950
+--- !u!114 &-3236587667908238593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,7 +56,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
-  - {fileID: -218765200050036364}
+  - {fileID: 4323269998944636340}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -46,7 +64,64 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 532
+--- !u!114 &-2654994333161901322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197376577215707
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1714029090501194406
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
+  m_Name: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
+  m_EditorClassIdentifier: 
+  Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
+  guid: a2b16c00f6b804428e96a94c228f62bc
+  Banks:
+  - {fileID: -218765200050036364}
+  IsStream: 0
+=======
+  m_Name: event:/Environnement/Circulation
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Circulation
+  guid: 1c7429d6a7e3d94aabec03e9d4814919
+  Banks:
+  - {fileID: 4323269998944636340}
+  IsStream: 1
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+<<<<<<< HEAD
+  Length: 532
 --- !u!114 &-2692483046180697768
+=======
+  Length: 363049
+--- !u!114 &-126033970390077125
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +136,11 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
+<<<<<<< HEAD
   - {fileID: -218765200050036364}
+=======
+  - {fileID: 4323269998944636340}
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -69,7 +148,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 432
+<<<<<<< HEAD
 --- !u!114 &-1482084630054615994
+=======
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 862742506813164982}
+  - {fileID: 4323269998944636340}
+  EditorEvents:
+  - {fileID: -1714029090501194406}
+  - {fileID: 6800671102824371471}
+  - {fileID: 9127205099736613014}
+  - {fileID: -126033970390077125}
+  - {fileID: -8444756188657224080}
+  - {fileID: -3236587667908238593}
+  - {fileID: 2733059540596624043}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 4323269998944636340}
+  StringsBanks:
+  - {fileID: 862742506813164982}
+  stringsBankWriteTime: 637197705145007017
+  cacheVersion: 3
+--- !u!114 &862742506813164982
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,13 +196,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637197974215808723
+=======
+  lastModified: 637197705145007017
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-1239823052809046372
+=======
+--- !u!114 &2733059540596624043
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +225,11 @@ MonoBehaviour:
   Path: event:/Environnement/Rumeur Ville
   guid: effbabf4976ca84ab9a6a1b2f9000f94
   Banks:
+<<<<<<< HEAD
   - {fileID: -218765200050036364}
+=======
+  - {fileID: 4323269998944636340}
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -112,7 +237,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 247040
+<<<<<<< HEAD
 --- !u!114 &-218765200050036364
+=======
+--- !u!114 &4323269998944636340
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,11 +255,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637197974215778849
   LoadResult: 0
   FileSizes: []
   Exists: 1
 --- !u!114 &-40948750831326157
+=======
+  lastModified: 637197705144957174
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6800671102824371471
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +282,11 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
+<<<<<<< HEAD
   - {fileID: -218765200050036364}
+=======
+  - {fileID: 4323269998944636340}
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -153,6 +294,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1847
+<<<<<<< HEAD
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +326,9 @@ MonoBehaviour:
   stringsBankWriteTime: 637197974215808723
   cacheVersion: 3
 --- !u!114 &587365237024901418
+=======
+--- !u!114 &9127205099736613014
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,6 +338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Environnement/Pigeon
   m_EditorClassIdentifier: 
   Path: event:/Environnement/Pigeon
@@ -226,6 +372,18 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+=======
+  m_Name: event:/Test2D
+  m_EditorClassIdentifier: 
+  Path: event:/Test2D
+  guid: 4da63a10cfabed43962236477dcb37dd
+  Banks:
+  - {fileID: 4323269998944636340}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+>>>>>>> b1e83148d7c3e66f044bcf0ee86ffecdcb1be4f5
   MinDistance: 0
   MaxDistance: 0
   Length: 1923
