@@ -13,7 +13,7 @@ public class MouseRotateCamera : MonoBehaviour {
 		if(Lock == true)
 		{
 			Screen.lockCursor = true;
-			transform.Rotate(-Input.GetAxis("Mouse Y"), 0, 0 * Time.deltaTime * speed);
+			transform.Rotate(-Input.GetAxis("Mouse Y") * speed, 0, 0);
 			// Debug.Log(Input.GetAxis("Mouse Y")); => donner un maximum et un minmum pour que la camera ne fasse pas de 360 (A FAIRE PLUS TARD)
 			if(Input.GetKey(KeyCode.Escape))
 			{
