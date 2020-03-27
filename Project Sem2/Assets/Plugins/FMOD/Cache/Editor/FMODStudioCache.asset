@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   lastModified: 637205569989055684
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5502923334519600944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir
   guid: 389f3f374991414a80c2ef98e02491fd
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   Path: event:/Test2D
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -110,6 +110,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1923
+--- !u!114 &-3158405936630230162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637202480544334624
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3663619288370832677}
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   EditorEvents:
   - {fileID: 1065087220048828972}
   - {fileID: -4837309312549523754}
@@ -140,10 +158,10 @@ MonoBehaviour:
   - {fileID: 1858221605127966949}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   StringsBanks:
   - {fileID: 3663619288370832677}
-  stringsBankWriteTime: 637205569989905797
+  stringsBankWriteTime: 637202480544374754
   cacheVersion: 3
 --- !u!114 &11676866164260529
 MonoBehaviour:
@@ -178,7 +196,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -201,7 +219,7 @@ MonoBehaviour:
   Path: event:/Environnement/Circulation
   guid: 1c7429d6a7e3d94aabec03e9d4814919
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -224,7 +242,7 @@ MonoBehaviour:
   Path: event:/Police/SpottedPlayer
   guid: f2f4b40ac09f3a4fa94c9e2c0541f8ed
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -247,7 +265,7 @@ MonoBehaviour:
   Path: event:/Environnement/Pigeon
   guid: 9da91076d98c134ca442eda2f65ea096
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -270,7 +288,7 @@ MonoBehaviour:
   Path: event:/Police/Police_Idle
   guid: e8626b42b17be444ad7af7a1300e9d9b
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -292,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637205569989905797
+  lastModified: 637202480544374754
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -313,7 +331,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir_Relacher
   guid: 940cb740f76d5d40870df09b57f8e4ad
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -336,7 +354,7 @@ MonoBehaviour:
   Path: event:/Environnement/Rumeur Ville
   guid: effbabf4976ca84ab9a6a1b2f9000f94
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -359,7 +377,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir_Appuyer
   guid: ebb62373d9f28247afeaf065ec2e22f6
   Banks:
-  - {fileID: -5806329165868747905}
+  - {fileID: -3158405936630230162}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
