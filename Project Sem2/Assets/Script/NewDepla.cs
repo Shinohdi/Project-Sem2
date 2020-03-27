@@ -48,32 +48,32 @@ public class NewDepla : MonoBehaviour
 
         if(v > 0)
         {
-            anim.SetBool("isWalkingForward", true);
-            anim.SetBool("isIdle", false);
+           // anim.SetBool("isWalkingForward", true);
+           // anim.SetBool("isIdle", false);
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 vitesse = vitesseMax;
-                anim.SetBool("isRunning", true);
+                //anim.SetBool("isRunning", true);
             }
             else if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 vitesse = vitesseMin;
-                anim.SetBool("isRunning", false);
+                //anim.SetBool("isRunning", false);
             }
         }
-        else if (v < 0)
+        /*else if (v < 0)
         {
-            anim.SetBool("isWalkingBackward", true);
-            anim.SetBool("isIdle", false);
+          // anim.SetBool("isWalkingBackward", true);
+          // anim.SetBool("isIdle", false);
         }
         else if(v == 0)
         {
-            anim.SetBool("isWalkingForward", false);
-            anim.SetBool("isWalkingBackward", false);
-            anim.SetBool("isIdle", true);
-            anim.SetBool("isRunning", false);
-        }
+           //anim.SetBool("isWalkingForward", false);
+           //anim.SetBool("isWalkingBackward", false);
+           //anim.SetBool("isIdle", true);
+           //anim.SetBool("isRunning", false);
+        }*/
 
         move.y -= gravité * Time.deltaTime;
 
