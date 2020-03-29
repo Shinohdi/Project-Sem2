@@ -34,6 +34,9 @@
 		<relationship name="parameters">
 			<destination>{8594e987-7e9d-463a-b5ba-a7aa4ebab394}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{5503a03f-ec4a-460e-80e2-6cc99726d56a}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{787403b9-2c7d-47b5-adfe-243bc73b712f}">
 		<relationship name="masterBus">
@@ -96,19 +99,25 @@
 	<object class="MixerBusPanner" id="{2788658c-f9fe-4dd1-8a4c-ac39787ae82b}" />
 	<object class="PluginSound" id="{7d52ce47-9a34-4385-800b-b8cdcbb7d81a}">
 		<property name="length">
-			<value>50</value>
+			<value>51</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{0d50e508-59af-4de8-8b2d-f9b6a31e1f56}</destination>
+		</relationship>
 		<relationship name="plugin">
 			<destination>{91ecf886-525a-4d1b-8d54-0d56e2145f5d}</destination>
 		</relationship>
 	</object>
 	<object class="PluginSound" id="{cdb1121a-c581-40e0-9421-2a5e3835a26d}">
 		<property name="start">
-			<value>50</value>
+			<value>49</value>
 		</property>
 		<property name="length">
-			<value>50</value>
+			<value>51</value>
 		</property>
+		<relationship name="fadeInCurve">
+			<destination>{1fcd4e5f-5dbf-4a93-9d7e-daadf3c623a8}</destination>
+		</relationship>
 		<relationship name="plugin">
 			<destination>{40029e84-6c4e-4099-96cb-fbab630e1cf2}</destination>
 		</relationship>
@@ -137,6 +146,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{b3dff6f5-cd9d-4757-90cf-665857c82f2b}" />
 	<object class="MixerBusFader" id="{f835f4d3-1c20-49e3-80c5-9cb75427e796}" />
+	<object class="FadeCurve" id="{0d50e508-59af-4de8-8b2d-f9b6a31e1f56}">
+		<relationship name="startPoint">
+			<destination>{c0875c79-597a-4729-b19e-97fc3f89e52d}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{a0640c9f-d12a-4bbd-8df4-6e7187706bec}</destination>
+		</relationship>
+	</object>
 	<object class="Plugin" id="{91ecf886-525a-4d1b-8d54-0d56e2145f5d}">
 		<property name="identifier">
 			<value>AudioGaming AudioWind</value>
@@ -190,6 +207,14 @@
 			<destination>{71cae6fb-0658-467f-9245-dcbcbe17c0e6}</destination>
 			<destination>{41798667-aeca-488d-9d1a-17a473cf9964}</destination>
 			<destination>{c3fbaf40-d665-459a-a0fe-c3d4767b8c68}</destination>
+		</relationship>
+	</object>
+	<object class="FadeCurve" id="{1fcd4e5f-5dbf-4a93-9d7e-daadf3c623a8}">
+		<relationship name="startPoint">
+			<destination>{027199f5-baa8-40b9-855a-f9399ff0f9cd}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{736e80ce-ed1d-4cc4-82c4-2425c15d1e74}</destination>
 		</relationship>
 	</object>
 	<object class="Plugin" id="{40029e84-6c4e-4099-96cb-fbab630e1cf2}">
@@ -255,6 +280,25 @@
 	</object>
 	<object class="MixerBusPanner" id="{69f07621-058f-4ac3-bfd3-d37c72c4c382}" />
 	<object class="MixerBusFader" id="{8cb15f1e-480c-4e98-a851-7b57a852bb79}" />
+	<object class="AutomationPoint" id="{c0875c79-597a-4729-b19e-97fc3f89e52d}">
+		<property name="position">
+			<value>49</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a0640c9f-d12a-4bbd-8df4-6e7187706bec}">
+		<property name="position">
+			<value>51</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="FloatPluginParameter" id="{abda2759-b22d-46c0-a0bc-c9139d8fdb1e}">
 		<property name="name">
 			<value>GlobalGain</value>
@@ -799,6 +843,25 @@
 		</property>
 		<property name="maximumValue">
 			<value>3</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{027199f5-baa8-40b9-855a-f9399ff0f9cd}">
+		<property name="position">
+			<value>49</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.2547189</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{736e80ce-ed1d-4cc4-82c4-2425c15d1e74}">
+		<property name="position">
+			<value>51</value>
+		</property>
+		<property name="value">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{fed65ac9-323b-4b45-bb35-305afc4515e7}">
