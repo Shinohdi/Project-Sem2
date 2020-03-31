@@ -10,8 +10,7 @@ public class SplatOnCollision : MonoBehaviour {
 
 	List<ParticleCollisionEvent> collisionEvents;
 
-
-	void Start () 
+    void Start () 
 	{
 		collisionEvents = new List<ParticleCollisionEvent> ();
 	}
@@ -19,7 +18,6 @@ public class SplatOnCollision : MonoBehaviour {
 	void OnParticleCollision(GameObject other)
 	{
 		int numCollisionEvents = ParticlePhysicsExtensions.GetCollisionEvents (particleLauncher, other, collisionEvents);
-
 		int i = 0;
 		while (i < numCollisionEvents) 
 		{
@@ -28,5 +26,4 @@ public class SplatOnCollision : MonoBehaviour {
 		}
 
 	}
-
 }

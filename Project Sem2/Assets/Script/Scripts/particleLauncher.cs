@@ -46,6 +46,5 @@ public class particleLauncher : MonoBehaviour
             psMain.startColor = particleColorGradient.Evaluate(Random.Range(0f,1f));
             ParticleLauncher.Emit(1);
         }
-
     }
 }
