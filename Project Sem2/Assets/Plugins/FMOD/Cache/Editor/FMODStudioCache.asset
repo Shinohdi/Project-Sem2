@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9141543408348791048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ventloop/HauteurJoueur
+  m_EditorClassIdentifier: 
+  Name: HauteurJoueur
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-8212129574166186406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +32,7 @@ MonoBehaviour:
   Path: event:/Test3D
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -38,7 +55,7 @@ MonoBehaviour:
   Path: event:/Environnement/Rumeur Ville
   guid: effbabf4976ca84ab9a6a1b2f9000f94
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -61,7 +78,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir_Appuyer
   guid: ebb62373d9f28247afeaf065ec2e22f6
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -69,6 +86,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 252
+--- !u!114 &-7377273878352199226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637218829759542282
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5900834527873828732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +119,7 @@ MonoBehaviour:
   Path: event:/Police/Police_Idle
   guid: e8626b42b17be444ad7af7a1300e9d9b
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -107,7 +142,7 @@ MonoBehaviour:
   Path: event:/Test2D
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -129,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637210942749502370
+  lastModified: 637218829759582186
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -150,7 +185,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/ParticuleCollisionSurface
   guid: 7f0af592378b6a4892a6fb0527059499
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -173,7 +208,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceSimple/Pas
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -195,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4492576921104752121}
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   EditorEvents:
   - {fileID: 1445096014535178148}
   - {fileID: 946851145130640157}
@@ -213,10 +248,10 @@ MonoBehaviour:
   - {fileID: 5774244144231072838}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   StringsBanks:
   - {fileID: -4492576921104752121}
-  stringsBankWriteTime: 637210942749502370
+  stringsBankWriteTime: 637218829759582186
   cacheVersion: 3
 --- !u!114 &897800528531130067
 MonoBehaviour:
@@ -234,7 +269,7 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &946851145130640157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +285,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir
   guid: 389f3f374991414a80c2ef98e02491fd
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -273,12 +308,12 @@ MonoBehaviour:
   Path: event:/Environnement/Ventloop
   guid: dcda97aaa3e72e4abe6f962d9f9bb574
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 897800528531130067}
+  - {fileID: -9141543408348791048}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -297,7 +332,7 @@ MonoBehaviour:
   Path: event:/Environnement/Circulation
   guid: 1c7429d6a7e3d94aabec03e9d4814919
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -322,7 +357,7 @@ MonoBehaviour:
   lastModified: 637210942749462809
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &3994290145107287417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +373,7 @@ MonoBehaviour:
   Path: event:/Avatar/Deplacements/SurfaceAvecPeinture/PasSurPeinture
   guid: a2b16c00f6b804428e96a94c228f62bc
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -361,7 +396,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Tir_Relacher
   guid: 940cb740f76d5d40870df09b57f8e4ad
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -384,7 +419,7 @@ MonoBehaviour:
   Path: event:/Police/SpottedPlayer
   guid: f2f4b40ac09f3a4fa94c9e2c0541f8ed
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -407,7 +442,7 @@ MonoBehaviour:
   Path: event:/Environnement/Pigeon
   guid: 9da91076d98c134ca442eda2f65ea096
   Banks:
-  - {fileID: 3863581112280405320}
+  - {fileID: -7377273878352199226}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
