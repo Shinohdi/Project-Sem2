@@ -6,6 +6,7 @@ public class SplatOnCollision : MonoBehaviour {
 
 	public ParticleSystem particleLauncher;
 	public Gradient particleColorGradient;
+	public Gradient particleColorGradientBlue;
 	//public ParticleDecalPool dropletDecalPool;
 
 	List<ParticleCollisionEvent> collisionEvents;
@@ -21,7 +22,7 @@ public class SplatOnCollision : MonoBehaviour {
 		int i = 0;
 		while (i < numCollisionEvents) 
 		{
-            //	dropletDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
+            	//dropletDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
             i++;
 		}
 
