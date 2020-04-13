@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ab83e98c-b298-4f3d-bab2-4e1828cb53a0}">
+		<property name="assetPath">
+			<value>ElectricalBuzzing_03.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.8960090702947845</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f403242-59e4-4c92-b244-bb3edfad3f4c}</destination>
+		</relationship>
+	</object>
+</objects>
