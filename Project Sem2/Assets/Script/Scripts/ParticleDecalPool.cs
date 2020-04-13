@@ -13,6 +13,9 @@ public class ParticleDecalPool : MonoBehaviour
     private particleDecalData[] particleData;
     private int particleDecalDataIndex;
     private ParticleSystem.Particle[] particles;
+    public bool Red = true;
+    public bool Blue = false;
+    public bool Green = false;
 
     void Start()
     {
@@ -45,8 +48,22 @@ public class ParticleDecalPool : MonoBehaviour
         particleRotationEuler.z = Random.Range(0, 360);
         particleData[particleDecalDataIndex].rotation = particleRotationEuler;
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
-        particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f, 1f));
+        //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
         particleDecalDataIndex++;
+        
+        if (Red == true)
+        {
+            particleData[particleDecalDataIndex].color = colorGradient.Evaluate(0f);
+        }
+        if (Blue == true)
+        {
+            particleData[particleDecalDataIndex].color = colorGradient.Evaluate(0.5f);
+        }
+        if (Green == true)
+        {
+            particleData[particleDecalDataIndex].color = colorGradient.Evaluate(1f);
+        }
+        
     }
 
     void DisplayParticles()
@@ -62,4 +79,25 @@ public class ParticleDecalPool : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            if(Red == true)
+            {
+                Blue = true;
+                Red = false;
+            }
+            else if(Blue == true)
+            {
+                Green = true;
+                Blue = false;
+            }
+            else if(Green == true)
+            {
+                Red = true;
+                Green = false;
+            }
+        }
+    }
 }
