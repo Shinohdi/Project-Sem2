@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{3bf6c207-1bc6-40b8-85d9-f12d7c76d2df}">
 		<property name="assetPath">
-			<value>ElectricalBuzzingLoop_06.wav</value>
+			<value>Electrique/ElectricalBuzzingLoop_06.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

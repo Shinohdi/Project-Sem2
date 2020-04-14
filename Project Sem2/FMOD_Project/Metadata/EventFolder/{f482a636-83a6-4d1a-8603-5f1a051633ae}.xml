@@ -5,7 +5,7 @@
 			<value>SurfaceAvecPeinture</value>
 		</property>
 		<relationship name="folder">
-			<destination>{e453bcb7-25bc-4e18-8cef-e01a0fe08705}</destination>
+			<destination>{abb9cccc-c890-4c49-a4c7-6f600ed62bfd}</destination>
 		</relationship>
 	</object>
 </objects>
