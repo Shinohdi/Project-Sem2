@@ -10,7 +10,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Serializable]
         public class MovementSettings
         {
-            public float ForwardSpeed = 8.0f;   // Speed when walking forward
+            public float ForwardSpeed = 8.0f;
+            public float ForwardSpeedMax = 10.0f;   // Speed when walking forward
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float SpeedInAir = 8.0f;   // Speed when onair
@@ -143,7 +144,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (Input.GetAxisRaw("Vertical") > 0.3f)
                 {
-                    m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+                    if (Input.GetKey(KeyCode.LeftShift))
+                    {
+                        m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeedMax * Mathf.Abs(inputVector.z));
+                    }
+                    else
+                    {
+                        m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+                    }
                 }
                 if (Input.GetAxisRaw("Vertical") < -0.3f)
                 {
