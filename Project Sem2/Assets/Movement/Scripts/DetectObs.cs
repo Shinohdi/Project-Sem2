@@ -37,9 +37,7 @@ public class DetectObs : MonoBehaviour
             }
 
         }
-
-
-      
+    
     }
 
     private void Update()
