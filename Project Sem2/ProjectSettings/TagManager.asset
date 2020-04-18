@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TexturePeinture
   - Sol
+  - Avatar
   layers:
   - Default
   - TransparentFX
