@@ -106,12 +106,15 @@ public class PlayerController : MonoBehaviour
             isOnClimb = true;
             rb.isKinematic = true; //ensure physics do not interrupt the vault
             RecordedMoveToPosition = ClimbEndPoint.position;
-            RecordedStartPosition = transform.position;           
+            RecordedStartPosition = transform.position;
+
+            
 
         }
 
         if (isOnClimb)
         {
+
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 isOnClimb = false;
@@ -127,6 +130,39 @@ public class PlayerController : MonoBehaviour
                 isOnClimb = false;
                 rb.AddForce(cam.gameObject.transform.forward * 10, ForceMode.Impulse);
             }
+
+            /*if(Input.GetKey(KeyCode.D))
+            {
+                rb.isKinematic = false;
+                rb.useGravity = false;
+                rb.AddRelativeForce(ClimbEndPoint.right * Time.deltaTime * 1000f * 5);
+
+            }
+            else
+            {
+                RecordedMoveToPosition = ClimbEndPoint.position;
+                RecordedStartPosition = transform.position;
+                rb.isKinematic = true;
+                rb.useGravity = true;
+
+            }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                rb.isKinematic = false;
+                rb.useGravity = false;
+                rb.AddRelativeForce( * Time.deltaTime * 1000f * -5);
+
+
+            }
+            else
+            {
+                RecordedMoveToPosition = ClimbEndPoint.position;
+                RecordedStartPosition = transform.position;
+                rb.isKinematic = true;
+                rb.useGravity = true;
+
+            }*/
         }
 
 
