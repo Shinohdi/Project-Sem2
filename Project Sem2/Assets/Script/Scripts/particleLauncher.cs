@@ -41,6 +41,7 @@ public class particleLauncher : MonoBehaviour
         splatterParticles.Emit(1);
     }
 
+
     void Update()
     {
         if (Input.GetButton("Fire1") && splatDecalPool.Red == true)
