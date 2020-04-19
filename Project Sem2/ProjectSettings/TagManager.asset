@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TexturePeinture
   - Sol
+  - Avatar
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Rouge
   - Bleu
   - Environment
-  - 
+  - PPP
   - 
   - 
   - 

@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private float t_parkour;
     private float chosenParkourMoveTime;
 
+    [SerializeField] private Camera cam;
+
     private bool CanVault;
     public float VaultTime; //how long the vault takes
     public Transform VaultEndPoint;
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private bool CanClimb;
     public float ClimbTime; //how long the vault takes
     public Transform ClimbEndPoint;
+    private bool isOnClimb;
 
     private RigidbodyFirstPersonController rbfps;
     private Rigidbody rb;
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //climb
-        if (detectClimbObject.Obstruction && !detectClimbObstruction.Obstruction && !CanClimb && !IsParkour && !WallRunning
+        if (detectClimbObject.Obstruction && isOnClimb == false &&!detectClimbObstruction.Obstruction && !CanClimb && !IsParkour && !WallRunning
             && (Input.GetKey(KeyCode.Space) || !rbfps.Grounded) && Input.GetAxisRaw("Vertical") > 0f)
         {
             CanClimb = true;
@@ -100,13 +103,66 @@ public class PlayerController : MonoBehaviour
         if (CanClimb)
         {
             CanClimb = false; // so this is only called once
+            isOnClimb = true;
             rb.isKinematic = true; //ensure physics do not interrupt the vault
             RecordedMoveToPosition = ClimbEndPoint.position;
             RecordedStartPosition = transform.position;
-            IsParkour = true;
-            chosenParkourMoveTime = ClimbTime;
 
-            cameraAnimator.CrossFade("Climb",0.1f);
+            
+
+        }
+
+        if (isOnClimb)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                isOnClimb = false;
+                IsParkour = true;
+                chosenParkourMoveTime = ClimbTime;
+
+                cameraAnimator.CrossFade("Climb", 0.1f);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.isKinematic = false;
+                isOnClimb = false;
+                rb.AddForce(cam.gameObject.transform.forward * 10, ForceMode.Impulse);
+            }
+
+            /*if(Input.GetKey(KeyCode.D))
+            {
+                rb.isKinematic = false;
+                rb.useGravity = false;
+                rb.AddRelativeForce(ClimbEndPoint.right * Time.deltaTime * 1000f * 5);
+
+            }
+            else
+            {
+                RecordedMoveToPosition = ClimbEndPoint.position;
+                RecordedStartPosition = transform.position;
+                rb.isKinematic = true;
+                rb.useGravity = true;
+
+            }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                rb.isKinematic = false;
+                rb.useGravity = false;
+                rb.AddRelativeForce( * Time.deltaTime * 1000f * -5);
+
+
+            }
+            else
+            {
+                RecordedMoveToPosition = ClimbEndPoint.position;
+                RecordedStartPosition = transform.position;
+                rb.isKinematic = true;
+                rb.useGravity = true;
+
+            }*/
         }
 
 

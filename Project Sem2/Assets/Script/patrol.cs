@@ -33,7 +33,7 @@ public class patrol : MonoBehaviour
     private void Update()
     {
         UpdateState();
-        Debug.Log(agent.remainingDistance);
+        //Debug.Log(agent.remainingDistance);
     }
 
     private void OnEnterState()
