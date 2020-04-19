@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ParticleDecalPool : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class ParticleDecalPool : MonoBehaviour
     public bool Red = true;
     public bool Blue = false;
     public bool Green = false;
+
+    [SerializeField] private tagScore tS;
+    [SerializeField] private Text text;
+
+
+    public int score = 0;
 
     void Start()
     {
@@ -43,6 +50,11 @@ public class ParticleDecalPool : MonoBehaviour
             particleDecalDataIndex = 0;
         }
 
+        if (tS.isScoring == true)
+        {
+            score++;
+            text.text = score.ToString();
+        }
         particleData[particleDecalDataIndex].position = particleCollisionEvent.intersection;
         Vector3 particleRotationEuler = Quaternion.LookRotation(particleCollisionEvent.normal).eulerAngles;
         particleRotationEuler.z = Random.Range(0, 360);
@@ -50,6 +62,7 @@ public class ParticleDecalPool : MonoBehaviour
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
         //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
         particleDecalDataIndex++;
+        Debug.Log(score);
         
         if (Red == true)
         {
@@ -98,6 +111,15 @@ public class ParticleDecalPool : MonoBehaviour
                 Red = true;
                 Green = false;
             }
+        }
+
+        if (tS.isScoring == true)
+        {
+            text.enabled = true;
+        }
+        else
+        {
+            text.enabled = false;
         }
     }
 }
