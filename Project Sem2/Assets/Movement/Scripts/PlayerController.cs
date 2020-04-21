@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public DetectObs detectVaultObstruction; //checks if theres somthing in front of the object e.g walls that will not allow the player to vault
     public DetectObs detectClimbObject; //checks for climb object
     public DetectObs detectClimbObstruction; //checks if theres somthing in front of the object e.g walls that will not allow the player to climb
+    public DetectObs detectCorniche; //checks if theres somthing in front of the object e.g walls that will not allow the player to climb
 
 
     public DetectObs DetectWallL; //detects for a wall on the left
@@ -43,7 +44,10 @@ public class PlayerController : MonoBehaviour
     private bool CanClimb;
     public float ClimbTime; //how long the vault takes
     public Transform ClimbEndPoint;
-    private bool isOnClimb;
+    private bool canCorniche;
+    private bool isOnCorniche;
+
+    public int JumpForceInCorniche;
 
     private RigidbodyFirstPersonController rbfps;
     private Rigidbody rb;
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //climb
-        if (detectClimbObject.Obstruction && isOnClimb == false &&!detectClimbObstruction.Obstruction && !CanClimb && !IsParkour && !WallRunning
+        if (detectClimbObject.Obstruction &&!detectClimbObstruction.Obstruction && !CanClimb && !IsParkour && !WallRunning
             && (Input.GetKey(KeyCode.Space) || !rbfps.Grounded) && Input.GetAxisRaw("Vertical") > 0f)
         {
             CanClimb = true;
@@ -103,66 +107,42 @@ public class PlayerController : MonoBehaviour
         if (CanClimb)
         {
             CanClimb = false; // so this is only called once
-            isOnClimb = true;
             rb.isKinematic = true; //ensure physics do not interrupt the vault
             RecordedMoveToPosition = ClimbEndPoint.position;
             RecordedStartPosition = transform.position;
+            IsParkour = true;
+            chosenParkourMoveTime = ClimbTime;
 
-            
+            cameraAnimator.CrossFade("Climb", 0.1f);
 
         }
 
-        if (isOnClimb)
+        //corniche
+        if(detectCorniche.Obstruction && isOnCorniche == false && !IsParkour && !rbfps.Grounded)
         {
+            canCorniche = true;
+        }
 
-            if (Input.GetKeyDown(KeyCode.Z))
+        if (canCorniche)
+        {
+            canCorniche = false;
+            isOnCorniche = true;
+            rb.isKinematic = true;
+        }
+
+        if (isOnCorniche)
+        {
+            if (Input.GetKeyDown(KeyCode.S))
             {
-                isOnClimb = false;
-                IsParkour = true;
-                chosenParkourMoveTime = ClimbTime;
-
-                cameraAnimator.CrossFade("Climb", 0.1f);
+                rb.isKinematic = false;
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.isKinematic = false;
-                isOnClimb = false;
-                rb.AddForce(cam.gameObject.transform.forward * 10, ForceMode.Impulse);
+                isOnCorniche = false;
+                rb.AddForce(cam.gameObject.transform.forward * JumpForceInCorniche, ForceMode.Impulse);
             }
-
-            /*if(Input.GetKey(KeyCode.D))
-            {
-                rb.isKinematic = false;
-                rb.useGravity = false;
-                rb.AddRelativeForce(ClimbEndPoint.right * Time.deltaTime * 1000f * 5);
-
-            }
-            else
-            {
-                RecordedMoveToPosition = ClimbEndPoint.position;
-                RecordedStartPosition = transform.position;
-                rb.isKinematic = true;
-                rb.useGravity = true;
-
-            }
-
-            if (Input.GetKey(KeyCode.Q))
-            {
-                rb.isKinematic = false;
-                rb.useGravity = false;
-                rb.AddRelativeForce( * Time.deltaTime * 1000f * -5);
-
-
-            }
-            else
-            {
-                RecordedMoveToPosition = ClimbEndPoint.position;
-                RecordedStartPosition = transform.position;
-                rb.isKinematic = true;
-                rb.useGravity = true;
-
-            }*/
         }
 
 
