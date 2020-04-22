@@ -14,8 +14,6 @@ public class policierZone2 : MonoBehaviour
     {           
             if (gameOver == true)
             {
-                Debug.Log("2");
-                Application.LoadLevel(1);
                 count += Time.deltaTime;
                 //Debug.Log("2");
                 FadeToLevel(1);
@@ -23,7 +21,6 @@ public class policierZone2 : MonoBehaviour
                 if (count > compT)
                 {
                     Application.LoadLevel(1);
-                    
                 }
             }
     }
