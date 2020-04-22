@@ -183,6 +183,7 @@
 			<destination>{d00e9f69-0609-4f4a-8c7b-b073d31905cf}</destination>
 			<destination>{34cc7dad-4a98-4191-b30e-845315a2f69d}</destination>
 			<destination>{fbdef584-3737-4802-9ad7-feb51dcd23ad}</destination>
+			<destination>{ead7fe0e-e771-4164-927b-21eac3d44565}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{148d4398-cef4-444b-94fe-b7a2c0dfdbfc}" />
@@ -209,7 +210,7 @@
 	</object>
 	<object class="LowpassSimpleEffect" id="{d00e9f69-0609-4f4a-8c7b-b073d31905cf}">
 		<property name="cutoff">
-			<value>7000</value>
+			<value>4200</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{34cc7dad-4a98-4191-b30e-845315a2f69d}" />
@@ -234,6 +235,11 @@
 		</property>
 		<property name="wetLevel">
 			<value>-26</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{ead7fe0e-e771-4164-927b-21eac3d44565}">
+		<property name="highGain">
+			<value>-18.5</value>
 		</property>
 	</object>
 </objects>
