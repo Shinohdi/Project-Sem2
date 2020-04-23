@@ -5,7 +5,7 @@
 			<value>Saut</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b02e731a-b76f-4abf-903b-ecb438ff28fb}</destination>
@@ -126,6 +126,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{7c514042-d755-4983-8b79-93858387dd32}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>33</value>
+		</property>
 		<property name="length">
 			<value>1.4735147392290249</value>
 		</property>
@@ -135,7 +141,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{ea4abf8c-698c-421b-bbc9-20618703ad16}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-19.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -153,7 +159,6 @@
 	<object class="MixerBusEffectChain" id="{c963505f-6b35-4355-977c-c5f4a44a52ea}">
 		<relationship name="effects">
 			<destination>{8566a086-db59-4620-8d0c-2abeb1b7b834}</destination>
-			<destination>{103a66f6-5422-4f37-a03c-30860455336c}</destination>
 			<destination>{c578a992-b225-4d2e-8f83-021796302ab1}</destination>
 		</relationship>
 	</object>
@@ -192,7 +197,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{d22285f3-7d5e-4ea2-8257-8ccf7ef466b1}" />
 	<object class="MixerBusFader" id="{8566a086-db59-4620-8d0c-2abeb1b7b834}" />
-	<object class="SpatialiserEffect" id="{103a66f6-5422-4f37-a03c-30860455336c}" />
 	<object class="SFXReverbEffect" id="{c578a992-b225-4d2e-8f83-021796302ab1}">
 		<property name="earlyDelay">
 			<value>7</value>

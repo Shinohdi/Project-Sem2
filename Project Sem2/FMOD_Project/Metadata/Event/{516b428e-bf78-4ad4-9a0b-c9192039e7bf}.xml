@@ -5,7 +5,7 @@
 			<value>Ambiance</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7fdf00dd-70c8-4f59-a527-084da3af527f}</destination>
@@ -197,7 +197,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{5b2440a9-e86b-4197-92d5-265c97927004}">
 		<property name="volume">
-			<value>-12</value>
+			<value>-18</value>
 		</property>
 		<property name="name">
 			<value>Audio 3</value>
@@ -230,7 +230,6 @@
 		<relationship name="effects">
 			<destination>{a078bba6-6c6f-4faa-9d64-0fb99a3b0e07}</destination>
 			<destination>{55fe89bb-0336-4154-bddf-3d3c20cb6761}</destination>
-			<destination>{0a8435df-00ec-4420-9fee-67e2abee4757}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6b8fc492-36f5-4d92-98b0-a48d93c58278}" />
@@ -311,7 +310,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{55fe89bb-0336-4154-bddf-3d3c20cb6761}" />
-	<object class="SpatialiserEffect" id="{0a8435df-00ec-4420-9fee-67e2abee4757}" />
 	<object class="MixerBusFader" id="{5a6e509e-c103-4a4f-afa7-409de3a4eb46}" />
 	<object class="LowpassEffect" id="{066ecf0e-6cfb-4fa7-9a2e-5d328195981b}">
 		<property name="cutoff">
@@ -321,13 +319,13 @@
 	<object class="MixerBusFader" id="{7434b8e1-c962-4e6b-9106-912afd4ae515}" />
 	<object class="ThreeEQEffect" id="{fe766e3a-ee76-4bbd-a722-59966f943808}">
 		<property name="lowGain">
-			<value>-32</value>
+			<value>-8.5</value>
 		</property>
 		<property name="midGain">
 			<value>-5</value>
 		</property>
 		<property name="highGain">
-			<value>-28.5</value>
+			<value>-26</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c49b14e3-cf78-424f-bc0f-cf66ff5b3d1e}">

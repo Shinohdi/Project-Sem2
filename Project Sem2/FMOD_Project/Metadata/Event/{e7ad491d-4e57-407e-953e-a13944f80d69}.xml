@@ -5,7 +5,7 @@
 			<value>Grimper</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{06a27646-1a24-4fe7-a242-09825f342bc2}</destination>
@@ -136,7 +136,6 @@
 	<object class="MixerBusEffectChain" id="{412295c4-c96f-45c8-a43b-5ed545cfd888}">
 		<relationship name="effects">
 			<destination>{8709ae3c-f036-46cd-9cda-3c822e00e570}</destination>
-			<destination>{5e0bf33b-7397-4e0d-834c-275e55271d84}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{28f4a6a7-d499-4f68-9a94-1ef5c33a4ead}" />
@@ -200,7 +199,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{2aecd4d0-09a3-4201-bba8-da64a6ba5315}" />
 	<object class="MixerBusFader" id="{8709ae3c-f036-46cd-9cda-3c822e00e570}" />
-	<object class="SpatialiserEffect" id="{5e0bf33b-7397-4e0d-834c-275e55271d84}" />
 	<object class="AutomationPoint" id="{95c394f6-0332-47db-87f9-370975925b8f}">
 		<property name="position">
 			<value>0.5</value>
