@@ -5,7 +5,7 @@
 			<value>ImpactSol</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b02e731a-b76f-4abf-903b-ecb438ff28fb}</destination>
@@ -117,7 +117,6 @@
 	<object class="MixerBusEffectChain" id="{488a4150-b624-4e40-8d9d-000d06f689c6}">
 		<relationship name="effects">
 			<destination>{d7b95731-eb9e-4cd3-81cc-96ca82214637}</destination>
-			<destination>{c28f79f0-9267-4262-89ff-1f2863d7440f}</destination>
 			<destination>{5ddcf4fa-204c-4de6-9ff1-e5a7770ca0a6}</destination>
 		</relationship>
 	</object>
@@ -140,7 +139,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{b661d968-e8e8-4440-bcdd-43a00fabbb1b}" />
 	<object class="MixerBusFader" id="{d7b95731-eb9e-4cd3-81cc-96ca82214637}" />
-	<object class="SpatialiserEffect" id="{c28f79f0-9267-4262-89ff-1f2863d7440f}" />
 	<object class="SFXReverbEffect" id="{5ddcf4fa-204c-4de6-9ff1-e5a7770ca0a6}">
 		<property name="earlyDelay">
 			<value>7</value>

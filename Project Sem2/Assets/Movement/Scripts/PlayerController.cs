@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerController : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    public string EventGrimpe = "";
+    [FMODUnity.EventRef]
+    public string EventAccrocheEdge = "";
+    [FMODUnity.EventRef]
+    public string EventSaut = "";
+
     public float drag_grounded;
     public float drag_inair;
 
@@ -94,6 +101,7 @@ public class PlayerController : MonoBehaviour
             IsParkour = true;
             chosenParkourMoveTime = VaultTime;
 
+            FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
             cameraAnimator.CrossFade("Vault",0.1f);
         }
 
@@ -113,6 +121,7 @@ public class PlayerController : MonoBehaviour
             IsParkour = true;
             chosenParkourMoveTime = ClimbTime;
 
+            FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
             cameraAnimator.CrossFade("Climb", 0.1f);
 
         }
@@ -125,6 +134,8 @@ public class PlayerController : MonoBehaviour
 
         if (canCorniche)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(EventAccrocheEdge, transform.position);
+
             canCorniche = false;
             isOnCorniche = true;
             rb.isKinematic = true;
@@ -139,6 +150,8 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
+
                 rb.isKinematic = false;
                 isOnCorniche = false;
                 rb.AddForce(cam.gameObject.transform.forward * JumpForceInCorniche, ForceMode.Impulse);

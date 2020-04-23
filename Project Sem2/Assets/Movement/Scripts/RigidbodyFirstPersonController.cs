@@ -7,6 +7,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        [FMODUnity.EventRef]
+        public string EventSaut = "";
+
+        [FMODUnity.EventRef]
+        public string EventEnAir = "";
+        FMOD.Studio.EventInstance EnAir;
+
         [Serializable]
         public class MovementSettings
         {
@@ -77,12 +84,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             get { return m_IsGrounded; }
         }
 
-        
-
-
         private void Awake()
         {
-            
+            EnAir = FMODUnity.RuntimeManager.CreateInstance(EventEnAir);
+
             canrotate = true;
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
@@ -98,6 +103,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    EnAir.start(); // SE JOUE UNE FOIS SUR 10 ????
+                    Debug.Log("EventAirStart");
+                    FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
                     NormalJump();
                 }
 
@@ -238,13 +246,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void GroundCheck()
         {
           if(detectGround.Obstruction)
-            {
+            {                
+                EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                Debug.Log("EventAirStop");
                 m_IsGrounded = true;
             }
           else
             {
                 m_IsGrounded = false;
-
             }
         }
     }
