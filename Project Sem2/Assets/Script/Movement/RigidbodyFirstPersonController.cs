@@ -62,6 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Vector3 relativevelocity;
 
         public DetectObs detectGround;
+        
 
 
         public bool Wallrunning;
@@ -72,6 +73,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private CapsuleCollider m_Capsule;
         private float m_YRotation;
         private bool  m_IsGrounded;
+        private bool isPlaying;
 
 
         public Vector3 Velocity
@@ -89,12 +91,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             EnAir = FMODUnity.RuntimeManager.CreateInstance(EventEnAir);
 
             canrotate = true;
-            m_RigidBody = GetComponent<Rigidbody>();
+            m_RigidBody = GetComponent<Rigidbody>();           
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init (transform, cam.transform);
         }
 
-
+        
         private void Update()
         {
             relativevelocity = transform.InverseTransformDirection(m_RigidBody.velocity);
@@ -102,15 +104,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
 
                 if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    EnAir.start(); // SE JOUE UNE FOIS SUR 10 ????
-                    Debug.Log("EventAirStart");
+                {                  
                     FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
                     NormalJump();
                 }
 
             }
 
+            if (m_RigidBody.velocity.y < -15 && !isPlaying)
+            {
+                EnAir.start();
+                isPlaying = true;
+            }
+            else if (m_IsGrounded || m_RigidBody.isKinematic)
+            {
+                EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                isPlaying = false;
+
+            }
         }
 
 
@@ -210,6 +221,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_RigidBody.velocity = transform.forward * m_RigidBody.velocity.magnitude;
             m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
         }
+
+        
   
 
       
@@ -247,8 +260,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
           if(detectGround.Obstruction)
             {                
-                EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                Debug.Log("EventAirStop");
                 m_IsGrounded = true;
             }
           else

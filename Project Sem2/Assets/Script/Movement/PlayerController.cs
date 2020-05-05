@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour
     public Transform ClimbEndPoint;
     private bool canCorniche;
     private bool isOnCorniche;
+    private bool timeWait;
+
+    private float timer;
+    [SerializeField] private float timeMaxWait;
 
     public int JumpForceInCorniche;
 
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         rbfps = GetComponent<RigidbodyFirstPersonController>();
         rb = GetComponent<Rigidbody>();
+        timer = 0;
     }
 
     // Update is called once per frame
@@ -127,7 +132,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //corniche
-        if(detectCorniche.Obstruction && isOnCorniche == false && !IsParkour && !rbfps.Grounded)
+        if(detectCorniche.Obstruction && isOnCorniche == false && !IsParkour && !rbfps.Grounded && timeWait == false)
         {
             canCorniche = true;
         }
@@ -146,6 +151,9 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S))
             {
                 rb.isKinematic = false;
+                timeWait = true;
+                isOnCorniche = false;
+
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -153,8 +161,21 @@ public class PlayerController : MonoBehaviour
                 FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
 
                 rb.isKinematic = false;
+                timeWait = true;
                 isOnCorniche = false;
                 rb.AddForce(cam.gameObject.transform.forward * JumpForceInCorniche, ForceMode.Impulse);
+
+            }
+        }
+
+        if (timeWait)
+        {
+            timer += Time.deltaTime;
+
+            if(timer >= timeMaxWait)
+            {
+                timeWait = false;
+                timer = 0;
             }
         }
 
