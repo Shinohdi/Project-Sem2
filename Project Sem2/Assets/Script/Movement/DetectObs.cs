@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DetectObs : MonoBehaviour
 {
+
+    public Transform corniche;
+
     public string ObjectTagName = "";
     public bool Obstruction;
     public GameObject Object;
@@ -19,6 +22,7 @@ public class DetectObs : MonoBehaviour
                     if (col != null && !col.isTrigger && col.GetComponent<CustomTag>().HasTag(ObjectTagName)) // checks if the object has the right tag
                     {
                         Obstruction = true;
+                        corniche = col.transform;
                         Object = col.gameObject;
                         colnow = col;
                     }
