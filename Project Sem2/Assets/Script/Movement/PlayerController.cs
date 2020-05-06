@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     public Animator cameraAnimator;
 
+    public float cornicheOffset = 1.5f;
+    public float CornicheTime;
+
     public float WallRunUpForce;
     public float WallRunUpForce_DecreaseRate;
     private float upforce;
@@ -135,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if(detectCorniche.Obstruction && isOnCorniche == false && !IsParkour && !rbfps.Grounded && timeWait == false)
         {
             canCorniche = true;
+
         }
 
         if (canCorniche)
@@ -144,6 +148,14 @@ public class PlayerController : MonoBehaviour
             canCorniche = false;
             isOnCorniche = true;
             rb.isKinematic = true;
+
+            Vector3 relativePosition = detectCorniche.corniche.InverseTransformPoint(transform.position); 
+            RecordedMoveToPosition = detectCorniche.corniche.position + detectCorniche.corniche.forward * relativePosition.z; //forward est lié a l'orentation de l'objet, donc on utilise la position relative z (si il était sur x, on utiliserai right et le x)
+            //Pour faire un offset vertical, on copie la même ligne et on modifie right par up
+            RecordedMoveToPosition += detectCorniche.corniche.right * cornicheOffset;
+            RecordedStartPosition = transform.position;
+            IsParkour = true;
+            chosenParkourMoveTime = CornicheTime;
         }
 
         if (isOnCorniche)
@@ -190,7 +202,11 @@ public class PlayerController : MonoBehaviour
             {
                 IsParkour = false;
                 t_parkour = 0f;
-                rb.isKinematic = false;
+                if(!isOnCorniche)
+                {
+                    rb.isKinematic = false;
+
+                }
 
             }
         }
