@@ -150,9 +150,9 @@ public class PlayerController : MonoBehaviour
             rb.isKinematic = true;
 
             Vector3 relativePosition = detectCorniche.corniche.InverseTransformPoint(transform.position); 
-            RecordedMoveToPosition = detectCorniche.corniche.position + detectCorniche.corniche.forward * relativePosition.z; //forward est lié a l'orentation de l'objet, donc on utilise la position relative z (si il était sur x, on utiliserai right et le x)
+            RecordedMoveToPosition = detectCorniche.corniche.position + detectCorniche.corniche.right * relativePosition.x; //forward est lié a l'orentation de l'objet, donc on utilise la position relative z (si il était sur x, on utiliserai right et le x)
             //Pour faire un offset vertical, on copie la même ligne et on modifie right par up
-            RecordedMoveToPosition += detectCorniche.corniche.right * cornicheOffset;
+            RecordedMoveToPosition -= detectCorniche.corniche.forward * cornicheOffset;
             RecordedStartPosition = transform.position;
             IsParkour = true;
             chosenParkourMoveTime = CornicheTime;
