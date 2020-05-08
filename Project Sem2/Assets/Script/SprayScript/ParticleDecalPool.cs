@@ -94,7 +94,7 @@ public class ParticleDecalPool : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetAxis("Mouse ScrollWheel") > 0.1 || Input.GetAxis("Mouse ScrollWheel") < -0.1)
         {
             if(Red == true)
             {
