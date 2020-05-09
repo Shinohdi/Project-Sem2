@@ -4767,12 +4767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d984343d282f8b4c922ad850c29832a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDecals: 1000
+  maxDecals: 10000
   decalSizeMin: 0.5
   decalSizeMax: 1.5
-  Red: 1
-  Blue: 0
-  Green: 0
   tS: {fileID: 0}
   text: {fileID: 0}
+  TagRed: {fileID: 0}
+  TagBlue: {fileID: 0}
+  TagGreen: {fileID: 0}
   score: 0
+  isOnParkour: 0
+  colorNow: 0

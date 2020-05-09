@@ -62,8 +62,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Vector3 relativevelocity;
 
         public DetectObs detectGround;
-        
 
+        [SerializeField] ParticleDecalPool PDP;
+        
 
         public bool Wallrunning;
 
@@ -166,6 +167,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     if (Input.GetKey(KeyCode.LeftShift))
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeedMax * Mathf.Abs(inputVector.z));
+
                     }
                     else
                     {
