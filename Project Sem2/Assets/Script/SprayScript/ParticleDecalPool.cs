@@ -14,15 +14,93 @@ public class ParticleDecalPool : MonoBehaviour
     private particleDecalData[] particleData;
     private int particleDecalDataIndex;
     private ParticleSystem.Particle[] particles;
-    public bool Red = true;
-    public bool Blue = false;
-    public bool Green = false;
 
     [SerializeField] private tagScore tS;
     [SerializeField] private Text text;
 
+    [SerializeField] private GameObject TagRed;
+    [SerializeField] private GameObject TagBlue;
+    [SerializeField] private GameObject TagGreen;
 
     public int score = 0;
+
+    public bool isOnParkour;
+
+
+    public enum Color
+    {       
+        Red,
+        Blue,
+        Green
+    }
+
+    public Color colorNow = Color.Red;
+
+    public void OnEnterColor()
+    {
+        switch (colorNow)
+        {
+            case Color.Red:
+                TagRed.SetActive(true);
+
+                break;
+            case Color.Blue:
+                TagBlue.SetActive(true);
+
+                break;
+            case Color.Green:
+                TagGreen.SetActive(true);
+
+                break;
+
+        }
+    }
+
+    public void OnExitColor()
+    {
+        switch (colorNow)
+        {
+            case Color.Red:
+                TagRed.SetActive(false);
+
+                break;
+            case Color.Blue:
+                TagBlue.SetActive(false);
+
+                break;
+            case Color.Green:
+                TagGreen.SetActive(false);
+
+                break;
+
+        }
+    }
+
+    public void UpdateColor()
+    {
+        switch (colorNow)
+        {
+            case Color.Red:
+
+                break;
+            case Color.Blue:
+
+                break;
+            case Color.Green:
+
+                break;
+
+        }
+    }
+
+    public void SwitchColor(Color newColor)
+    {
+        OnExitColor();
+        colorNow = newColor;
+        OnEnterColor();
+
+    }
+
 
     void Start()
     {
@@ -64,15 +142,15 @@ public class ParticleDecalPool : MonoBehaviour
         particleDecalDataIndex++;
         Debug.Log(score);
         
-        if (Red == true)
+        if (colorNow == Color.Red)
         {
             particleData[particleDecalDataIndex].color = colorGradient.Evaluate(0f);
         }
-        if (Blue == true)
+        if (colorNow == Color.Blue)
         {
             particleData[particleDecalDataIndex].color = colorGradient.Evaluate(0.5f);
         }
-        if (Green == true)
+        if (colorNow == Color.Green)
         {
             particleData[particleDecalDataIndex].color = colorGradient.Evaluate(1f);
         }
@@ -94,24 +172,44 @@ public class ParticleDecalPool : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0.1 || Input.GetAxis("Mouse ScrollWheel") < -0.1)
+
+        //UpdateColor();
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0.1)
         {
-            if(Red == true)
+            switch (colorNow)
             {
-                Blue = true;
-                Red = false;
-            }
-            else if(Blue == true)
-            {
-                Green = true;
-                Blue = false;
-            }
-            else if(Green == true)
-            {
-                Red = true;
-                Green = false;
+                case Color.Red:
+                    SwitchColor(Color.Blue);
+                    break;
+                case Color.Blue:
+                    SwitchColor(Color.Green);
+
+                    break;
+                case Color.Green:
+                    SwitchColor(Color.Red);
+                    break;
+
             }
         }
+        else if(Input.GetAxis("Mouse ScrollWheel") < -0.1)
+        {
+            switch (colorNow)
+            {
+                case Color.Red:
+                    SwitchColor(Color.Green);
+                    break;
+                case Color.Blue:
+                    SwitchColor(Color.Red);
+
+                    break;
+                case Color.Green:
+                    SwitchColor(Color.Blue);
+                    break;
+
+            }
+        }
+      
 
         if (tS.isScoring == true)
         {

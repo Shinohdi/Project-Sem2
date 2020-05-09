@@ -44,7 +44,37 @@ public class particleLauncher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && splatDecalPool.Red == true)
+        if (Input.GetButton("Fire1"))
+        {
+            ParticleSystem.MainModule psMain;
+            switch (splatDecalPool.colorNow)
+            {
+                case ParticleDecalPool.Color.Red:
+
+                    psMain = ParticleLauncher.main;
+                    psMain.startColor = particleColorGradientRed.Evaluate(1f);
+                    ParticleLauncher.Emit(1);
+
+                    break;
+                case ParticleDecalPool.Color.Blue:
+
+                    psMain = ParticleLauncher.main;
+                    psMain.startColor = particleColorGradientBlue.Evaluate(1f);
+                    ParticleLauncher.Emit(1);
+
+                    break;
+                case ParticleDecalPool.Color.Green:
+
+                    psMain = ParticleLauncher.main;
+                    psMain.startColor = particleColorGradientGreen.Evaluate(1f);
+                    ParticleLauncher.Emit(1);
+
+                    break;
+
+            }
+        }
+
+        /*if (Input.GetButton("Fire1") && splatDecalPool.Red == true)
         {
             ParticleSystem.MainModule psMain = ParticleLauncher.main;
             psMain.startColor = particleColorGradientRed.Evaluate(1f);
@@ -63,6 +93,6 @@ public class particleLauncher : MonoBehaviour
             ParticleSystem.MainModule psMain = ParticleLauncher.main;
             psMain.startColor = particleColorGradientGreen.Evaluate(1f);
             ParticleLauncher.Emit(1);
-        }
+        }*/
     }
 }
