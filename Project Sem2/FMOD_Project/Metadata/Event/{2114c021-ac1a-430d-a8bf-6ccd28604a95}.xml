@@ -240,7 +240,7 @@
 			<value>4</value>
 		</property>
 		<property name="maximumDistance">
-			<value>8.19999981</value>
+			<value>8.80000019</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{270c74cc-fe87-4e48-8973-0cb5342c5b6c}">

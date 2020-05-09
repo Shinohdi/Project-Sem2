@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string EventGrimpe = "";
+    FMOD.Studio.EventInstance Grimper;
+
     [FMODUnity.EventRef]
     public string EventAccrocheEdge = "";
     [FMODUnity.EventRef]
@@ -73,6 +75,8 @@ public class PlayerController : MonoBehaviour
         rbfps = GetComponent<RigidbodyFirstPersonController>();
         rb = GetComponent<Rigidbody>();
         timer = 0;
+
+        Grimper = FMODUnity.RuntimeManager.CreateInstance(EventGrimpe);
     }
 
     // Update is called once per frame
@@ -109,7 +113,8 @@ public class PlayerController : MonoBehaviour
             IsParkour = true;
             chosenParkourMoveTime = VaultTime;
 
-            FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
+            Grimper.start();
+            //FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
             cameraAnimator.CrossFade("Vault",0.1f);
         }
 
@@ -129,7 +134,8 @@ public class PlayerController : MonoBehaviour
             IsParkour = true;
             chosenParkourMoveTime = ClimbTime;
 
-            FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
+            Grimper.start();
+            //FMODUnity.RuntimeManager.PlayOneShot(EventGrimpe, transform.position);
             cameraAnimator.CrossFade("Climb", 0.1f);
 
         }
@@ -211,7 +217,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
         //Wallrun
         /*if (DetectWallL.Obstruction && !rbfps.Grounded && !IsParkour && canwallrun) // if detect wall on the left and is not on the ground and not doing parkour(climb/vault)
         {
@@ -285,5 +290,23 @@ public class PlayerController : MonoBehaviour
 
 
     }
-  
+
+    // POUR LE SON A NE PAS TOUCHER PLZ
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Poubelle"))
+        {
+            Grimper.setParameterByName("TriggerPoubelle", 1);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Poubelle"))
+        {
+            Grimper.setParameterByName("TriggerPoubelle", 0);
+        }
+    }
+
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{e42d48fa-fe46-4f62-8eea-da2ec7769616}">
+		<property name="name">
+			<value>TriggerPoubelle2</value>
+		</property>
+		<relationship name="folder">
+			<destination>{689471fb-4489-4687-be89-0553aa2fa000}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7a1e4b49-027b-4ce6-9652-c6ae7b480a2e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7a1e4b49-027b-4ce6-9652-c6ae7b480a2e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
