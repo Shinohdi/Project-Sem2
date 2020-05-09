@@ -28,6 +28,7 @@ namespace FMODUnity
             if (Input.GetButtonDown("Fire1"))
             {
                 tir.start();
+
             }
 
             if (Input.GetButtonUp("Fire1"))
@@ -35,6 +36,8 @@ namespace FMODUnity
                 FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
                 tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             }
+
+           
         }
     }
 }

@@ -42,15 +42,12 @@ public class ParticleDecalPool : MonoBehaviour
         {
             case Color.Red:
                 TagRed.SetActive(true);
-
                 break;
             case Color.Blue:
                 TagBlue.SetActive(true);
-
                 break;
             case Color.Green:
                 TagGreen.SetActive(true);
-
                 break;
 
         }

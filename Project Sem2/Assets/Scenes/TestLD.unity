@@ -19040,6 +19040,27 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &853139034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 259999538987697455, guid: a903ceb209aeee643a5353c5f85afa74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1052168430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &853139039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853139034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca48a87004d1894baea661d8622c1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTir: event:/Avatar/Mecaniques/Tir
+  EventRelacher: event:/Avatar/Mecaniques/Tir_Relacher
+  AllowFadeout: 1
 --- !u!1 &856717125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: eb55d7b2a0c40b44a81656081d1758f7,
@@ -22332,6 +22353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 6749765754453005724, guid: a903ceb209aeee643a5353c5f85afa74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.42
+      objectReference: {fileID: 0}
     - target: {fileID: 6752261041730285356, guid: a903ceb209aeee643a5353c5f85afa74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22389,6 +22415,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4037807992202440638, guid: a903ceb209aeee643a5353c5f85afa74, type: 3}
+    - {fileID: 3227392954837569923, guid: a903ceb209aeee643a5353c5f85afa74, type: 3}
+    - {fileID: 5977754074180594402, guid: a903ceb209aeee643a5353c5f85afa74, type: 3}
+    - {fileID: 2851660877697510746, guid: a903ceb209aeee643a5353c5f85afa74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a903ceb209aeee643a5353c5f85afa74, type: 3}
 --- !u!1 &1055898651
 GameObject:
