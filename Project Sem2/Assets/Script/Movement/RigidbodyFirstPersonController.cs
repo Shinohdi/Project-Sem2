@@ -23,6 +23,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float SpeedInAir = 8.0f;   // Speed when onair
             public float JumpForce = 30f;
+           
 
             [HideInInspector] public float CurrentTargetSpeed = 8f;
             
@@ -62,6 +63,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Vector3 relativevelocity;
 
         public DetectObs detectGround;
+
+        public ParticleSystem ParticleColSol;
 
         [SerializeField] ParticleDecalPool PDP;
         
@@ -121,7 +124,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 isPlaying = false;
-
+                ParticleColSol.transform.gameObject.SetActive(true);
             }
         }
 
