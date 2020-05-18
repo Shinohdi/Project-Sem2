@@ -119,12 +119,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 EnAir.start();
                 isPlaying = true;
+                
+
             }
-            else if (m_IsGrounded || m_RigidBody.isKinematic)
+            else if (m_IsGrounded && isPlaying)
+            {
+                EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                ParticleSystem PCS = Instantiate(ParticleColSol, transform.position, transform.rotation, gameObject.transform);
+                Destroy(PCS, 0.5f);
+                isPlaying = false;
+                
+            }
+            else if (m_RigidBody.isKinematic)
             {
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 isPlaying = false;
-                ParticleColSol.transform.gameObject.SetActive(true);
             }
         }
 
