@@ -26,12 +26,12 @@ public class particleLauncher : MonoBehaviour
         for (int i = 0; i < collisionEvents.Count; i++)
         {
             splatDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
-            EmitAtLocation(collisionEvents[i]);
+            //EmitAtLocation(collisionEvents[i]);
         }
         
     }
 
-    void EmitAtLocation(ParticleCollisionEvent particleCollisionEvent)
+    /*void EmitAtLocation(ParticleCollisionEvent particleCollisionEvent)
     {
         splatterParticles.transform.position = particleCollisionEvent.intersection; // worldspace
         splatterParticles.transform.rotation = Quaternion.LookRotation(particleCollisionEvent.normal);
@@ -39,7 +39,7 @@ public class particleLauncher : MonoBehaviour
         psMain.startColor = particleColorGradient.Evaluate(Random.Range(0f, 1f));
 
         splatterParticles.Emit(1);
-    }
+    }*/
 
 
     void Update()

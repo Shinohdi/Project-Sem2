@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class policierZone2 : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class policierZone2 : MonoBehaviour
 
                 if (count > compT)
                 {
-                    Application.LoadLevel(1);
+                    SceneManager.LoadScene("TestLD");
                 }
             }
     }
