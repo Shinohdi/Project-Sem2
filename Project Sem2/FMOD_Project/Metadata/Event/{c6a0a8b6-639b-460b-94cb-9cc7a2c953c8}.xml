@@ -268,7 +268,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{cda4b4e1-44cd-4596-90d3-8a1cae0afbad}" />
 	<object class="MixerBusFader" id="{97596ed5-95b4-4c40-b348-e108f794420a}" />
-	<object class="SpatialiserEffect" id="{8014a628-2dd1-448a-978d-6338b1bc365f}" />
+	<object class="SpatialiserEffect" id="{8014a628-2dd1-448a-978d-6338b1bc365f}">
+		<property name="minimumDistance">
+			<value>2.20000005</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{74604f8a-cabe-486c-a0db-ed57fe51dfa8}">
 		<property name="position">
 			<value>0</value>
@@ -384,7 +388,7 @@
 			<value>0.08560881284425173</value>
 		</property>
 		<property name="value">
-			<value>-8</value>
+			<value>-4</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1bd8d2a9-3511-41ca-96df-1a41774881ad}">
@@ -392,7 +396,7 @@
 			<value>5.8984472049689449</value>
 		</property>
 		<property name="value">
-			<value>-8</value>
+			<value>-4</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{698c8ecf-76e8-4624-8ae0-f679a7144d80}">
@@ -400,7 +404,7 @@
 			<value>0.48797023321223493</value>
 		</property>
 		<property name="value">
-			<value>-11</value>
+			<value>-7</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b95c738f-af97-40b0-bd5b-33738bd26567}">
@@ -408,7 +412,7 @@
 			<value>1.1000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-6</value>
+			<value>-2</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c66a395a-18b8-47c7-8b8c-0b389e5e786e}">
@@ -416,7 +420,7 @@
 			<value>1.8577112387202628</value>
 		</property>
 		<property name="value">
-			<value>-10</value>
+			<value>-6</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{a7b32f2e-23bd-4660-9d31-630506355d68}">
@@ -424,7 +428,7 @@
 			<value>2.268633540372671</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5fe81106-eb54-44c7-bfce-43da8c4dbb43}">
@@ -432,7 +436,7 @@
 			<value>2.6795558420250796</value>
 		</property>
 		<property name="value">
-			<value>-12</value>
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1f4a5d82-125d-4820-abed-f112571a9149}">
@@ -440,7 +444,7 @@
 			<value>3.1247216688151882</value>
 		</property>
 		<property name="value">
-			<value>-3</value>
+			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{96ff7ed2-b117-401e-aa59-c9908cd2c3b5}">
@@ -448,7 +452,7 @@
 			<value>3.6640571897339744</value>
 		</property>
 		<property name="value">
-			<value>-11</value>
+			<value>-7</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9ed6801d-6fbe-4430-844b-b29605cbc4e1}">
@@ -456,7 +460,7 @@
 			<value>4.0064924411109812</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{2061b6d1-6a1d-4775-ab35-c73adfa56564}">
@@ -464,7 +468,7 @@
 			<value>4.4430973866166648</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{ed96f5ec-529d-49c5-aee9-35484f4af25a}">
@@ -472,7 +476,7 @@
 			<value>4.7940935192780971</value>
 		</property>
 		<property name="value">
-			<value>-11</value>
+			<value>-7</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{88e9c6d3-5ee4-4f9d-bf26-ea6a36bb2256}">
@@ -480,7 +484,7 @@
 			<value>5.6000000000000005</value>
 		</property>
 		<property name="value">
-			<value>-9</value>
+			<value>-5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{91dd7425-fe9b-4536-9955-dcf32cf50013}">
@@ -488,7 +492,7 @@
 			<value>4.383171217625689</value>
 		</property>
 		<property name="value">
-			<value>-10</value>
+			<value>-6</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{7478feef-b606-4ccf-a31a-b087af47b347}">
@@ -496,7 +500,7 @@
 			<value>5.2000000000000002</value>
 		</property>
 		<property name="value">
-			<value>-2</value>
+			<value>2</value>
 		</property>
 	</object>
 </objects>

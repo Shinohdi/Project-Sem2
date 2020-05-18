@@ -4635,6 +4635,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.00037539302, y: -6.418191e-11, z: 0.0003589285}
+--- !u!114 &192276758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192276751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &194254587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5890,6 +5913,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.00037551206, y: -1.06865385e-11, z: 0.00035893405}
+--- !u!114 &229345901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229345894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &230485848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: eb55d7b2a0c40b44a81656081d1758f7,
@@ -12179,6 +12225,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014795298, y: -0.0000004768692, z: 0.0010749454}
+--- !u!114 &522555285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522555278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &522804673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13904,6 +13973,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014797682, y: -3.2035874e-11, z: 0.0010749398}
+--- !u!114 &633225422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633225415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &635248136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15565,6 +15657,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014797689, y: 0.00000047664494, z: 0.0010749494}
+--- !u!114 &684625456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684625449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &689872464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21867,6 +21982,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014795298, y: 0, z: 0.0010749513}
+--- !u!114 &763365626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763365619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &777462703 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 097bb9211d873604893ceca1b382dd26,
@@ -24340,6 +24478,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014797682, y: -0.0000004768692, z: 0.0010749417}
+--- !u!114 &865488426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865488419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &878086443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27516,6 +27677,11 @@ PrefabInstance:
       propertyPath: ParticleColSol
       value: 
       objectReference: {fileID: 734566269}
+    - target: {fileID: 6643354664276961430, guid: a903ceb209aeee643a5353c5f85afa74,
+        type: 3}
+      propertyPath: EventImpactSol
+      value: event:/Avatar/Deplacements/Saut/ImpactSol
+      objectReference: {fileID: 0}
     - target: {fileID: 6643866755545263390, guid: a903ceb209aeee643a5353c5f85afa74,
         type: 3}
       propertyPath: CornicheTime
@@ -32923,6 +33089,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014795298, y: -0.0000004768692, z: 0.0010749398}
+--- !u!114 &1345838540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345838533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1346209579
 GameObject:
   m_ObjectHideFlags: 0
@@ -36952,6 +37141,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014797682, y: -0.0000004768692, z: 0.0010749398}
+--- !u!114 &1510908940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510908933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1511880560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40824,6 +41036,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.09, z: 0.12}
   m_Center: {x: 0.0014797682, y: -0.0000004768692, z: 0.0010749398}
+--- !u!114 &1649610248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649610241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/PoubelleMouche
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1649874409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: 510f6f3de6142664cbac7d92f5085eac,

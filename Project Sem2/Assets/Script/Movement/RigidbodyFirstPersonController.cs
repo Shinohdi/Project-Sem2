@@ -11,6 +11,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public string EventSaut = "";
 
         [FMODUnity.EventRef]
+        public string EventImpactSol = "";
+
+        [FMODUnity.EventRef]
         public string EventEnAir = "";
         FMOD.Studio.EventInstance EnAir;
 
@@ -126,6 +129,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 ParticleSystem PCS = Instantiate(ParticleColSol, transform.position, transform.rotation, gameObject.transform);
+                FMODUnity.RuntimeManager.PlayOneShot(EventImpactSol, transform.position);
                 Destroy(PCS, 0.5f);
                 isPlaying = false;
                 
