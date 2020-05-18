@@ -4358,6 +4358,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4588776775644431416, guid: 097bb9211d873604893ceca1b382dd26, type: 3}
+--- !u!1 &160240770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 493824188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &160240777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160240770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &160726019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4606,6 +4635,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 182574044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &186858501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 836919034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &186858508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186858501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &189696810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: b463114ca05cb714fa6070fc6ff5e2d9,
@@ -12638,6 +12696,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19999999, y: 0.20399147, z: 0.19999999}
   m_Center: {x: -0.00000023841858, y: -0.0019955002, z: 0.000000007450581}
+--- !u!1 &539635995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014241472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &539636002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539635995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &546750124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13312,6 +13399,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 572630099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &574405917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 252889994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &574405924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574405917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &580101228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 097bb9211d873604893ceca1b382dd26,
@@ -16841,6 +16957,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6999549474186355203, guid: ea5246f65ab314540a8a31ecb2d1b158, type: 3}
+--- !u!1 &743859881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2111887830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &743859888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743859881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &744442497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ea5778836ac86e04796df308a8ecb8d0,
@@ -21038,6 +21183,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3367236983848290617, guid: 084bdc4b00c9d464a99da39c5173c2df, type: 3}
+--- !u!1 &931580317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 342031395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &931580324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931580317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &933242573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27480,6 +27654,11 @@ PrefabInstance:
       propertyPath: maxDecals
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5678830136568513638, guid: b9a179f719bf1b34ebf635394cb3c3b6,
+        type: 3}
+      propertyPath: EventChgtColor
+      value: event:/Avatar/Mecaniques/ChangementCouleur
+      objectReference: {fileID: 0}
     - target: {fileID: 5901460042799026096, guid: b9a179f719bf1b34ebf635394cb3c3b6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -28990,6 +29169,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cbec4790d6081849a0865b475fcee1e, type: 3}
+--- !u!1 &1348265146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 478424831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348265153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348265146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1354669524
 GameObject:
   m_ObjectHideFlags: 0
@@ -44476,6 +44684,35 @@ MonoBehaviour:
   IsEnabled: 1
   tags:
   - Corniche
+--- !u!1 &1987409582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4007980383389883888, guid: 453b76170944fa54081be7f6dee0d72f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1957140659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1987409589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987409582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Police/Police_Idle
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1988087253
 PrefabInstance:
   m_ObjectHideFlags: 0

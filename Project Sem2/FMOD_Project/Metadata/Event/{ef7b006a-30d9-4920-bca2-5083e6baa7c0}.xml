@@ -5,7 +5,7 @@
 			<value>ChangementCouleur</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{41b4497c-30bf-40db-85b6-9078020bcdb4}</destination>
@@ -89,9 +89,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{736f45d5-f4d3-47e2-95ed-fc3468170fef}" />
 	<object class="MultiSound" id="{28f9c663-bcdd-408a-a40f-9366b4316a9b}">
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
@@ -126,7 +123,6 @@
 	<object class="MixerBusEffectChain" id="{506465c3-700f-4c87-8ab9-62de267651d6}">
 		<relationship name="effects">
 			<destination>{da0aca63-58b9-4f85-b79a-1b1a6bea5b94}</destination>
-			<destination>{61bffeb2-8d9e-4aa4-90c1-2e29241a8e72}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{875f09ed-7828-44d8-bddf-4db6bfd0480c}" />
@@ -175,11 +171,11 @@
 	<object class="MixerBusEffectChain" id="{e3fcd017-bae7-4eb3-9177-b653f5d5864e}">
 		<relationship name="effects">
 			<destination>{65d03f0a-d82f-486d-bd57-dc68a067f4e1}</destination>
+			<destination>{29147330-5c19-4321-b89b-0d1c90e16855}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4b55813a-3d8f-4129-bbfb-d0c982b2cd0f}" />
 	<object class="MixerBusFader" id="{da0aca63-58b9-4f85-b79a-1b1a6bea5b94}" />
-	<object class="SpatialiserEffect" id="{61bffeb2-8d9e-4aa4-90c1-2e29241a8e72}" />
 	<object class="AutomationPoint" id="{d982c38c-0f0e-4607-badd-f375c9bc00b3}">
 		<property name="position">
 			<value>0</value>
@@ -219,4 +215,27 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{65d03f0a-d82f-486d-bd57-dc68a067f4e1}" />
+	<object class="SFXReverbEffect" id="{29147330-5c19-4321-b89b-0d1c90e16855}">
+		<property name="earlyDelay">
+			<value>7</value>
+		</property>
+		<property name="lateDelay">
+			<value>11</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>67</value>
+		</property>
+		<property name="diffusion">
+			<value>50</value>
+		</property>
+		<property name="highCut">
+			<value>4050</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>66</value>
+		</property>
+		<property name="wetLevel">
+			<value>-26</value>
+		</property>
+	</object>
 </objects>

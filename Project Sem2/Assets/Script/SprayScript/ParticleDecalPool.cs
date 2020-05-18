@@ -26,6 +26,8 @@ public class ParticleDecalPool : MonoBehaviour
 
     public bool isOnParkour;
 
+    [FMODUnity.EventRef]
+    public string EventChgtColor;
 
     public enum Color
     {       
@@ -38,6 +40,8 @@ public class ParticleDecalPool : MonoBehaviour
 
     public void OnEnterColor()
     {
+        Debug.Log("joue le son");
+        FMODUnity.RuntimeManager.PlayOneShot(EventChgtColor, transform.position);
         switch (colorNow)
         {
             case Color.Red:
