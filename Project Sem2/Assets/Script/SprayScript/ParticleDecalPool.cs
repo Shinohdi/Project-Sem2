@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ParticleDecalPool : MonoBehaviour
 {
-    public int maxDecals = 100;
+    public int maxDecals = 10000;
     public float decalSizeMin = 0.5f;
     public float decalSizeMax = 1.5f;
 
@@ -15,14 +15,11 @@ public class ParticleDecalPool : MonoBehaviour
     private int particleDecalDataIndex;
     private ParticleSystem.Particle[] particles;
 
-    //[SerializeField] private tagScore tS;
-    [SerializeField] private Text text;
+    [SerializeField] private List<tagScore> panneau;
 
     [SerializeField] private GameObject TagRed;
     [SerializeField] private GameObject TagBlue;
     [SerializeField] private GameObject TagGreen;
-
-    public int score = 0;
 
     public bool isOnParkour;
 
@@ -119,6 +116,7 @@ public class ParticleDecalPool : MonoBehaviour
     {
         SetParticleData(particleCollisionEvent, colorGradient);
         DisplayParticles();
+
     }
 
     void SetParticleData(ParticleCollisionEvent particleCollisionEvent, Gradient colorGradient)
@@ -129,20 +127,16 @@ public class ParticleDecalPool : MonoBehaviour
             particleDecalDataIndex = 0;
         }
 
-        /*if (tS.isScoring == true)
+
+        for (int i = 0; i < panneau.Count; i++)
         {
-            score++;
-            text.text = score.ToString();
-        }*/
-        particleData[particleDecalDataIndex].position = particleCollisionEvent.intersection;
-        Vector3 particleRotationEuler = Quaternion.LookRotation(particleCollisionEvent.normal).eulerAngles;
-        particleRotationEuler.z = Random.Range(0, 360);
-        particleData[particleDecalDataIndex].rotation = particleRotationEuler;
-        particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
-        //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
-        particleDecalDataIndex++;
-        Debug.Log(score);
-        
+            if (panneau[i].isScoring == true)
+            {
+                panneau[i].score++;
+            }
+        }
+       
+
         if (colorNow == Color.Red)
         {
             particleData[particleDecalDataIndex].color = colorGradient.Evaluate(0f);
@@ -155,6 +149,15 @@ public class ParticleDecalPool : MonoBehaviour
         {
             particleData[particleDecalDataIndex].color = colorGradient.Evaluate(1f);
         }
+
+        particleData[particleDecalDataIndex].position = particleCollisionEvent.intersection;
+        Vector3 particleRotationEuler = Quaternion.LookRotation(particleCollisionEvent.normal).eulerAngles;
+        particleRotationEuler.z = Random.Range(0, 360);
+        particleData[particleDecalDataIndex].rotation = particleRotationEuler;
+        particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
+        //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
+        particleDecalDataIndex++;
+       
         
     }
 
@@ -211,14 +214,5 @@ public class ParticleDecalPool : MonoBehaviour
             }
         }
       
-
-        /*if (tS.isScoring == true)
-        {
-            text.enabled = true;
-        }
-        else
-        {
-            text.enabled = false;
-        }*/
     }
 }

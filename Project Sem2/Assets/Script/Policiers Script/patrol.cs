@@ -7,18 +7,18 @@ public class patrol : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
 
-    [SerializeField] private Transform firstPoint;
-    [SerializeField] private Transform secondPoint;
-    [SerializeField] private Transform thirdPoint;
+    [SerializeField] private List<Transform> waypoints;
 
+    public int cible = 0;
 
+    private int increment = 1;
+
+    [SerializeField] private bool AlléRetour;
 
     public enum State
     {
         Idle,
-        firstPatrol,
-        secondPatrol,
-        thirdPatrol
+        Patrol
     }
 
     public State state = State.Idle;
@@ -40,17 +40,7 @@ public class patrol : MonoBehaviour
     {
         switch (state)
         {
-            case State.firstPatrol:
-                agent.SetDestination(firstPoint.position);
-                break;
-
-            case State.secondPatrol:
-                agent.SetDestination(secondPoint.position);
-                break;
-
-            case State.thirdPatrol:
-                agent.SetDestination(thirdPoint.position);
-                break;
+            
 
         }
     }
@@ -60,29 +50,50 @@ public class patrol : MonoBehaviour
         switch (state)
         {
             case State.Idle:
-                SwitchState(State.firstPatrol);
+                SwitchState(State.Patrol);
                 break;
 
-            case State.firstPatrol:
-                if (agent.remainingDistance < 0.1f)
+            case State.Patrol:
+                if(waypoints.Count > 0)
                 {
-                    SwitchState(State.secondPatrol);
-                }
-                break;
+                    TargetID();
 
-            case State.secondPatrol:
-                if (agent.remainingDistance < 0.5f)
-                {
-                    SwitchState(State.thirdPatrol);
-                }
-                break;
+                    Transform target = waypoints[cible];
+                    Vector3 direction = waypoints[cible].position - transform.position;
+                    agent.SetDestination(target.position);
 
-            case State.thirdPatrol:
-                if(agent.remainingDistance < 0.5f)
-                {
-                    SwitchState(State.Idle);
+                    if (direction.magnitude < 3.1)
+                    {
+                        cible += increment;
+                    }
+
                 }
                 break;
+        }
+    }
+
+    private void TargetID()
+    {
+        if (cible >= waypoints.Count)
+        {
+            if (AlléRetour)
+            {
+                increment = -1;
+                cible = waypoints.Count - 1;
+            }
+            else
+            {
+                cible = 0;
+            }
+        }
+        else if (cible <= 0)
+        {
+            if (AlléRetour)
+            {
+                increment = 1;
+
+            }
+
         }
     }
 
