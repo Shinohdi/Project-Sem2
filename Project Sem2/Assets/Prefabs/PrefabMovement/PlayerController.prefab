@@ -5442,7 +5442,6 @@ GameObject:
   - component: {fileID: 6729579097435383810}
   - component: {fileID: 6643866755545263390}
   - component: {fileID: 6643354664276961430}
-  - component: {fileID: 6747306857945843885}
   - component: {fileID: 4037807992202440638}
   m_Layer: 0
   m_Name: PlayerController
@@ -5562,6 +5561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventSaut: event:/Avatar/Deplacements/Saut/Saut
+  EventImpactSol: 
   EventEnAir: event:/Avatar/Deplacements/Saut/EnAir
   canrotate: 0
   cam: {fileID: 6765431989575408612}
@@ -5585,21 +5585,9 @@ MonoBehaviour:
     m_CameraTargetRot: {x: 0, y: 0, z: 0, w: 0}
   relativevelocity: {x: 0, y: 0, z: 0}
   detectGround: {fileID: 6643157321582447964}
+  ParticleColSol: {fileID: 0}
   PDP: {fileID: 0}
   Wallrunning: 0
---- !u!114 &6747306857945843885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6747306857945843886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2c541cd5f6c344388018e057da223d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isScoring: 0
 --- !u!114 &4037807992202440638
 MonoBehaviour:
   m_ObjectHideFlags: 0

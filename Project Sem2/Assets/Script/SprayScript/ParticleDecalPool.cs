@@ -15,7 +15,7 @@ public class ParticleDecalPool : MonoBehaviour
     private int particleDecalDataIndex;
     private ParticleSystem.Particle[] particles;
 
-    [SerializeField] private tagScore tS;
+    //[SerializeField] private tagScore tS;
     [SerializeField] private Text text;
 
     [SerializeField] private GameObject TagRed;
@@ -129,11 +129,11 @@ public class ParticleDecalPool : MonoBehaviour
             particleDecalDataIndex = 0;
         }
 
-        if (tS.isScoring == true)
+        /*if (tS.isScoring == true)
         {
             score++;
             text.text = score.ToString();
-        }
+        }*/
         particleData[particleDecalDataIndex].position = particleCollisionEvent.intersection;
         Vector3 particleRotationEuler = Quaternion.LookRotation(particleCollisionEvent.normal).eulerAngles;
         particleRotationEuler.z = Random.Range(0, 360);
@@ -212,13 +212,13 @@ public class ParticleDecalPool : MonoBehaviour
         }
       
 
-        if (tS.isScoring == true)
+        /*if (tS.isScoring == true)
         {
             text.enabled = true;
         }
         else
         {
             text.enabled = false;
-        }
+        }*/
     }
 }
