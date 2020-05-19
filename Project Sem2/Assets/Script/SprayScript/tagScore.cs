@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class tagScore : MonoBehaviour
 {
-
+    
     public float score;
     [SerializeField] private int scoreMax;
 
