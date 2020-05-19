@@ -6106,18 +6106,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: eb55d7b2a0c40b44a81656081d1758f7, type: 3}
---- !u!114 &233147283 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6747306857945843885, guid: a903ceb209aeee643a5353c5f85afa74,
-    type: 3}
-  m_PrefabInstance: {fileID: 1052168430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236609280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2c541cd5f6c344388018e057da223d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &234899919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23443,13 +23431,18 @@ PrefabInstance:
         type: 3}
       propertyPath: ParticleColSol
       value: 
-      objectReference: {fileID: 8972824327142685085, guid: a45200ca1d8174e48b1ccd94ace3ff37,
+      objectReference: {fileID: 8972824327142685082, guid: a45200ca1d8174e48b1ccd94ace3ff37,
         type: 3}
     - target: {fileID: 6643354664276961430, guid: a903ceb209aeee643a5353c5f85afa74,
         type: 3}
       propertyPath: EventImpactSol
       value: event:/Avatar/Deplacements/Saut/ImpactSol
       objectReference: {fileID: 0}
+    - target: {fileID: 6643354664276961430, guid: a903ceb209aeee643a5353c5f85afa74,
+        type: 3}
+      propertyPath: pied
+      value: 
+      objectReference: {fileID: 2101871335}
     - target: {fileID: 6643866755545263390, guid: a903ceb209aeee643a5353c5f85afa74,
         type: 3}
       propertyPath: CornicheTime
@@ -27628,7 +27621,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tS
       value: 
-      objectReference: {fileID: 233147283}
+      objectReference: {fileID: 0}
     - target: {fileID: 5678830136568513638, guid: b9a179f719bf1b34ebf635394cb3c3b6,
         type: 3}
       propertyPath: text
@@ -46901,6 +46894,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9313bcd5f7f88149b6a640d9585a20b, type: 3}
+--- !u!4 &2094335575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6752176882966040658, guid: a903ceb209aeee643a5353c5f85afa74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1052168430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095914890
 GameObject:
   m_ObjectHideFlags: 0
@@ -47036,6 +47035,36 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 4
   OverrideMaxDistance: 8.2
+--- !u!1 &2101871334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101871335}
+  m_Layer: 0
+  m_Name: piedSol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2101871335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101871334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.721, z: -0.404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2094335575}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2103035516
 GameObject:
   m_ObjectHideFlags: 0
