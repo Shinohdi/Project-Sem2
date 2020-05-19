@@ -67,14 +67,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public DetectObs detectGround;
 
-        public ParticleSystem ParticleColSol;
+        public GameObject ParticleColSol;
 
         [SerializeField] ParticleDecalPool PDP;
         
 
         public bool Wallrunning;
 
-
+        [SerializeField] private Transform pied;
 
         private Rigidbody m_RigidBody;
         private CapsuleCollider m_Capsule;
@@ -128,7 +128,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else if (m_IsGrounded && isPlaying)
             {
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                ParticleSystem PCS = Instantiate(ParticleColSol, transform.position, transform.rotation);
+                GameObject PCS = Instantiate(ParticleColSol,pied.position, Quaternion.Euler(90f,0f,0f));
                 FMODUnity.RuntimeManager.PlayOneShot(EventImpactSol, transform.position);
                 Destroy(PCS, 0.5f);
                 isPlaying = false;
