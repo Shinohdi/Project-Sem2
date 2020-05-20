@@ -201,7 +201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570534376535247125}
-  - component: {fileID: 6392741066640032924}
   m_Layer: 0
   m_Name: TagRouge
   m_TagString: Untagged
@@ -225,18 +224,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &6392741066640032924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7887038716562553606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca48a87004d1894baea661d8622c1ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventTir: event:/Avatar/Mecaniques/Tir
-  EventRelacher: event:/Avatar/Mecaniques/Tir_Relacher
-  AllowFadeout: 1
