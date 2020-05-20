@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class tagScore : MonoBehaviour
 {
-    
-    public float score;
+
+    [HideInInspector] public float score;
     [SerializeField] private int scoreMax;
 
     private bool isEnter;
     public bool isScoring;
+    public bool Completed;
 
     [SerializeField] private GameObject preScoreBar;
     [SerializeField] private Canvas canvas;
+
+    private Slider bar;
 
    
     private GameObject scoreBar;
@@ -25,22 +29,29 @@ public class tagScore : MonoBehaviour
 
     private void Update()
     {
-        if (isScoring)
+        if (isScoring && !Completed)
         {
-            scoreBar.GetComponent<Slider>().value = score;
+            bar.value = score;
+
+            if(bar.value >= bar.maxValue)
+            {
+                Completed = true;
+                Destroy(scoreBar);
+            } 
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Avatar"))
+        if (other.CompareTag("Avatar") && !Completed)
         {
             if (!isEnter)
             {
                 isEnter = true;
                 scoreBar = Instantiate(preScoreBar, canvas.transform);
                 scoreBar.name = gameObject.name + " ScoreBar";
-                scoreBar.GetComponent<Slider>().maxValue = scoreMax;
+                bar = scoreBar.GetComponent<Slider>();
+                bar.maxValue = scoreMax;
                 isScoring = true;
                 
 
@@ -56,7 +67,7 @@ public class tagScore : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Avatar"))
+        if (other.CompareTag("Avatar") && !Completed)
         {
             scoreBar.SetActive(false);
             isScoring = false;

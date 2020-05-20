@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ParticleDecalPool : MonoBehaviour
 {
@@ -20,8 +21,6 @@ public class ParticleDecalPool : MonoBehaviour
     [SerializeField] private GameObject TagRed;
     [SerializeField] private GameObject TagBlue;
     [SerializeField] private GameObject TagGreen;
-
-    public bool isOnParkour;
 
     [FMODUnity.EventRef]
     public string EventChgtColor;
@@ -157,8 +156,7 @@ public class ParticleDecalPool : MonoBehaviour
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
         //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
         particleDecalDataIndex++;
-       
-        
+              
     }
 
     void DisplayParticles()
@@ -213,6 +211,22 @@ public class ParticleDecalPool : MonoBehaviour
 
             }
         }
+
+        if(panneau.Count > 0)
+        {
+            for (int i = 0; i < panneau.Count; i++)
+            {
+                if (panneau[i].Completed)
+                {
+                    panneau.Remove(panneau[i]);
+                }
+            }
+        }
+        else
+        {
+            
+        }
+        
       
     }
 }

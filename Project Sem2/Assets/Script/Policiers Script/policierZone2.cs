@@ -8,7 +8,7 @@ public class policierZone2 : MonoBehaviour
     public Animator animator;
     [SerializeField] private float compT = 1f;
     [SerializeField] private float count = 0f;
-    private bool gameOver = false;
+    public bool gameOver = false;
 
 
     void Update()

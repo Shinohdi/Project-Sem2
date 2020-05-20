@@ -1,9 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using FMODUnity;
 
 public class particleLauncher : MonoBehaviour
 {
+
+
+    [EventRef]
+    public string EventTir = "";
+    [EventRef]
+    public string EventRelacher = "";
+
+    FMOD.Studio.EventInstance tir;
+
+
     public ParticleSystem ParticleLauncher;
     public ParticleSystem splatterParticles;
     public Gradient particleColorGradient;
@@ -14,9 +26,21 @@ public class particleLauncher : MonoBehaviour
 
     List<ParticleCollisionEvent> collisionEvents;
 
+    public Slider tagUI;
+    [SerializeField] private float chargeMax;
+
+    [HideInInspector] public bool isCharging;
+
+    [SerializeField] private int TimeChargement;
+
     void Start()
     {
         collisionEvents = new List<ParticleCollisionEvent>();
+        tagUI.maxValue = chargeMax;
+        tagUI.value = chargeMax;
+
+        tir = FMODUnity.RuntimeManager.CreateInstance(EventTir);
+
     }
 
     void OnParticleCollision(GameObject other)
@@ -44,8 +68,15 @@ public class particleLauncher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+
+        if (Input.GetButtonDown("Fire1"))
         {
+            tir.start();
+        }
+
+        if (Input.GetButton("Fire1") && !isCharging)
+        {
+
             ParticleSystem.MainModule psMain;
             switch (splatDecalPool.colorNow)
             {
@@ -71,6 +102,43 @@ public class particleLauncher : MonoBehaviour
 
                     break;
 
+            }
+
+            tagUI.value--;
+
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
+            tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+
+
+        if (tagUI.value <= 0)
+        {
+            isCharging = true;
+            FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
+            tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < chargeMax)
+        {
+            isCharging = true;
+            tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+
+        if (isCharging)
+        {
+            tagUI.value += TimeChargement * Time.deltaTime;
+
+            if(tagUI.value >= chargeMax)
+            {
+                isCharging = false;
+            }
+            else if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
+            {
+                isCharging = false;
+                tir.start();
             }
         }
 

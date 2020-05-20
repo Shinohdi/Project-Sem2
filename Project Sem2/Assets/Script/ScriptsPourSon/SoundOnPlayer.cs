@@ -14,7 +14,7 @@ namespace FMODUnity
 
         FMOD.Studio.EventInstance tir;
 
-        public bool AllowFadeout = true;
+        [SerializeField] private particleLauncher PL;
 
         // Start is called before the first frame update
         void Start()
@@ -25,19 +25,20 @@ namespace FMODUnity
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (!PL.isCharging)
             {
-                tir.start();
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    tir.start();
 
-            }
+                }
 
-            if (Input.GetButtonUp("Fire1"))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
-                tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            }
-
-           
+                if (Input.GetButtonUp("Fire1") || PL.isCharging)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
+                    tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                }
+            }          
         }
     }
 }
