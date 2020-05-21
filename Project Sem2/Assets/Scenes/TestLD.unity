@@ -2500,6 +2500,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -2585,6 +2590,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 2046614189}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &80325452
@@ -2594,6 +2604,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -2684,6 +2699,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1177405894}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &82733910
@@ -4988,6 +5008,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -5068,6 +5093,11 @@ PrefabInstance:
       propertyPath: "All\xE9Retour"
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &182574044
@@ -17504,6 +17534,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -17589,6 +17624,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 600092405}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &723071904
@@ -25712,6 +25752,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -25792,6 +25837,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1064919892}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &1094776785
@@ -25801,6 +25851,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -25886,6 +25941,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1035028022}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &1098190438 stripped
@@ -35990,6 +36050,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -36085,6 +36150,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[4]
       value: 
       objectReference: {fileID: 444270300}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &1561897507
@@ -38331,6 +38401,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -38416,6 +38491,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 499338807}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &1633498407
@@ -39187,6 +39267,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172293350091532706, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 4870477617144873629}
     - target: {fileID: 6172293350430864672, guid: 453b76170944fa54081be7f6dee0d72f,
         type: 3}
       propertyPath: m_Name
@@ -39272,6 +39357,11 @@ PrefabInstance:
       propertyPath: "All\xE9Retour"
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1726295504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &1649610241 stripped
