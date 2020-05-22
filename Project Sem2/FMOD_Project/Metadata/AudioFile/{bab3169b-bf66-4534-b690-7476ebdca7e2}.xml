@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{bab3169b-bf66-4534-b690-7476ebdca7e2}">
 		<property name="assetPath">
-			<value>Dogs- Labradors- Large- Bark and Growl.mp3</value>
+			<value>Z_PasRanger/Dogs- Labradors- Large- Bark and Growl.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

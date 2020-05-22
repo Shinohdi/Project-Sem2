@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{40c492ee-1419-4ba9-89d3-5e97c8921b6d}">
 		<property name="assetPath">
-			<value>MoucheLoop-002.wav</value>
+			<value>Z_PasRanger/MoucheLoop-002.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

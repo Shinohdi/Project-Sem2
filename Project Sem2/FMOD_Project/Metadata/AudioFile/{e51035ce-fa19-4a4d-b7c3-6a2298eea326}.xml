@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{e51035ce-fa19-4a4d-b7c3-6a2298eea326}">
 		<property name="assetPath">
-			<value>SecouerSprayPaint-005.wav</value>
+			<value>Z_PasRanger/SecouerSprayPaint-005.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

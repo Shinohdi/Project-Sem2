@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{df15af88-999f-4c41-ae1c-173acf2d92de}">
+		<property name="name">
+			<value>Zone1Fill</value>
+		</property>
+		<relationship name="folder">
+			<destination>{689471fb-4489-4687-be89-0553aa2fa000}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{822420b8-fad4-4b0f-83d2-65420f3c81df}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{822420b8-fad4-4b0f-83d2-65420f3c81df}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

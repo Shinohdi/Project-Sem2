@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{118eba73-65bb-4752-8d0c-a4a60f077a02}">
 		<property name="assetPath">
-			<value>Voix_Jump_grunting_10_alex.wav</value>
+			<value>Z_PasRanger/Voix_Jump_grunting_10_alex.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

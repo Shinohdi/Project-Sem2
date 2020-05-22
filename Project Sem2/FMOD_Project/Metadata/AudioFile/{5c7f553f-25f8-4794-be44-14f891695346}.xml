@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{5c7f553f-25f8-4794-be44-14f891695346}">
 		<property name="assetPath">
-			<value>PoubelleGrimpeDebut_02.wav</value>
+			<value>Z_PasRanger/PoubelleGrimpeDebut_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
