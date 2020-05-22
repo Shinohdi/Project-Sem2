@@ -52364,6 +52364,7 @@ MonoBehaviour:
   PDP: {fileID: 1788325375}
   Wallrunning: 0
   pied: {fileID: 2101871335}
+  anim: {fileID: 1817738294}
 --- !u!114 &2081895772715357154
 MonoBehaviour:
   m_ObjectHideFlags: 0

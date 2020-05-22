@@ -82,6 +82,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool  m_IsGrounded;
         private bool isPlaying;
 
+        public Animator anim; //Animation
 
         public Vector3 Velocity
         {
@@ -91,6 +92,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool Grounded
         {
             get { return m_IsGrounded; }
+        }
+
+        //AnimationBombonne
+        void Start()
+        {
+           // anim = GetComponent<Animator>();
         }
 
         private void Awake()
@@ -184,10 +191,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeedMax * Mathf.Abs(inputVector.z));
 
+                        anim.SetBool("IsRunning", true); //Anim
                     }
                     else
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+                        anim.SetBool("IsRunning", false); //Anim
                     }
                 }
                 if (Input.GetAxisRaw("Vertical") < -0.3f)
