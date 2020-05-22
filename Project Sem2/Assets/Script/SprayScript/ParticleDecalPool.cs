@@ -22,6 +22,8 @@ public class ParticleDecalPool : MonoBehaviour
     [SerializeField] private GameObject TagBlue;
     [SerializeField] private GameObject TagGreen;
 
+    [SerializeField] private particleLauncher shot;
+
     [FMODUnity.EventRef]
     public string EventChgtColor;
 
@@ -42,12 +44,23 @@ public class ParticleDecalPool : MonoBehaviour
         {
             case Color.Red:
                 TagRed.SetActive(true);
+                shot.tagUIRed.gameObject.SetActive(true);
+                shot.tagUI = shot.tagUIRed;
+
                 break;
             case Color.Blue:
                 TagBlue.SetActive(true);
+                shot.tagUIBlue.gameObject.SetActive(true);
+                shot.tagUI = shot.tagUIBlue;
+
+
                 break;
             case Color.Green:
                 TagGreen.SetActive(true);
+                shot.tagUIGreen.gameObject.SetActive(true);
+                shot.tagUI = shot.tagUIGreen;
+
+
                 break;
 
         }
@@ -59,14 +72,20 @@ public class ParticleDecalPool : MonoBehaviour
         {
             case Color.Red:
                 TagRed.SetActive(false);
+                shot.tagUIRed.gameObject.SetActive(false);              
+
 
                 break;
             case Color.Blue:
                 TagBlue.SetActive(false);
+                shot.tagUIBlue.gameObject.SetActive(false);
+
 
                 break;
             case Color.Green:
                 TagGreen.SetActive(false);
+                shot.tagUIGreen.gameObject.SetActive(false);
+
 
                 break;
 

@@ -26,8 +26,12 @@ public class particleLauncher : MonoBehaviour
 
     List<ParticleCollisionEvent> collisionEvents;
 
-    public Slider tagUI;
-    [SerializeField] private float chargeMax;
+    public Slider tagUIRed;
+    public Slider tagUIBlue;
+    public Slider tagUIGreen;
+
+
+    [HideInInspector] public Slider tagUI;
 
     [HideInInspector] public bool isCharging;
 
@@ -36,8 +40,13 @@ public class particleLauncher : MonoBehaviour
     void Start()
     {
         collisionEvents = new List<ParticleCollisionEvent>();
-        tagUI.maxValue = chargeMax;
-        tagUI.value = chargeMax;
+
+        tagUIBlue.value = tagUIBlue.maxValue;
+        tagUIGreen.value = tagUIGreen.maxValue;
+        tagUIRed.value = tagUIRed.maxValue;
+
+        tagUI = tagUIRed;
+
 
         tir = FMODUnity.RuntimeManager.CreateInstance(EventTir);
 
@@ -85,6 +94,8 @@ public class particleLauncher : MonoBehaviour
                     psMain = ParticleLauncher.main;
                     psMain.startColor = particleColorGradientRed.Evaluate(1f);
                     ParticleLauncher.Emit(1);
+                    tagUIRed.value--;
+
 
                     break;
                 case ParticleDecalPool.Color.Blue:
@@ -92,6 +103,8 @@ public class particleLauncher : MonoBehaviour
                     psMain = ParticleLauncher.main;
                     psMain.startColor = particleColorGradientBlue.Evaluate(1f);
                     ParticleLauncher.Emit(1);
+                    tagUIBlue.value--;
+
 
                     break;
                 case ParticleDecalPool.Color.Green:
@@ -99,12 +112,11 @@ public class particleLauncher : MonoBehaviour
                     psMain = ParticleLauncher.main;
                     psMain.startColor = particleColorGradientGreen.Evaluate(1f);
                     ParticleLauncher.Emit(1);
+                    tagUIGreen.value--;
 
                     break;
 
             }
-
-            tagUI.value--;
 
         }
         else if (Input.GetButtonUp("Fire1"))
@@ -121,7 +133,7 @@ public class particleLauncher : MonoBehaviour
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         }
-        else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < chargeMax)
+        else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < tagUI.maxValue)
         {
             isCharging = true;
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -129,38 +141,43 @@ public class particleLauncher : MonoBehaviour
 
         if (isCharging)
         {
-            tagUI.value += TimeChargement * Time.deltaTime;
 
-            if(tagUI.value >= chargeMax)
+            if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
             {
                 isCharging = false;
             }
-            else if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
+
+            switch (splatDecalPool.colorNow)
             {
-                isCharging = false;
-                tir.start();
+                case ParticleDecalPool.Color.Red:
+                    tagUIRed.value += TimeChargement * Time.deltaTime;
+
+                    if (tagUIRed.value >= tagUIRed.maxValue)
+                    {
+                        isCharging = false;
+                    }
+
+                    break;
+                case ParticleDecalPool.Color.Blue:
+                    tagUIBlue.value += TimeChargement * Time.deltaTime;
+
+                    if (tagUIBlue.value >= tagUIBlue.maxValue)
+                    {
+                        isCharging = false;
+                    }
+
+                    break;
+                case ParticleDecalPool.Color.Green:
+                    tagUIGreen.value += TimeChargement * Time.deltaTime;
+
+                    if (tagUIGreen.value >= tagUIGreen.maxValue)
+                    {
+                        isCharging = false;
+                    }
+
+                    break;
             }
-        }
 
-        /*if (Input.GetButton("Fire1") && splatDecalPool.Red == true)
-        {
-            ParticleSystem.MainModule psMain = ParticleLauncher.main;
-            psMain.startColor = particleColorGradientRed.Evaluate(1f);
-            ParticleLauncher.Emit(1);
-        }
-
-        if (Input.GetButton("Fire1") && splatDecalPool.Blue == true)
-        {
-            ParticleSystem.MainModule psMain = ParticleLauncher.main;
-            psMain.startColor = particleColorGradientBlue.Evaluate(1f);
-            ParticleLauncher.Emit(1);
-        }
-
-        if (Input.GetButton("Fire1") && splatDecalPool.Green == true)
-        {
-            ParticleSystem.MainModule psMain = ParticleLauncher.main;
-            psMain.startColor = particleColorGradientGreen.Evaluate(1f);
-            ParticleLauncher.Emit(1);
-        }*/
+        }         
     }
 }
