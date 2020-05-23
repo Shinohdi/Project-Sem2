@@ -24,6 +24,9 @@ public class ParticleDecalPool : MonoBehaviour
 
     [SerializeField] private particleLauncher shot;
 
+    [SerializeField] private gameOver gO;
+
+
     [FMODUnity.EventRef]
     public string EventChgtColor;
 
@@ -243,7 +246,7 @@ public class ParticleDecalPool : MonoBehaviour
         }
         else
         {
-            
+            gO.gameOverBool = true;
         }
         
       
