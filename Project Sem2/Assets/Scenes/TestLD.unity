@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2117088412745008728}
-  threshold: 5
+  EventMusique: event:/ZonesTags/ZoneDebutTest
 --- !u!1 &85178935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3d42699b0f1b20b4fbd36759a23045d2,
@@ -43243,6 +43243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817738293}
   - component: {fileID: 1817738294}
+  - component: {fileID: 1817738295}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -43286,6 +43287,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1817738295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817738292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bfbcf502ac2054491bcd0ba50aaaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPas: event:/Avatar/Deplacements/Marche/SurfaceSimple/Pas
 --- !u!1 &1818287823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: b463114ca05cb714fa6070fc6ff5e2d9,

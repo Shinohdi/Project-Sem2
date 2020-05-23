@@ -7,15 +7,17 @@ public class musicFirstZone : MonoBehaviour
 
     [SerializeField] private Transform player;
 
-    public float threshold;
+    [FMODUnity.EventRef]
+    public string EventMusique = "";
+    FMOD.Studio.EventInstance Musique;
 
-    private bool isEnter;
-
+    float volume;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Musique = FMODUnity.RuntimeManager.CreateInstance(EventMusique);
+        Musique.start();
     }
 
     // Update is called once per frame
@@ -23,17 +25,34 @@ public class musicFirstZone : MonoBehaviour
     {
         Vector3 distance = transform.position - player.position;
 
-        if (!isEnter)
+        if (volume <= 90)
         {
-            if (distance.magnitude > threshold)
-            {
-                Debug.Log("Le son est entendu");
-            }
-            else
-            {
-                Debug.Log("le son est a son volume max");
-                isEnter = true;
-            }
+            volume = -(distance.magnitude - 100);
+            Musique.setParameterByName("VolumeDebut", volume);
+        }
+        else
+        {
+            volume = 100;
+            Musique.setParameterByName("VolumeDebut", volume);
+        }
+        Debug.Log(volume);
+
+        // Pour test le pourcentage de panneaux terminés
+
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("2eme partie en cours...");
+            Musique.setParameterByName("Zone1Fill", 26);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log("3eme partie en cours...");
+            Musique.setParameterByName("Zone1Fill", 52);
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("4eme partie en cours...");
+            Musique.setParameterByName("Zone1Fill", 76);
         }
     }
 }
