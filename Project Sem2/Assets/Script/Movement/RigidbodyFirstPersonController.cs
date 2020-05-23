@@ -187,29 +187,43 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (Input.GetAxisRaw("Vertical") > 0.3f)
                 {
+
+                    anim.SetBool("IsWalking", true); //AnimWalking
+
                     if (Input.GetKey(KeyCode.LeftShift))
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeedMax * Mathf.Abs(inputVector.z));
 
-                        anim.SetBool("IsRunning", true); //Anim
+                        anim.SetBool("IsRunning", true); //AnimRun
+                        anim.SetBool("IsWalking", false); //AnimWalking
                     }
                     else
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
-                        anim.SetBool("IsRunning", false); //Anim
+                        anim.SetBool("IsRunning", false); //AnimRun
                     }
                 }
                 if (Input.GetAxisRaw("Vertical") < -0.3f)
                 {
                     m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * -movementSettings.BackwardSpeed * Mathf.Abs(inputVector.z));
+
+                    anim.SetBool("IsWalking", true); //AnimWalking
                 }
                 if (Input.GetAxisRaw("Horizontal") > 0.5f)
                 {
                     m_RigidBody.AddRelativeForce(Time.deltaTime * 1000f * movementSettings.StrafeSpeed * Mathf.Abs(inputVector.x), 0, 0);
+
+                    anim.SetBool("IsWalking", true); //AnimWalking
                 }
                 if (Input.GetAxisRaw("Horizontal") < -0.5f)
                 {
                     m_RigidBody.AddRelativeForce(Time.deltaTime * 1000f * -movementSettings.StrafeSpeed * Mathf.Abs(inputVector.x), 0, 0);
+
+                    anim.SetBool("IsWalking", true); //AnimWalking
+                }
+                if (Input.GetAxisRaw("Vertical") == 0f)
+                {
+                    anim.SetBool("IsWalking", false); //AnimWalking
                 }
 
             }
