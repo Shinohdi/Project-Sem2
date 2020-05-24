@@ -122,7 +122,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
                     NormalJump();
 
-                    anim.SetBool("IsJumping", true); //AnimJump
                 }
 
             }
@@ -150,7 +149,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 isPlaying = false;
 
-                anim.SetBool("IsJumping", false); //AnimJump
+
             }
         }
 
@@ -193,9 +192,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (Input.GetAxisRaw("Vertical") > 0.3f)
                 {
-
-                    anim.SetBool("IsWalking", true); //AnimWalking
-
                     if (Input.GetKey(KeyCode.LeftShift))
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeedMax * Mathf.Abs(inputVector.z));
@@ -206,6 +202,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     else
                     {
                         m_RigidBody.AddRelativeForce(0, 0, Time.deltaTime * 1000f * movementSettings.ForwardSpeed * Mathf.Abs(inputVector.z));
+
+                        anim.SetBool("IsWalking", true); //AnimWalking
                         anim.SetBool("IsRunning", false); //AnimRun
                     }
                 }
@@ -227,11 +225,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                     anim.SetBool("IsWalking", true); //AnimWalking
                 }
-                if (Input.GetAxisRaw("Vertical") == 0f)
+                if (Input.GetAxisRaw("Vertical") <= 0.2f && Input.GetAxisRaw("Vertical") >= -0.2f && Input.GetAxisRaw("Horizontal") <= 0.3f && Input.GetAxisRaw("Horizontal") >= -0.3f)
                 {
-                    anim.SetBool("IsWalking", false); //AnimWalking
+                    anim.SetBool("IsWalking", false); //AnimIdle
                 }
-
             }
             //inair
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && !m_IsGrounded  && !Wallrunning)
@@ -262,6 +259,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
             m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+
+            anim.SetBool("IsJumping", true); //AnimJump
         }
         public void SwitchDirectionJump()
         {

@@ -211,6 +211,7 @@ public class PlayerController : MonoBehaviour
                 if(!isOnCorniche)
                 {
                     rb.isKinematic = false;
+                    rbfps.anim.SetBool("IsJumping", false); //AnimJump
 
                 }
 
