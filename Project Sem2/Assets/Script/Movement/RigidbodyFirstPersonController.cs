@@ -121,6 +121,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {                  
                     FMODUnity.RuntimeManager.PlayOneShot(EventSaut, transform.position);
                     NormalJump();
+
+                    anim.SetBool("IsJumping", true); //AnimJump
                 }
 
             }
@@ -139,12 +141,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 FMODUnity.RuntimeManager.PlayOneShot(EventImpactSol, transform.position);
                 Destroy(PCS, 0.5f);
                 isPlaying = false;
-                
+
+                anim.SetBool("IsJumping", false); //AnimJump
+
             }
             else if (m_RigidBody.isKinematic)
             {
                 EnAir.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 isPlaying = false;
+
+                anim.SetBool("IsJumping", false); //AnimJump
             }
         }
 

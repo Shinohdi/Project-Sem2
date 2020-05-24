@@ -35,7 +35,7 @@ public class musicFirstZone : MonoBehaviour
             volume = 100;
             Musique.setParameterByName("VolumeDebut", volume);
         }
-        Debug.Log(volume);
+        //Debug.Log(volume);
 
         // Pour test le pourcentage de panneaux terminés
 
