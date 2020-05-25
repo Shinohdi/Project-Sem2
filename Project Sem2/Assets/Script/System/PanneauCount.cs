@@ -9,6 +9,8 @@ public class PanneauCount : MonoBehaviour
 
     private int panneauInLevel;
 
+    public musicFirstZone Musique;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +22,18 @@ public class PanneauCount : MonoBehaviour
     {
         if(PDP.PanneauClear >= panneauInLevel * 0.25f)
         {
-            //2ere phase
+            Musique.MusiqueFirst();
             Debug.Log(PDP.PanneauClear);
         }
 
         if (PDP.PanneauClear >= panneauInLevel * 0.5f)
         {
-            //3eme phase
+            Musique.MusiqueSecond();
         }
 
         if (PDP.PanneauClear >= panneauInLevel * 0.75f)
         {
-            //4eme phase
+            Musique.MusiqueThird();
         }
     }
 }
