@@ -16,7 +16,7 @@ public class ParticleDecalPool : MonoBehaviour
     private int particleDecalDataIndex;
     private ParticleSystem.Particle[] particles;
 
-    [SerializeField] private List<tagScore> panneau;
+    public List<tagScore> panneau;
 
     [SerializeField] private GameObject TagRed;
     [SerializeField] private GameObject TagBlue;
