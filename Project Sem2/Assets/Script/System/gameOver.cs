@@ -12,6 +12,7 @@ public class gameOver : MonoBehaviour
     [SerializeField] private float timeChange;
     [SerializeField] private string LevelHere;
 
+    public musicFirstZone MusiqueStop;
 
     private float chrono;
 
@@ -32,6 +33,7 @@ public class gameOver : MonoBehaviour
 
             if(chrono >= timeChange)
             {
+                MusiqueStop.MusiqueStop();
                 SceneManager.LoadScene(LevelHere);
                 gameOverBool = false;
             }

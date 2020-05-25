@@ -5227,6 +5227,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &80041595
@@ -5451,6 +5456,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &82733910
@@ -12127,6 +12137,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &181583201
@@ -45484,6 +45499,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &710945555
@@ -66347,6 +66367,7 @@ MonoBehaviour:
   anim: {fileID: 1726295504}
   timeChange: 2
   LevelHere: TestLD
+  MusiqueStop: {fileID: 84692084}
 --- !u!4 &1048919552
 Transform:
   m_ObjectHideFlags: 0
@@ -69145,6 +69166,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &1093841984
@@ -69474,6 +69500,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &1096618622
@@ -86688,6 +86719,29 @@ MonoBehaviour:
   IsEnabled: 1
   tags:
   - Wall
+--- !u!114 &1434465541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434465535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/VentiloDebut1
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1435585429
 GameObject:
   m_ObjectHideFlags: 0
@@ -93923,6 +93977,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &1561473753
@@ -98799,6 +98858,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1001 &1633498407
@@ -100056,6 +100120,11 @@ PrefabInstance:
       propertyPath: gO
       value: 
       objectReference: {fileID: 1048919551}
+    - target: {fileID: 6172293350847781304, guid: 453b76170944fa54081be7f6dee0d72f,
+        type: 3}
+      propertyPath: EventMusique
+      value: event:/ZonesTags/ZoneDebutTest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453b76170944fa54081be7f6dee0d72f, type: 3}
 --- !u!1 &1649610241 stripped
@@ -110277,6 +110346,29 @@ MonoBehaviour:
   IsEnabled: 1
   tags:
   - Wall
+--- !u!114 &1826842352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826842346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Environnement/VentiloDebut1 2
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1829658208
 GameObject:
   m_ObjectHideFlags: 0

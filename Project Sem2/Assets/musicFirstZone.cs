@@ -55,4 +55,9 @@ public class musicFirstZone : MonoBehaviour
             Musique.setParameterByName("Zone1Fill", 76);
         }
     }
+
+    public void MusiqueStop()
+    {
+        Musique.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }
