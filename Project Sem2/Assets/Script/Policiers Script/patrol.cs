@@ -9,11 +9,16 @@ public class patrol : MonoBehaviour
 
     [SerializeField] private List<Transform> waypoints;
 
-    public int cible = 0;
+    [HideInInspector] public int cible = 0;
 
     private int increment = 1;
 
     [SerializeField] private bool AlléRetour;
+
+    [SerializeField] private int timeWait;
+    private float chrono;
+
+    public bool wait;
 
     public enum State
     {
@@ -64,7 +69,26 @@ public class patrol : MonoBehaviour
 
                     if (direction.magnitude < 3.1)
                     {
-                        cible += increment;
+                        
+                        if(Random.value >= 0.7 && !wait)
+                        {
+                            wait = true;                          
+                        }
+                        else if(Random.value < 0.7 && !wait)
+                        {
+                            cible += increment;
+                        }
+
+                        if (wait)
+                        {
+                            chrono += Time.deltaTime;
+                            if (chrono >= timeWait)
+                            {
+                                cible += increment;
+                                chrono = 0;
+                                wait = false;
+                            }
+                        }
                     }
 
                 }

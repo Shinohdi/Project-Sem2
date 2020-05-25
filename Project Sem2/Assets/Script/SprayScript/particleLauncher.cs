@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using FMODUnity;
+using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class particleLauncher : MonoBehaviour
 {
@@ -29,7 +31,6 @@ public class particleLauncher : MonoBehaviour
     public Slider tagUIRed;
     public Slider tagUIBlue;
     public Slider tagUIGreen;
-
 
     [HideInInspector] public Slider tagUI;
 
@@ -85,7 +86,7 @@ public class particleLauncher : MonoBehaviour
 
         if (Input.GetButton("Fire1") && !isCharging)
         {
-
+            
             ParticleSystem.MainModule psMain;
             switch (splatDecalPool.colorNow)
             {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+
 public class PlayerController : MonoBehaviour
 {
     [FMODUnity.EventRef]
