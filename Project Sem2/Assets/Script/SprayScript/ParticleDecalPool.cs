@@ -17,6 +17,7 @@ public class ParticleDecalPool : MonoBehaviour
     private ParticleSystem.Particle[] particles;
 
     public List<tagScore> panneau;
+    public int PanneauClear;
 
     [SerializeField] private GameObject TagRed;
     [SerializeField] private GameObject TagBlue;
@@ -241,6 +242,7 @@ public class ParticleDecalPool : MonoBehaviour
                 if (panneau[i].Completed)
                 {
                     panneau.Remove(panneau[i]);
+                    PanneauClear++;
                 }
             }
         }
