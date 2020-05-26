@@ -143,6 +143,7 @@ public class particleLauncher : MonoBehaviour
         if (isCharging)
         {
 
+
             if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
             {
                 isCharging = false;

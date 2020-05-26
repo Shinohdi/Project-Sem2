@@ -55,7 +55,8 @@ public class patrol : MonoBehaviour
         switch (state)
         {
             case State.Look:
-                animFlic.SetBool("IsIdle", true); //AnimTagOnCorniche
+                animFlic.SetBool("IsIdle", true); //AnimFlic
+                
                 break;
 
             case State.Chase:

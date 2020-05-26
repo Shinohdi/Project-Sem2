@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
                 rbfps.anim.SetBool("TagCorniche",true); //AnimTagOnCorniche
                 rbfps.anim.SetBool("IsJumping", false); //AnimJump
             }
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetButtonUp("Fire1"))
             {
                 rbfps.anim.SetBool("TagCorniche", false); //AnimTagOnCorniche
                 rbfps.anim.SetBool("IsJumping", true); //AnimJump
