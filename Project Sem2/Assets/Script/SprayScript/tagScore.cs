@@ -22,6 +22,9 @@ public class tagScore : MonoBehaviour
    
     private GameObject scoreBar;
 
+    [FMODUnity.EventRef]
+    public string EventRecompense = "";
+
     private void Start()
     {
         isEnter = false;
@@ -35,6 +38,7 @@ public class tagScore : MonoBehaviour
 
             if(bar.value >= bar.maxValue)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(EventRecompense, transform.position);
                 Completed = true;
                 Destroy(scoreBar);
             } 
