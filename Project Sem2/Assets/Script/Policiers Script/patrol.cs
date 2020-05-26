@@ -8,24 +8,31 @@ public class patrol : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
 
     [SerializeField] private List<Transform> waypoints;
+    [SerializeField] private Transform player;
 
     [HideInInspector] public int cible = 0;
 
     private int increment = 1;
 
+    private Transform target;
+
     [SerializeField] private bool AlléRetour;
 
     [SerializeField] private int timeWait;
+    [SerializeField] private float rangeView;
+
     private float chrono;
 
-    public bool wait;
+    [Range(0, 1)] [SerializeField] private float rangeWait;
 
     public Animator animFlic; //Animation
 
     public enum State
     {
         Idle,
-        Patrol
+        Patrol,
+        Look,
+        Chase
     }
 
     public State state = State.Idle;
@@ -47,7 +54,18 @@ public class patrol : MonoBehaviour
     {
         switch (state)
         {
-            
+            case State.Look:
+                animFlic.SetBool("IsIdle", true); //AnimTagOnCorniche
+                break;
+
+            case State.Chase:
+                target = player;
+                agent.speed = 10;
+                break;
+
+            case State.Patrol:
+                agent.speed = 7;
+                break;
 
         }
     }
@@ -65,36 +83,48 @@ public class patrol : MonoBehaviour
                 {
                     TargetID();
 
-                    Transform target = waypoints[cible];
+                    target = waypoints[cible];
                     Vector3 direction = waypoints[cible].position - transform.position;
                     agent.SetDestination(target.position);
+
+                    SeeThePlayer();
 
                     if (direction.magnitude < 3.1)
                     {
                         
-                        if(Random.value >= 0.1 && !wait)
+                        if(Random.value >= rangeWait && state != State.Look)
                         {
-                            wait = true;                          
+                            SwitchState(State.Look);                         
                         }
-                        else if(Random.value < 0.1 && !wait)
+                        else
                         {
                             cible += increment;
                         }
 
-                        if (wait)
-                        {
-                            animFlic.SetBool("IsIdle", true); //AnimTagOnCorniche
-                            chrono += Time.deltaTime;
-                            if (chrono >= timeWait)
-                            {
-                                cible += increment;
-                                chrono = 0;
-                                wait = false;
-                                animFlic.SetBool("IsIdle", false); //AnimTagOnCorniche
-                            }
-                        }
                     }
 
+                }
+                break;
+
+            case State.Look:
+                SeeThePlayer();
+                chrono += Time.deltaTime;
+                if (chrono >= timeWait)
+                {
+                    cible += increment;
+                    chrono = 0;
+                    SwitchState(State.Patrol);
+                }
+                break;
+
+            case State.Chase:
+                agent.SetDestination(target.position);
+                Vector3 directionChase = target.position - transform.position;
+                transform.LookAt(target);
+
+                if (directionChase.magnitude > rangeView * 2)
+                {
+                    SwitchState(State.Patrol);
                 }
                 break;
         }
@@ -129,7 +159,30 @@ public class patrol : MonoBehaviour
     {
         switch (state)
         {
+            case State.Look:
+                animFlic.SetBool("IsIdle", false); //AnimTagOnCorniche
+                break;
+        }
+    }
 
+    private void SeeThePlayer()
+    {
+        Vector3 playerDirection = player.position - transform.position;
+        float dist = playerDirection.magnitude;
+
+        if(dist < rangeView)
+        {
+            playerDirection = playerDirection.normalized;
+
+            Debug.DrawRay(transform.position, playerDirection, Color.blue);
+            Debug.DrawRay(transform.position, transform.forward, Color.magenta);
+
+            float dot = Vector3.Dot(playerDirection, transform.forward);
+            
+            if(dot > 0.5f)
+            {
+                SwitchState(State.Chase);
+            }
         }
     }
 }
