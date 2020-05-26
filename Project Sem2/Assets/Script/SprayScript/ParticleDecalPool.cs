@@ -157,6 +157,8 @@ public class ParticleDecalPool : MonoBehaviour
                 panneau[i].score++;
             }
         }
+
+        Debug.Log(particleData[particleDecalDataIndex].tag);
        
 
         if (colorNow == Color.Red)
