@@ -225,11 +225,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                     anim.SetBool("IsWalking", true); //AnimWalking
                 }
-                if (Input.GetAxisRaw("Vertical") <= 0.2f && Input.GetAxisRaw("Vertical") >= -0.2f && Input.GetAxisRaw("Horizontal") <= 0.3f && Input.GetAxisRaw("Horizontal") >= -0.3f)
-                {
-                    anim.SetBool("IsWalking", false); //AnimIdle
-                }
+                //if (Input.GetAxisRaw("Vertical") <= 0.2f && Input.GetAxisRaw("Vertical") >= -0.2f && Input.GetAxisRaw("Horizontal") <= 0.3f && Input.GetAxisRaw("Horizontal") >= -0.3f)
+                //{
+                //    anim.SetBool("IsWalking", false); //AnimIdle
+                //}
+                
             }
+
             //inair
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && !m_IsGrounded  && !Wallrunning)
             {
@@ -252,7 +254,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             }
 
-     
+            if (m_RigidBody.velocity.magnitude < 0.1f)
+            {
+                anim.SetBool("IsWalking", false); //AnimIdle
+                anim.SetBool("IsRunning", false); //AnimIdle
+            }
         }
 
         public void NormalJump()

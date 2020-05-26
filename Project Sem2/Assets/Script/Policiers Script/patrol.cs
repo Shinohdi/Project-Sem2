@@ -20,6 +20,8 @@ public class patrol : MonoBehaviour
 
     public bool wait;
 
+    public Animator animFlic; //Animation
+
     public enum State
     {
         Idle,
@@ -70,23 +72,25 @@ public class patrol : MonoBehaviour
                     if (direction.magnitude < 3.1)
                     {
                         
-                        if(Random.value >= 0.7 && !wait)
+                        if(Random.value >= 0.1 && !wait)
                         {
                             wait = true;                          
                         }
-                        else if(Random.value < 0.7 && !wait)
+                        else if(Random.value < 0.1 && !wait)
                         {
                             cible += increment;
                         }
 
                         if (wait)
                         {
+                            animFlic.SetBool("IsIdle", true); //AnimTagOnCorniche
                             chrono += Time.deltaTime;
                             if (chrono >= timeWait)
                             {
                                 cible += increment;
                                 chrono = 0;
                                 wait = false;
+                                animFlic.SetBool("IsIdle", false); //AnimTagOnCorniche
                             }
                         }
                     }
