@@ -100,6 +100,7 @@
 			<destination>{71d393bc-0234-4e90-8e1a-7be08e38715a}</destination>
 			<destination>{137b44ee-8fe8-45a4-81a8-016822f87219}</destination>
 			<destination>{3bf9d274-c583-4472-a5b7-dc721be02373}</destination>
+			<destination>{a6ec2805-c326-4fe5-8694-d1de698b7df6}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{76a3a887-080c-4a46-9f4d-3b7de1601da0}">
@@ -253,7 +254,7 @@
 	</object>
 	<object class="TransitionMarker" id="{3bf9d274-c583-4472-a5b7-dc721be02373}">
 		<property name="position">
-			<value>10</value>
+			<value>5.7000000000000002</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{0e967d0a-5f61-4835-8237-e79afb9d2c1c}</destination>
@@ -263,6 +264,26 @@
 		</relationship>
 		<relationship name="destination">
 			<destination>{137b44ee-8fe8-45a4-81a8-016822f87219}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{a6ec2805-c326-4fe5-8694-d1de698b7df6}">
+		<property name="position">
+			<value>5</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>85.5</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{0e967d0a-5f61-4835-8237-e79afb9d2c1c}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{133a150c-279c-43a3-bb63-6cace2c707ba}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{5fedd9ea-ac17-45e9-b70c-cc022aaf8fc9}">
