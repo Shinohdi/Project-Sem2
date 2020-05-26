@@ -7,6 +7,15 @@ public class skyarena : MonoBehaviour
     [SerializeField] private float scrollSpeed = 0.1f;
     private float offset = 0.5f;
     Renderer rend;
+
+    [SerializeField] private GameObject Sun;
+
+    [SerializeField] private GameObject Moon;
+
+    [SerializeField] private GameObject Stars;
+
+    Color oui;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -18,5 +27,12 @@ public class skyarena : MonoBehaviour
     {
         offset += Time.deltaTime * scrollSpeed;
         rend.material.mainTextureOffset = new Vector2(offset, 0);
+
+        if(offset >= 0.75)
+        {
+            Sun.SetActive(true);
+            Moon.SetActive(false);
+            Stars.SetActive(false);
+        }
     }
 }

@@ -23,7 +23,6 @@ public class PanneauCount : MonoBehaviour
         if(PDP.PanneauClear >= panneauInLevel * 0.25f)
         {
             Musique.MusiqueFirst();
-            Debug.Log(PDP.PanneauClear);
         }
 
         if (PDP.PanneauClear >= panneauInLevel * 0.5f)
