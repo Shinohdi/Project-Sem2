@@ -254,7 +254,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             }
 
-            if (m_RigidBody.velocity.magnitude < 0.1f)
+            if (m_RigidBody.velocity.magnitude <= 4f)
             {
                 anim.SetBool("IsWalking", false); //AnimIdle
                 anim.SetBool("IsRunning", false); //AnimIdle

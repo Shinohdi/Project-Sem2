@@ -10,6 +10,8 @@ public class tagScore : MonoBehaviour
     [HideInInspector] public float score;
     [SerializeField] private int scoreMax;
 
+    public float multiplicateur;
+
     private bool isEnter;
     public bool isScoring;
     public bool Completed;

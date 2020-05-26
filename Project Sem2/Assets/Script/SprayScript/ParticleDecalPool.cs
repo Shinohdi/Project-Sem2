@@ -154,11 +154,10 @@ public class ParticleDecalPool : MonoBehaviour
         {
             if (panneau[i].isScoring == true)
             {
-                panneau[i].score++;
+                panneau[i].score += panneau[i].multiplicateur;
             }
         }
 
-        
        
 
         if (colorNow == Color.Red)
@@ -180,8 +179,36 @@ public class ParticleDecalPool : MonoBehaviour
         particleData[particleDecalDataIndex].rotation = particleRotationEuler;
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
         //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
+
+        if(particleDecalDataIndex > 0)
+        {
+            if (particleData[particleDecalDataIndex].position != particleData[particleDecalDataIndex - 1].position)
+            {
+                //Debug.Log("no");
+                for (int i = 0; i < panneau.Count; i++)
+                {
+                    if (panneau[i].isScoring == true)
+                    {
+                        panneau[i].score += panneau[i].multiplicateur;
+                    }
+                }
+            }
+        }
+
+        else
+        {
+            //Debug.Log("yes");
+            for (int i = 0; i < panneau.Count; i++)
+            {
+                if (panneau[i].isScoring == true)
+                {
+                    panneau[i].score += panneau[i].multiplicateur;
+                }
+            }
+        }
+
         particleDecalDataIndex++;
-              
+
     }
 
     void DisplayParticles()
