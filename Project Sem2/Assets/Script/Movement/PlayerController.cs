@@ -185,6 +185,16 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(cam.gameObject.transform.forward * JumpForceInCorniche, ForceMode.Impulse);
 
             }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                rbfps.anim.SetBool("TagCorniche",true); //AnimTagOnCorniche
+                rbfps.anim.SetBool("IsJumping", false); //AnimJump
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                rbfps.anim.SetBool("TagCorniche", false); //AnimTagOnCorniche
+                rbfps.anim.SetBool("IsJumping", true); //AnimJump
+            }
         }
 
         if (timeWait)
