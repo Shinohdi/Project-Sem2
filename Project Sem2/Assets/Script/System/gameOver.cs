@@ -9,17 +9,20 @@ public class gameOver : MonoBehaviour
     [HideInInspector] public bool gameOverBool;
 
     [SerializeField] private Animator anim;
-    [SerializeField] private float timeChange;
+    [SerializeField] private float timeChangeLost;
+    [SerializeField] private float timeChangeWin;
     [SerializeField] private string LevelHere;
 
     public musicFirstZone MusiqueStop;
+
+    [SerializeField] private GameObject victoire;
 
     private float chrono;
 
     [FMODUnity.EventRef]
     public string EventVictory;
 
-    private bool isPlaying;
+    private bool isPlaying = false;
     public bool victoryBool;
 
     // Start is called before the first frame update
@@ -36,7 +39,7 @@ public class gameOver : MonoBehaviour
             chrono += Time.deltaTime;
             FadeToLevel(1);
 
-            if(chrono >= timeChange)
+            if(chrono >= timeChangeLost)
             {
                 MusiqueStop.MusiqueStop();
                 SceneManager.LoadScene(LevelHere);
@@ -45,12 +48,39 @@ public class gameOver : MonoBehaviour
         }
         if(victoryBool)
         {
-            // FMODUnity.RuntimeManager.PlayOneShot(EventVictory, transform.position); => DOIT SE JOUER QU'UNE FOIS
+            chrono += Time.deltaTime;
+            victoryFade(1);
+
+            if(chrono >= timeChangeWin - 2)
+            {
+                victoire.SetActive(true);
+
+                if(chrono >= timeChangeWin)
+                {
+                    MusiqueStop.MusiqueStop();
+                    SceneManager.LoadScene(LevelHere);
+                    victoryBool = false;
+                    isPlaying = false;
+                }
+            }
+
+                
         }
     }
 
     public void FadeToLevel(int LevelIndex)
     {
+        anim.SetTrigger("Fadeout");
+    }
+
+    public void victoryFade(int LevelIndex)
+    {
+        if (!isPlaying)
+        {
+            isPlaying = true;
+            FMODUnity.RuntimeManager.PlayOneShot(EventVictory, transform.position);
+
+        }
         anim.SetTrigger("Fadeout");
     }
 }

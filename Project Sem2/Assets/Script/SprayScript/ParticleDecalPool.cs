@@ -180,33 +180,6 @@ public class ParticleDecalPool : MonoBehaviour
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
         //particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f,1f));
 
-        if(particleDecalDataIndex > 0)
-        {
-            if (particleData[particleDecalDataIndex].position != particleData[particleDecalDataIndex - 1].position)
-            {
-                //Debug.Log("no");
-                for (int i = 0; i < panneau.Count; i++)
-                {
-                    if (panneau[i].isScoring == true)
-                    {
-                        panneau[i].score += panneau[i].multiplicateur;
-                    }
-                }
-            }
-        }
-
-        else
-        {
-            //Debug.Log("yes");
-            for (int i = 0; i < panneau.Count; i++)
-            {
-                if (panneau[i].isScoring == true)
-                {
-                    panneau[i].score += panneau[i].multiplicateur;
-                }
-            }
-        }
-
         particleDecalDataIndex++;
 
     }
@@ -277,7 +250,7 @@ public class ParticleDecalPool : MonoBehaviour
         }
         else
         {
-            gO.gameOverBool = true;
+            gO.victoryBool = true;
         }
         
       

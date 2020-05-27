@@ -1,29 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeInLevel : MonoBehaviour
 {
 
-    [SerializeField] private int TimeMax;
-    private float chrono;
+    [SerializeField] private float minutes;
+    [SerializeField] private float secondes;
+
+    [SerializeField] private Text time;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        chrono = TimeMax;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        chrono -= Time.deltaTime;
 
-        if(chrono <= 0)
+        if(secondes <= 0)
+        {
+            minutes--;
+            secondes = 60f;
+        }
+
+
+        secondes -= Time.deltaTime;
+
+        time.text = string.Format("{0} : {1}", minutes, (int)secondes);
+
+    
+        if(minutes <= 0)
         {
             GetComponent<gameOver>().gameOverBool = true;
-            chrono = TimeMax;
+            
         }
     }
 }
