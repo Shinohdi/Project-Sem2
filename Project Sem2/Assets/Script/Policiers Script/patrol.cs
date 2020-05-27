@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using FMODUnity;
 
 public class patrol : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class patrol : MonoBehaviour
 
 
     public Animator animFlic; //Animation
+
+    [EventRef]
+    public string EventEtonnement = "";
 
     public enum State
     {
@@ -59,6 +63,7 @@ public class patrol : MonoBehaviour
         switch (state)
         {
             case State.Look:
+                
                 animFlic.SetBool("IsIdle", true); //AnimFlic
                 chrono = 0;
                 viewAround = -0.5f;
@@ -67,6 +72,7 @@ public class patrol : MonoBehaviour
                 break;
 
             case State.Chase:
+                FMODUnity.RuntimeManager.PlayOneShot(EventEtonnement, transform.position);
                 animFlic.SetBool("IsSplat", false); //AnimFlic
                 target = player;
                 agent.isStopped = false;
