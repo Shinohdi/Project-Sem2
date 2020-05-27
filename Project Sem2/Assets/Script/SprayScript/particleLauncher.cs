@@ -17,7 +17,6 @@ public class particleLauncher : MonoBehaviour
 
     FMOD.Studio.EventInstance tir;
 
-
     public ParticleSystem ParticleLauncher;
     public ParticleSystem splatterParticles;
     public Gradient particleColorGradient;
@@ -38,8 +37,12 @@ public class particleLauncher : MonoBehaviour
 
     [SerializeField] private int TimeChargement;
 
+    private RigidbodyFirstPersonController rbfps;
+
     void Start()
     {
+        rbfps = GetComponent<RigidbodyFirstPersonController>();
+
         collisionEvents = new List<ParticleCollisionEvent>();
 
         tagUIBlue.value = tagUIBlue.maxValue;
@@ -143,10 +146,13 @@ public class particleLauncher : MonoBehaviour
         if (isCharging)
         {
 
+            //rbfps.anim.SetBool("IsCharging", true); //AnimCharging
 
             if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
             {
                 isCharging = false;
+
+                //rbfps.anim.SetBool("IsCharging", false); //AnimCharging
             }
 
             switch (splatDecalPool.colorNow)
