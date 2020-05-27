@@ -67,12 +67,14 @@ public class patrol : MonoBehaviour
                 break;
 
             case State.Chase:
+                animFlic.SetBool("IsSplat", false); //AnimFlic
                 target = player;
                 agent.isStopped = false;
                 agent.speed = 10;
                 break;
 
             case State.Patrol:
+                animFlic.SetBool("IsSplat", false); //AnimFlic
                 agent.speed = 7;
                 viewAround = 0.5f;
                 rangeView = rangeView / 1.5f;
@@ -80,6 +82,8 @@ public class patrol : MonoBehaviour
                 break;
 
             case State.Blind:
+                animFlic.SetBool("IsSplat", true); //AnimFlic
+                animFlic.SetBool("IsIdle", false); //AnimFlic
                 agent.isStopped = true;
                 break;
 
