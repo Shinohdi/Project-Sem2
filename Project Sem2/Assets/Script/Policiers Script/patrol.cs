@@ -34,6 +34,9 @@ public class patrol : MonoBehaviour
     [EventRef]
     public string EventEtonnement = "";
 
+    [EventRef]
+    public string EventDamaged = "";
+
     public enum State
     {
         Idle,
@@ -88,6 +91,7 @@ public class patrol : MonoBehaviour
                 break;
 
             case State.Blind:
+                FMODUnity.RuntimeManager.PlayOneShot(EventDamaged, transform.position);
                 animFlic.SetBool("IsSplat", true); //AnimFlic
                 animFlic.SetBool("IsIdle", false); //AnimFlic
                 agent.isStopped = true;
