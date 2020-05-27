@@ -14,6 +14,8 @@ public class particleLauncher : MonoBehaviour
     public string EventTir = "";
     [EventRef]
     public string EventRelacher = "";
+    [EventRef]
+    public string EventRecharger = "";
 
     FMOD.Studio.EventInstance tir;
 
@@ -135,12 +137,14 @@ public class particleLauncher : MonoBehaviour
             isCharging = true;
             FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            FMODUnity.RuntimeManager.PlayOneShot(EventRecharger, transform.position);
 
         }
         else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < tagUI.maxValue)
         {
             isCharging = true;
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            FMODUnity.RuntimeManager.PlayOneShot(EventRecharger, transform.position);
         }
 
         if (isCharging)

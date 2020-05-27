@@ -16,6 +16,11 @@ public class gameOver : MonoBehaviour
 
     private float chrono;
 
+    [FMODUnity.EventRef]
+    public string EventVictory;
+
+    private bool isPlaying;
+    public bool victoryBool;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,10 @@ public class gameOver : MonoBehaviour
                 SceneManager.LoadScene(LevelHere);
                 gameOverBool = false;
             }
+        }
+        if(victoryBool)
+        {
+            // FMODUnity.RuntimeManager.PlayOneShot(EventVictory, transform.position); => DOIT SE JOUER QU'UNE FOIS
         }
     }
 
