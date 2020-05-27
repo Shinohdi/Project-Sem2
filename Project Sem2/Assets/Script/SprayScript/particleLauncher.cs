@@ -18,6 +18,7 @@ public class particleLauncher : MonoBehaviour
     public string EventRecharger = "";
 
     FMOD.Studio.EventInstance tir;
+    FMOD.Studio.EventInstance recharger;
 
     public ParticleSystem ParticleLauncher;
     public ParticleSystem splatterParticles;
@@ -55,6 +56,8 @@ public class particleLauncher : MonoBehaviour
 
 
         tir = FMODUnity.RuntimeManager.CreateInstance(EventTir);
+        recharger = FMODUnity.RuntimeManager.CreateInstance(EventRecharger);
+
 
     }
 
@@ -137,14 +140,14 @@ public class particleLauncher : MonoBehaviour
             isCharging = true;
             FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            FMODUnity.RuntimeManager.PlayOneShot(EventRecharger, transform.position);
+            recharger.start();
 
         }
         else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < tagUI.maxValue)
         {
             isCharging = true;
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            FMODUnity.RuntimeManager.PlayOneShot(EventRecharger, transform.position);
+            recharger.start();
         }
 
         if (isCharging)
@@ -155,7 +158,7 @@ public class particleLauncher : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
             {
                 isCharging = false;
-
+                recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 //rbfps.anim.SetBool("IsCharging", false); //AnimCharging
             }
 
@@ -166,6 +169,7 @@ public class particleLauncher : MonoBehaviour
 
                     if (tagUIRed.value >= tagUIRed.maxValue)
                     {
+                        recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
                     }
 
@@ -175,6 +179,7 @@ public class particleLauncher : MonoBehaviour
 
                     if (tagUIBlue.value >= tagUIBlue.maxValue)
                     {
+                        recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
                     }
 
@@ -184,6 +189,7 @@ public class particleLauncher : MonoBehaviour
 
                     if (tagUIGreen.value >= tagUIGreen.maxValue)
                     {
+                        recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
                     }
 
