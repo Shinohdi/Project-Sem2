@@ -19,6 +19,7 @@ public class patrol : MonoBehaviour
     [SerializeField] private bool AlléRetour;
 
     [SerializeField] private int timeWait;
+    [SerializeField] private int timeBlind;
     [SerializeField] private float rangeView;
 
     private float chrono;
@@ -34,7 +35,8 @@ public class patrol : MonoBehaviour
         Idle,
         Patrol,
         Look,
-        Chase
+        Chase,
+        Blind
     }
 
     public State state = State.Idle;
@@ -58,7 +60,9 @@ public class patrol : MonoBehaviour
         {
             case State.Look:
                 animFlic.SetBool("IsIdle", true); //AnimFlic
+                chrono = 0;
                 viewAround = -0.5f;
+                rangeView = rangeView * 1.5f;
                 agent.isStopped = true;
                 break;
 
@@ -71,7 +75,12 @@ public class patrol : MonoBehaviour
             case State.Patrol:
                 agent.speed = 7;
                 viewAround = 0.5f;
+                rangeView = rangeView / 1.5f;
                 agent.isStopped = false;
+                break;
+
+            case State.Blind:
+                agent.isStopped = true;
                 break;
 
         }
@@ -137,6 +146,16 @@ public class patrol : MonoBehaviour
                     SwitchState(State.Patrol);
 
                 }
+                break;
+
+            case State.Blind:
+                chrono += Time.deltaTime;
+
+                if(chrono >= timeBlind)
+                {
+                    SwitchState(State.Look);               
+                }
+
                 break;
         }
     }

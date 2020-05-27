@@ -9,6 +9,7 @@ TagManager:
   - Avatar
   - score
   - Poubelle
+  - police
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Bleu
   - Environment
   - PPP
-  - 
+  - Policiers
   - 
   - 
   - 

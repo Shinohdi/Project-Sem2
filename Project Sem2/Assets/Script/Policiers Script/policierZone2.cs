@@ -13,7 +13,7 @@ public class policierZone2 : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.CompareTag("Avatar"))
+        if (collision.transform.CompareTag("Avatar") && !gO.gameOverBool)
         {
             FMODUnity.RuntimeManager.PlayOneShot(EventSpotted, transform.position);
             gO.gameOverBool = true;
