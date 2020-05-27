@@ -24,6 +24,8 @@ public class patrol : MonoBehaviour
     private float chrono;
 
     [Range(0, 1)] [SerializeField] private float rangeWait;
+    [Range(-1, 1)] private float viewAround;
+
 
     public Animator animFlic; //Animation
 
@@ -56,16 +58,20 @@ public class patrol : MonoBehaviour
         {
             case State.Look:
                 animFlic.SetBool("IsIdle", true); //AnimFlic
-                
+                viewAround = -0.5f;
+                agent.isStopped = true;
                 break;
 
             case State.Chase:
                 target = player;
+                agent.isStopped = false;
                 agent.speed = 10;
                 break;
 
             case State.Patrol:
                 agent.speed = 7;
+                viewAround = 0.5f;
+                agent.isStopped = false;
                 break;
 
         }
@@ -89,7 +95,6 @@ public class patrol : MonoBehaviour
                     agent.SetDestination(target.position);
 
                     SeeThePlayer();
-
                     if (direction.magnitude < 3.1)
                     {
                         
@@ -126,6 +131,11 @@ public class patrol : MonoBehaviour
                 if (directionChase.magnitude > rangeView * 2)
                 {
                     SwitchState(State.Patrol);
+                }
+                else if (target.position.y > 23)
+                {
+                    SwitchState(State.Patrol);
+
                 }
                 break;
         }
@@ -180,7 +190,7 @@ public class patrol : MonoBehaviour
 
             float dot = Vector3.Dot(playerDirection, transform.forward);
             
-            if(dot > 0.5f)
+            if(dot > viewAround)
             {
                 SwitchState(State.Chase);
             }
