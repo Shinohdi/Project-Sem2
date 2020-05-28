@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9222270021356805730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Grimper/TriggerPoubelle
+  m_EditorClassIdentifier: 
+  Name: TriggerPoubelle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-9206856204337460828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +186,23 @@ MonoBehaviour:
   Name: VolumeDebut
   Min: 0
   Max: 100
+  Default: 0
+  Exists: 0
+--- !u!114 &-8786520033533575347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestMusique/Drums
+  m_EditorClassIdentifier: 
+  Name: Drums
+  Min: 0
+  Max: 1
   Default: 0
   Exists: 0
 --- !u!114 &-8662373774913317130
@@ -376,7 +410,7 @@ MonoBehaviour:
   guid: 6a007befd9302049bca25083e6baa7c0
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -538,13 +572,13 @@ MonoBehaviour:
   guid: 847eacf3bd97ae49a793362d7117ac6f
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6092231501553487282}
-  - {fileID: -6564951415440321040}
+  - {fileID: 4718713607775970131}
+  - {fileID: 4991116483967590898}
   MinDistance: 0
   MaxDistance: 0
   Length: 51826
@@ -581,7 +615,7 @@ MonoBehaviour:
   guid: e8626b42b17be444ad7af7a1300e9d9b
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -623,6 +657,23 @@ MonoBehaviour:
   lastModified: 637242906278095289
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-7603816697429010608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/Zone1Fill
+  m_EditorClassIdentifier: 
+  Name: Zone1Fill
+  Min: 0
+  Max: 100
+  Default: 0
   Exists: 0
 --- !u!114 &-7480171664381351888
 MonoBehaviour:
@@ -726,12 +777,12 @@ MonoBehaviour:
   guid: 8e426b5178bfd44a9a0bc9192039e7bf
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1972578982508913173}
+  - {fileID: 2255557976845017095}
   MinDistance: 0
   MaxDistance: 0
   Length: 265522
@@ -869,7 +920,7 @@ MonoBehaviour:
   Path: event:/Environnement/VentiloDebut1
   guid: 1e68b4ee11fff540896d9ef7986df88d
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1151,6 +1202,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-6245757912800682914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/VolumeDebut
+  m_EditorClassIdentifier: 
+  Name: VolumeDebut
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 0
 --- !u!114 &-6108904148161936263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1303,23 @@ MonoBehaviour:
   Name: TriggerPoubelle
   Min: 0
   Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-5852651957653688649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/VentSelonHauteur
+  m_EditorClassIdentifier: 
+  Name: VentSelonHauteur
+  Min: 0
+  Max: 100
   Default: 0
   Exists: 0
 --- !u!114 &-5849715632135463479
@@ -1446,7 +1531,7 @@ MonoBehaviour:
   guid: 7f671c8158c2fb46a02c5a63a94cf8c6
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1470,7 +1555,7 @@ MonoBehaviour:
   guid: ebb62373d9f28247afeaf065ec2e22f6
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1650,7 +1735,7 @@ MonoBehaviour:
   guid: 940cb740f76d5d40870df09b57f8e4ad
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1768,6 +1853,23 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &-4732677072466766318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Grimper/TriggerPoubelle
+  m_EditorClassIdentifier: 
+  Name: TriggerPoubelle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-4729289199011565047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1954,7 +2056,7 @@ MonoBehaviour:
   Path: event:/Police/Etonnement
   guid: 76598d3705ed4248a15adee7623e2e8f
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2046,7 +2148,7 @@ MonoBehaviour:
   guid: 0296ad697104184bb1eccea384f68d9f
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2274,7 +2376,7 @@ MonoBehaviour:
   guid: 389f3f374991414a80c2ef98e02491fd
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2331,7 +2433,7 @@ MonoBehaviour:
   Path: "event:/R\xE9compenses/PanneauFini"
   guid: 084da961552c0340be303c13519b447b
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2426,6 +2528,24 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &-2716821028312356929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637262593942699524
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2669255157227462002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,6 +2579,23 @@ MonoBehaviour:
   Name: TriggerPoubelle
   Min: 0
   Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-2653322772630640306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/VentSelonHauteur
+  m_EditorClassIdentifier: 
+  Name: VentSelonHauteur
+  Min: 0
+  Max: 100
   Default: 0
   Exists: 0
 --- !u!114 &-2622783891901322998
@@ -2549,6 +2686,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-2172239335338249576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestMusique/Drums
+  m_EditorClassIdentifier: 
+  Name: Drums
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-2166247848874278962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,7 +2737,7 @@ MonoBehaviour:
   guid: 21c014211aac0d43a8bf6ccd28604a95
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2934,7 +3088,7 @@ MonoBehaviour:
   Path: event:/Police/PoliceDamaged
   guid: 1c8e39fde2805548adc75191e29ee807
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2993,6 +3147,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-945044157099207748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/ClickOnButton
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/ClickOnButton
+  guid: ad8b670368aa4245b233ed2e8b7f3429
+  Banks:
+  - {fileID: 7282026000524939886}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1226
 --- !u!114 &-903846952076108272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,7 +3477,7 @@ MonoBehaviour:
   Path: event:/Environnement/VentiloDebut1 2
   guid: 09b4f3c1b9159144885433df34531a01
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3375,7 +3552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8971930183569641851}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   EditorEvents:
   - {fileID: -4049847220788660142}
   - {fileID: 4235995750491569339}
@@ -3407,12 +3584,13 @@ MonoBehaviour:
   - {fileID: 4791113979841678071}
   - {fileID: -4383532964439871790}
   - {fileID: -1269721274361678932}
+  - {fileID: -945044157099207748}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   StringsBanks:
   - {fileID: 8971930183569641851}
-  stringsBankWriteTime: 637262117377105820
+  stringsBankWriteTime: 637262594149700147
   cacheVersion: 3
 --- !u!114 &50341804850729853
 MonoBehaviour:
@@ -3810,6 +3988,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &1202745184198173602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Grimper/TriggerPoubelle
+  m_EditorClassIdentifier: 
+  Name: TriggerPoubelle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &1216940003238255695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,7 +4039,7 @@ MonoBehaviour:
   guid: 3f3f64deaf937f4fb2a19798d5c5d17c
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3938,7 +4133,7 @@ MonoBehaviour:
   guid: 91f2b9afa4e7a14ea5219c787cb18c08
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4257,6 +4452,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &2255557976845017095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/VentSelonHauteur
+  m_EditorClassIdentifier: 
+  Name: VentSelonHauteur
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &2301912981861184134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4531,7 +4743,7 @@ MonoBehaviour:
   guid: 65b7f0f957ab394386cf7be4e53cc1a5
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -4573,7 +4785,7 @@ MonoBehaviour:
   guid: 3a723470acca6046b2a9a74cd7174348
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -5030,6 +5242,23 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &4070053622513152193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestMusique/Drums
+  m_EditorClassIdentifier: 
+  Name: Drums
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &4076164081353272958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,12 +5395,12 @@ MonoBehaviour:
   guid: 1d49ade7574e7e40953ea13944f80d69
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1608779770081767802}
+  - {fileID: -9222270021356805730}
   MinDistance: 0
   MaxDistance: 0
   Length: 1750
@@ -5400,6 +5629,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &4679388574122153055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/VolumeDebut
+  m_EditorClassIdentifier: 
+  Name: VolumeDebut
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 0
+--- !u!114 &4718713607775970131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/VolumeDebut
+  m_EditorClassIdentifier: 
+  Name: VolumeDebut
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &4791113979841678071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5415,7 +5678,7 @@ MonoBehaviour:
   Path: event:/Avatar/Mecaniques/Rechargement
   guid: 231bc54bcb03294085d34fa26c15c855
   Banks:
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -5490,6 +5753,23 @@ MonoBehaviour:
   Name: TriggerPoubelle
   Min: 0
   Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4991116483967590898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/Zone1Fill
+  m_EditorClassIdentifier: 
+  Name: Zone1Fill
+  Min: 0
+  Max: 100
   Default: 0
   Exists: 1
 --- !u!114 &5067319388080739377
@@ -5662,6 +5942,41 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &5394253695339028508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/Zone1Fill
+  m_EditorClassIdentifier: 
+  Name: Zone1Fill
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 0
+--- !u!114 &5399309450561704325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637262085300337063
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5422552772153397111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5782,6 +6097,24 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &5645497905559375652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637262593040187575
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5703240296875162193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,7 +6166,7 @@ MonoBehaviour:
   guid: f2f6a52729458a4fabef08ba73a588aa
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5857,7 +6190,7 @@ MonoBehaviour:
   guid: f2f4b40ac09f3a4fa94c9e2c0541f8ed
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6000,7 +6333,7 @@ MonoBehaviour:
   guid: a5174c109422994dab8192f5ab744356
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6076,7 +6409,7 @@ MonoBehaviour:
   guid: b6a8a0c69b630b4694cb9cc7a2c953c8
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -6150,6 +6483,23 @@ MonoBehaviour:
   Name: Drums
   Min: 0
   Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &6487542726304214782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/VolumeDebut
+  m_EditorClassIdentifier: 
+  Name: VolumeDebut
+  Min: 0
+  Max: 100
   Default: 0
   Exists: 0
 --- !u!114 &6524558737457602958
@@ -6363,6 +6713,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7184902278174214610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestMusique/Drums
+  m_EditorClassIdentifier: 
+  Name: Drums
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7224972947241181995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6397,6 +6764,24 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &7282026000524939886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637262594149620453
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7362139089870672713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,7 +6798,7 @@ MonoBehaviour:
   guid: d6dd65c7fdd9a8429d5be09c27f753ab
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -6473,6 +6858,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7730801025676360359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Grimper/TriggerPoubelle
+  m_EditorClassIdentifier: 
+  Name: TriggerPoubelle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7735446521252127633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6718,6 +7120,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &8343737423397254200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambiance/VentSelonHauteur
+  m_EditorClassIdentifier: 
+  Name: VentSelonHauteur
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 0
 --- !u!114 &8481764313974531501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6751,12 +7170,12 @@ MonoBehaviour:
   guid: 08c70a17142b36419c5cdb2440e8ccc5
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4493408261398773273}
+  - {fileID: 4070053622513152193}
   MinDistance: 0
   MaxDistance: 0
   Length: 48010
@@ -6829,6 +7248,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8784232731405040222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ZoneDebutTest/Zone1Fill
+  m_EditorClassIdentifier: 
+  Name: Zone1Fill
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 0
 --- !u!114 &8959822831512350278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6860,11 +7296,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637262117377105820
+  lastModified: 637262594149700147
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2340
+    Value: 2390
   Exists: 1
 --- !u!114 &8992484383934093463
 MonoBehaviour:
@@ -6936,7 +7372,7 @@ MonoBehaviour:
   guid: 4da63a10cfabed43962236477dcb37dd
   Banks:
   - {fileID: 3754898871308267390}
-  - {fileID: -2180821323958385437}
+  - {fileID: 7282026000524939886}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
