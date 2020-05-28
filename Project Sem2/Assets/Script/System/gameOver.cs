@@ -51,20 +51,26 @@ public class gameOver : MonoBehaviour
             chrono += Time.deltaTime;
             victoryFade(1);
 
-            if(chrono >= timeChangeWin - 2)
+            if(chrono >= timeChangeWin - 5.5)
             {
                 victoire.SetActive(true);
+                anim.SetTrigger("Finish");
 
                 if(chrono >= timeChangeWin)
                 {
                     MusiqueStop.MusiqueStop();
-                    SceneManager.LoadScene(LevelHere);
+                    SceneManager.LoadScene(0);
                     victoryBool = false;
                     isPlaying = false;
                 }
             }
 
                 
+        }
+
+        if (Input.GetKeyDown(KeyCode.AltGr))
+        {
+            victoryBool = true;
         }
     }
 

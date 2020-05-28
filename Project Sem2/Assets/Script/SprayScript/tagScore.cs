@@ -160,6 +160,9 @@ public class tagScore : MonoBehaviour
             {
                 FMODUnity.RuntimeManager.PlayOneShot(EventRecompense, transform.position);
                 Completed = true;
+                LumDroite.color = Color.white;
+                LumMid.color = Color.white;
+                LumGauche.color = Color.white;
                 Destroy(scoreBar);
             } 
         }
