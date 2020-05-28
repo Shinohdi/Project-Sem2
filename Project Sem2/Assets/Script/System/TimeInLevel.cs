@@ -31,7 +31,7 @@ public class TimeInLevel : MonoBehaviour
 
         secondes -= Time.deltaTime;
 
-        time.text = string.Format("{0} : {1}", minutes, (int)secondes);
+        time.text = string.Format("{0} m {1} s", minutes, (int)secondes);
 
     
         if(minutes <= 0)

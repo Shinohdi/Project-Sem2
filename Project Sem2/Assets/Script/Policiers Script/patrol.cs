@@ -65,8 +65,7 @@ public class patrol : MonoBehaviour
     {
         switch (state)
         {
-            case State.Look:
-                
+            case State.Look:               
                 animFlic.SetBool("IsIdle", true); //AnimFlic
                 chrono = 0;
                 viewAround = -0.5f;
@@ -76,14 +75,12 @@ public class patrol : MonoBehaviour
 
             case State.Chase:
                 FMODUnity.RuntimeManager.PlayOneShot(EventEtonnement, transform.position);
-                animFlic.SetBool("IsSplat", false); //AnimFlic
                 target = player;
                 agent.isStopped = false;
                 agent.speed = 10;
                 break;
 
             case State.Patrol:
-                animFlic.SetBool("IsSplat", false); //AnimFlic
                 agent.speed = 7;
                 viewAround = 0.5f;
                 rangeView = rangeView / 1.5f;
@@ -93,7 +90,6 @@ public class patrol : MonoBehaviour
             case State.Blind:
                 FMODUnity.RuntimeManager.PlayOneShot(EventDamaged, transform.position);
                 animFlic.SetBool("IsSplat", true); //AnimFlic
-                animFlic.SetBool("IsIdle", false); //AnimFlic
                 agent.isStopped = true;
                 break;
 
@@ -167,6 +163,7 @@ public class patrol : MonoBehaviour
 
                 if(chrono >= timeBlind)
                 {
+                    animFlic.SetBool("IsSplat", false); //AnimFlic
                     SwitchState(State.Look);               
                 }
 
