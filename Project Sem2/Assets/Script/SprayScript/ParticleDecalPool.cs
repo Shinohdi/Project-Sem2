@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class ParticleDecalPool : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class ParticleDecalPool : MonoBehaviour
 
     [SerializeField] private gameOver gO;
 
+    [SerializeField] private RigidbodyFirstPersonController rbfps;
 
     [FMODUnity.EventRef]
     public string EventChgtColor;
@@ -50,20 +52,21 @@ public class ParticleDecalPool : MonoBehaviour
                 TagRed.SetActive(true);
                 shot.tagUIRed.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIRed;
+                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
 
                 break;
             case Color.Blue:
                 TagBlue.SetActive(true);
                 shot.tagUIBlue.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIBlue;
-
+                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
 
                 break;
             case Color.Green:
                 TagGreen.SetActive(true);
                 shot.tagUIGreen.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIGreen;
-
+                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
 
                 break;
 
@@ -76,20 +79,21 @@ public class ParticleDecalPool : MonoBehaviour
         {
             case Color.Red:
                 TagRed.SetActive(false);
-                shot.tagUIRed.gameObject.SetActive(false);              
+                shot.tagUIRed.gameObject.SetActive(false);
+                rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
 
 
                 break;
             case Color.Blue:
                 TagBlue.SetActive(false);
                 shot.tagUIBlue.gameObject.SetActive(false);
-
+                rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
 
                 break;
             case Color.Green:
                 TagGreen.SetActive(false);
                 shot.tagUIGreen.gameObject.SetActive(false);
-
+                rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
 
                 break;
 

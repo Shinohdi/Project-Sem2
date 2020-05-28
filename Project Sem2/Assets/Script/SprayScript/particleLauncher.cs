@@ -40,11 +40,10 @@ public class particleLauncher : MonoBehaviour
 
     [SerializeField] private int TimeChargement;
 
-    private RigidbodyFirstPersonController rbfps;
+    [SerializeField] private RigidbodyFirstPersonController rbfps;
 
     void Start()
     {
-        rbfps = GetComponent<RigidbodyFirstPersonController>();
 
         collisionEvents = new List<ParticleCollisionEvent>();
 
@@ -141,6 +140,7 @@ public class particleLauncher : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot(EventRelacher, transform.position);
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             recharger.start();
+            rbfps.anim.SetBool("IsCharging", true); //AnimCharging
 
         }
         else if (Input.GetKeyDown(KeyCode.R) && tagUI.value < tagUI.maxValue)
@@ -148,18 +148,19 @@ public class particleLauncher : MonoBehaviour
             isCharging = true;
             tir.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             recharger.start();
+            rbfps.anim.SetBool("IsCharging", true); //AnimCharging
         }
 
         if (isCharging)
         {
 
-            //rbfps.anim.SetBool("IsCharging", true); //AnimCharging
+            
 
             if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
             {
                 isCharging = false;
                 recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                //rbfps.anim.SetBool("IsCharging", false); //AnimCharging
+                rbfps.anim.SetBool("IsCharging", false); //AnimCharging
             }
 
             switch (splatDecalPool.colorNow)
@@ -171,6 +172,8 @@ public class particleLauncher : MonoBehaviour
                     {
                         recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
+                        rbfps.anim.SetBool("IsCharging", false); //AnimCharging
+
                     }
 
                     break;
@@ -181,6 +184,8 @@ public class particleLauncher : MonoBehaviour
                     {
                         recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
+                        rbfps.anim.SetBool("IsCharging", false); //AnimCharging
+
                     }
 
                     break;
@@ -191,6 +196,8 @@ public class particleLauncher : MonoBehaviour
                     {
                         recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                         isCharging = false;
+                        rbfps.anim.SetBool("IsCharging", false); //AnimCharging
+
                     }
 
                     break;
