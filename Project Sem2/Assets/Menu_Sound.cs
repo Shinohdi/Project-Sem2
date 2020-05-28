@@ -9,6 +9,8 @@ public class Menu_Sound : MonoBehaviour
     public string EventAmbiance;
     FMOD.Studio.EventInstance Ambiance;
 
+    private bool isPlaying;
+
     [FMODUnity.EventRef]
     public string EventOnClick;
 
@@ -22,12 +24,16 @@ public class Menu_Sound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlaying)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(EventOnClick, transform.position);
+            Ambiance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            isPlaying = false;
+        }
     }
 
     public void OnClickPlay()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(EventOnClick, transform.position);
-        Ambiance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        isPlaying = true;
     }
 }
