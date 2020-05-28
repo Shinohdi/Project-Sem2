@@ -4,9 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class mainmenu : MonoBehaviour
 {
+
+    private bool play = false;
+
+    public float chronoMax;
+    private float chrono;
+
+
+
+
     public void Playgame ()
     {
-        SceneManager.LoadScene(0);
+        play = true;
     }
 
     public void Quitgame ()
@@ -14,6 +23,20 @@ public class mainmenu : MonoBehaviour
         Debug.Log("Quitter;");
         Application.Quit();
 
+    }
+
+    private void Update()
+    {
+        if(play == true)
+        {
+            chrono += Time.deltaTime;
+
+            if(chrono >= chronoMax)
+            {
+                SceneManager.LoadScene(0);
+                play = false;
+            }
+        }
     }
 
 
