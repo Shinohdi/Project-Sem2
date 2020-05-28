@@ -33,7 +33,7 @@ public class mainmenu : MonoBehaviour
 
             if(chrono >= chronoMax)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("TestLD");
                 play = false;
             }
         }
