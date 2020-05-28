@@ -86,14 +86,10 @@ public class particleLauncher : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && !isCharging && !splatDecalPool.isChanging)
         {
-            tir.start();
-        }
 
-        if (Input.GetButton("Fire1") && !isCharging)
-        {
-            
+            rbfps.anim.SetBool("IsCharging", false); //AnimCharging
             ParticleSystem.MainModule psMain;
             switch (splatDecalPool.colorNow)
             {
@@ -152,15 +148,12 @@ public class particleLauncher : MonoBehaviour
         }
 
         if (isCharging)
-        {
+        {           
 
-            
-
-            if (Input.GetButtonDown("Fire1") && tagUI.value > 50)
+            if (Input.GetButtonDown("Fire1") && tagUI.value > tagUI.maxValue / 2)
             {
                 isCharging = false;
                 recharger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                rbfps.anim.SetBool("IsCharging", false); //AnimCharging
             }
 
             switch (splatDecalPool.colorNow)
@@ -203,6 +196,11 @@ public class particleLauncher : MonoBehaviour
                     break;
             }
 
-        }         
+        }
+
+        if (Input.GetButtonDown("Fire1") && !splatDecalPool.isChanging && !isCharging)
+        {
+            tir.start();
+        }
     }
 }

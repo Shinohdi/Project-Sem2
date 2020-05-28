@@ -20,6 +20,9 @@ public class ParticleDecalPool : MonoBehaviour
     public List<tagScore> panneau;
     public int PanneauClear;
 
+    [SerializeField] private float chronoChange;
+    private float chrono;
+
     [SerializeField] private GameObject TagRed;
     [SerializeField] private GameObject TagBlue;
     [SerializeField] private GameObject TagGreen;
@@ -29,6 +32,8 @@ public class ParticleDecalPool : MonoBehaviour
     [SerializeField] private gameOver gO;
 
     [SerializeField] private RigidbodyFirstPersonController rbfps;
+
+    public bool isChanging;
 
     [FMODUnity.EventRef]
     public string EventChgtColor;
@@ -49,24 +54,19 @@ public class ParticleDecalPool : MonoBehaviour
         switch (colorNow)
         {
             case Color.Red:
-                TagRed.SetActive(true);
                 shot.tagUIRed.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIRed;
-                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
 
                 break;
             case Color.Blue:
-                TagBlue.SetActive(true);
                 shot.tagUIBlue.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIBlue;
-                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
+
 
                 break;
             case Color.Green:
-                TagGreen.SetActive(true);
                 shot.tagUIGreen.gameObject.SetActive(true);
                 shot.tagUI = shot.tagUIGreen;
-                rbfps.anim.SetBool("IsChanging", false); //AnimChangingColor
 
                 break;
 
@@ -78,22 +78,23 @@ public class ParticleDecalPool : MonoBehaviour
         switch (colorNow)
         {
             case Color.Red:
-                TagRed.SetActive(false);
                 shot.tagUIRed.gameObject.SetActive(false);
                 rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
-
+                isChanging = true;
 
                 break;
+
             case Color.Blue:
-                TagBlue.SetActive(false);
                 shot.tagUIBlue.gameObject.SetActive(false);
                 rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
+                isChanging = true;
 
                 break;
+
             case Color.Green:
-                TagGreen.SetActive(false);
                 shot.tagUIGreen.gameObject.SetActive(false);
                 rbfps.anim.SetBool("IsChanging", true); //AnimChangingColor
+                isChanging = true;
 
                 break;
 
@@ -105,12 +106,65 @@ public class ParticleDecalPool : MonoBehaviour
         switch (colorNow)
         {
             case Color.Red:
+                if(isChanging)
+                {
+                    chrono += Time.deltaTime;
+
+                    if (chrono >= chronoChange)
+                    {
+                        isChanging = false;
+                        chrono = 0;
+                        rbfps.anim.SetBool("IsChanging", false);
+                        TagGreen.SetActive(false);
+                        TagBlue.SetActive(false);
+
+                        TagRed.SetActive(true);
+
+
+                    }
+                }
 
                 break;
             case Color.Blue:
+                if (isChanging)
+                {
+                    chrono += Time.deltaTime;
+
+                    if (chrono >= chronoChange)
+                    {                     
+                        isChanging = false;
+                        chrono = 0;
+                        rbfps.anim.SetBool("IsChanging", false);
+                        TagBlue.SetActive(true);
+
+                        TagGreen.SetActive(false);
+                        TagRed.SetActive(false);
+
+
+
+                    }
+
+                }
 
                 break;
             case Color.Green:
+                if (isChanging)
+                {
+                    chrono += Time.deltaTime;
+
+                    if(chrono >= chronoChange)
+                    {
+                        isChanging = false;
+                        chrono = 0;
+                        rbfps.anim.SetBool("IsChanging", false);
+                        TagGreen.SetActive(true);
+
+                        TagBlue.SetActive(false);
+                        TagRed.SetActive(false);
+
+                    }
+
+                }
 
                 break;
 
@@ -153,16 +207,7 @@ public class ParticleDecalPool : MonoBehaviour
             particleDecalDataIndex = 0;
         }
 
-
-        for (int i = 0; i < panneau.Count; i++)
-        {
-            if (panneau[i].isScoring == true)
-            {
-                panneau[i].score += panneau[i].multiplicateur;
-            }
-        }
-
-       
+        PointsGagné();
 
         if (colorNow == Color.Red)
         {
@@ -188,6 +233,64 @@ public class ParticleDecalPool : MonoBehaviour
 
     }
 
+    private void PointsGagné()
+    {
+        for (int i = 0; i < panneau.Count; i++)
+        {
+            if (panneau[i].isScoring == true)
+            {
+                switch (panneau[i].color)
+                {
+                    case tagScore.colorTag.None:
+
+                        panneau[i].score += panneau[i].multiplicateur;
+
+                        break;
+                    case tagScore.colorTag.Red:
+                        if (colorNow == Color.Red)
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 1.75f;
+
+                        }
+                        else
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 0.5f;
+
+
+                        }
+                        break;
+                    case tagScore.colorTag.Blue:
+                        if (colorNow == Color.Blue)
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 1.75f;
+
+
+                        }
+                        else
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 0.5f;
+
+
+                        }
+                        break;
+                    case tagScore.colorTag.Green:
+                        if (colorNow == Color.Green)
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 1.75f;
+
+                        }
+                        else
+                        {
+                            panneau[i].score += panneau[i].multiplicateur * 0.5f;
+
+                        }
+                        break;
+
+                }
+            }
+        }
+    }
+
     void DisplayParticles()
     {
         for (int i = 0; i < particleData.Length; i++)
@@ -204,7 +307,7 @@ public class ParticleDecalPool : MonoBehaviour
     void Update()
     {
 
-        //UpdateColor();
+       UpdateColor();
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0.1)
         {

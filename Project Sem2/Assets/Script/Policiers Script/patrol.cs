@@ -23,6 +23,9 @@ public class patrol : MonoBehaviour
     [SerializeField] private int timeBlind;
     [SerializeField] private float rangeView;
 
+    private float rangeViewPatrol;
+    private float rangeViewLook;
+
     private float chrono;
 
     [Range(0, 1)] [SerializeField] private float rangeWait;
@@ -55,6 +58,12 @@ public class patrol : MonoBehaviour
         OnEnterState();
     }
 
+    private void Start()
+    {
+        rangeViewPatrol = rangeView;
+        rangeViewLook = rangeView * 1.5f;
+    }
+
     private void Update()
     {
         UpdateState();
@@ -69,13 +78,13 @@ public class patrol : MonoBehaviour
                 animFlic.SetBool("IsIdle", true); //AnimFlic
                 chrono = 0;
                 viewAround = -0.5f;
-                rangeView = rangeView * 1.5f;
+                rangeView = rangeViewLook;
                 agent.isStopped = true;
                 break;
 
             case State.Chase:
-                FMODUnity.RuntimeManager.PlayOneShot(EventEtonnement, transform.position);
                 target = player;
+                FMODUnity.RuntimeManager.PlayOneShot(EventEtonnement, target.position);
                 agent.isStopped = false;
                 agent.speed = 10;
                 break;
@@ -83,7 +92,7 @@ public class patrol : MonoBehaviour
             case State.Patrol:
                 agent.speed = 7;
                 viewAround = 0.5f;
-                rangeView = rangeView / 1.5f;
+                rangeView = rangeViewPatrol;
                 agent.isStopped = false;
                 break;
 
@@ -95,6 +104,9 @@ public class patrol : MonoBehaviour
 
         }
     }
+
+
+    
 
     private void UpdateState()
     {
@@ -145,15 +157,19 @@ public class patrol : MonoBehaviour
             case State.Chase:
                 agent.SetDestination(target.position);
                 Vector3 directionChase = target.position - transform.position;
-                transform.LookAt(target);
 
                 if (directionChase.magnitude > rangeView * 2)
                 {
                     SwitchState(State.Patrol);
                 }
-                else if (target.position.y > 23)
+                else if (target.position.y > 11.5f)
                 {
                     SwitchState(State.Patrol);
+
+                }
+                else
+                {
+                    transform.LookAt(target);
 
                 }
                 break;
