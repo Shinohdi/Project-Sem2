@@ -25,6 +25,11 @@ public class mainmenu : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void Update()
     {
         if(play == true)
